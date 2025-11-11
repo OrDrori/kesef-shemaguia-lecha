@@ -81,7 +81,7 @@ export default function Results() {
                         <div className="font-semibold text-lg">{org.name}</div>
                         <div className="text-muted-foreground">{org.description}</div>
                         <div className="flex flex-wrap gap-3 pt-2">
-                          {org.phone && (
+                          {('phone' in org) && org.phone && (
                             <a
                               href={`tel:${org.phone}`}
                               className="inline-flex items-center gap-1 text-primary hover:underline"

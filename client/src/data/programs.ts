@@ -292,10 +292,152 @@ export const assistancePrograms: AssistanceProgram[] = [
       employed: true,
       unemployed: true
     }
+  },
+  {
+    id: 'health-fund-exemptions',
+    title: 'פטורים בקופות חולים',
+    icon: '🏥',
+    category: 'health',
+    whatIsIt: 'פטור מתשלומים בקופת החולים (ביקור רופא, בדיקות, תרופות).',
+    howMuch: 'חיסכון של מאות עד אלפי שקלים בשנה.',
+    forWhom: 'מקבלי קצבאות (נכות, זיקנה, הבטחת הכנסה), אזרחים ותיקים.',
+    howToCheck: {
+      steps: [
+        'תתקשר לקופת החולים שלך',
+        'תשאל על "פטור מתשלומים"',
+        'תביא אישור מהביטוח לאומי'
+      ],
+      phoneDisplay: 'תתקשר לקופת החולים שלך'
+    },
+    eligibility: {
+      unemployed: true,
+      pensioner: true
+    }
+  },
+  {
+    id: 'municipal-assistance',
+    title: 'סיוע מהעירייה',
+    icon: '🏛️',
+    category: 'money',
+    whatIsIt: 'מענק כספי מהמחלקה לשירותים חברתיים בעירייה לצרכים חיוניים.',
+    howMuch: 'עד 14,520 ₪ בשנה למשפחה.',
+    forWhom: 'משפחות ויחידים במצוקה כלכלית.',
+    howToCheck: {
+      steps: [
+        'לך למחלקה לשירותים חברתיים בעירייה',
+        'תבקש לפגוש עובד סוציאלי',
+        'תסביר מה אתה צריך (ציוד, נסיעות, בריאות)'
+      ],
+      phoneDisplay: 'חייג לעירייה שלך ושאל על "שירותים חברתיים"'
+    },
+    eligibility: {
+      employed: true,
+      unemployed: true
+    }
+  },
+  {
+    id: 'legal-aid',
+    title: 'סיוע משפטי בחינם',
+    icon: '⚖️',
+    category: 'charity',
+    whatIsIt: 'ייצוג משפטי חינם בבתי משפט ובתי דין.',
+    howMuch: 'בחינם לגמרי (חוץ מאגרה קטנה).',
+    forWhom: 'אנשים עם הכנסה נמוכה שצריכים עורך דין.',
+    howToCheck: {
+      steps: [
+        'לך לאתר הסיוע המשפטי',
+        'תמלא טופס בקשה',
+        'תצרף אישורי הכנסה'
+      ],
+      url: 'https://www.gov.il/he/service/legal_aid_application',
+      phone: '1-800-350-350',
+      phoneDisplay: 'סיוע משפטי (1-800-350-350)'
+    },
+    eligibility: {
+      employed: true,
+      unemployed: true
+    }
+  },
+  {
+    id: 'vocational-training',
+    title: 'שוברים להכשרה מקצועית',
+    icon: '🎯',
+    category: 'education',
+    whatIsIt: 'מימון חלקי לקורסים מקצועיים (מחשבים, בנייה, טיפולים).',
+    howMuch: 'עד 7,000 ₪ למימון הקורס.',
+    forWhom: 'מבוגרים מעל 18 שרוצים ללמוד מקצוע.',
+    howToCheck: {
+      steps: [
+        'לך לאתר השוברים',
+        'תמלא בקשה',
+        'תבחר קורס'
+      ],
+      url: 'https://www.taasuka.gov.il/applicants/shovarim/',
+      phone: '1599-500-818',
+      phoneDisplay: 'שוברים (1599-500-818)'
+    },
+    eligibility: {
+      employed: true,
+      unemployed: true,
+      student: true
+    }
+  },
+  {
+    id: 'campus-il',
+    title: 'קמפוס IL - קורסים בחינם',
+    icon: '💻',
+    category: 'education',
+    whatIsIt: 'קורסים אונליין בחינם מהמדינה (מחשבים, אנגלית, פסיכומטרי).',
+    howMuch: 'בחינם לגמרי!',
+    forWhom: 'כל מי שרוצה ללמוד.',
+    howToCheck: {
+      steps: [
+        'לך לאתר קמפוס IL',
+        'תירשם',
+        'תתחיל ללמוד'
+      ],
+      url: 'https://campus.gov.il'
+    },
+    eligibility: {
+      employed: true,
+      unemployed: true,
+      student: true,
+      pensioner: true
+    }
+  },
+  {
+    id: 'activities-discount',
+    title: 'הנחות בחוגים וקייטנות',
+    icon: '⚽',
+    category: 'education',
+    whatIsIt: 'הנחה בחוגים עירוניים וקייטנות לילדים.',
+    howMuch: '10%-100% הנחה (תלוי בעירייה).',
+    forWhom: 'משפחות עם הכנסה נמוכה.',
+    howToCheck: {
+      steps: [
+        'תתקשר למחלקת קהילה ונוער בעירייה',
+        'תשאל על "הנחות בחוגים"',
+        'תביא אישורי הכנסה'
+      ],
+      phoneDisplay: 'חייג לעירייה שלך'
+    },
+    eligibility: {
+      hasChildren: true
+    }
   }
 ];
 
 export const charityOrganizations = [
+  {
+    category: 'ייעוץ וסיוע משפטי',
+    icon: '⚖️',
+    organizations: [
+      { name: 'יד שרה', description: 'ייעוץ משפטי לקשישים וחולים', url: 'https://yad-sarah.net' },
+      { name: 'ידיד', description: 'ייעוץ משפטי בתחום הדיור', url: 'https://www.yadid.org.il' },
+      { name: 'שכר מצווה', description: 'ייעוץ משפטי בהתנדבות' },
+      { name: 'נעמת', description: 'סיוע משפטי לנשים', url: 'https://www.naamat.org.il' }
+    ]
+  },
   {
     category: 'אוכל ומזון',
     icon: '🍞',
