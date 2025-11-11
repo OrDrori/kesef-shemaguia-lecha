@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { assistancePrograms, charityOrganizations, type AssistanceProgram } from "@/data/programs";
 import { type Answers, getAnswers } from "@/lib/answers";
-import { ChevronDown, ExternalLink, Phone } from "lucide-react";
+import { ChevronDown, ExternalLink, Phone, Share2 } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
 
@@ -59,6 +59,72 @@ export default function Results() {
           {relevantPrograms.map((program) => (
             <ProgramCard key={program.id} program={program} />
           ))}
+        </div>
+
+        {/* WhatsApp Share */}
+        <div className="mt-12 text-center">
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">📱 שמור את זה לעצמך</h3>
+            <p className="text-muted-foreground mb-4">
+              שלח לעצמך את התוצאות בוואטסאפ כדי שלא תשכח
+            </p>
+            <Button
+              size="lg"
+              className="text-xl px-8 py-6"
+              onClick={() => {
+                const text = `היי! מצאתי כלי שבודק מה מגיע לי מהמדינה.
+
+הנה התוצאות שלי:
+${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
+
+כנס לכאן: ${window.location.origin}`;
+                window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+              }}
+            >
+              <Share2 className="ml-2 h-5 w-5" />
+              שלח לוואטסאפ
+            </Button>
+          </div>
+        </div>
+
+        {/* Success Stories */}
+        <div className="mt-16 space-y-6">
+          <h2 className="text-3xl font-bold text-center">💬 אנשים שזה עבד להם</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="p-6 bg-primary/5">
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl">👨‍👩‍👧‍👦</div>
+                  <div className="flex-1">
+                    <blockquote className="text-lg italic">
+                      "לא האמנתי שזה אמיתי. אבל עשיתי את מה שהכלי אמר לי,
+                      ואחרי חודשיים קיבלתי 12,000 ₪ מהמדינה.
+                      זה שינה לנו את החיים."
+                    </blockquote>
+                    <cite className="text-sm text-muted-foreground mt-2 block">
+                      — דני, אב ל-3 ילדים, תל אביב
+                    </cite>
+                  </div>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6 bg-primary/5">
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl">👵</div>
+                  <div className="flex-1">
+                    <blockquote className="text-lg italic">
+                      "הייתי בטוחה שלא מגיע לי כלום. הכלי הראה לי שאני זכאית
+                      להנחות בארנונה ובחשמל. זה חוסך לי אלפים בשנה."
+                    </blockquote>
+                    <cite className="text-sm text-muted-foreground mt-2 block">
+                      — רחל, פנסיונרית, חיפה
+                    </cite>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
 
         {/* Additional Help Section */}

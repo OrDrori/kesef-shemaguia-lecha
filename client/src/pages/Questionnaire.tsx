@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { type Answers, saveAnswers } from "@/lib/answers";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
+import { toast } from "sonner";
 
 export default function Questionnaire() {
   const [, setLocation] = useLocation();
@@ -16,27 +17,42 @@ export default function Questionnaire() {
   });
 
   const handleEmploymentSelect = (value: 'employed' | 'unemployed' | 'pensioner' | 'student') => {
-    setAnswers({ ...answers, employment: value });
+    const newAnswers = { ...answers, employment: value };
+    setAnswers(newAnswers);
+    saveAnswers(newAnswers);
+    toast.success('✓ שמרנו בשבילך');
     setTimeout(() => setCurrentStep(2), 300);
   };
 
   const handleChildrenSelect = (value: boolean) => {
     if (value) {
-      setAnswers({ ...answers, hasChildren: value });
+      const newAnswers = { ...answers, hasChildren: value };
+      setAnswers(newAnswers);
+      saveAnswers(newAnswers);
+      toast.success('✓ שמרנו בשבילך');
       setTimeout(() => setCurrentStep(2.5), 300); // Go to children count
     } else {
-      setAnswers({ ...answers, hasChildren: value, childrenCount: 0 });
+      const newAnswers = { ...answers, hasChildren: value, childrenCount: 0 };
+      setAnswers(newAnswers);
+      saveAnswers(newAnswers);
+      toast.success('✓ שמרנו בשבילך');
       setTimeout(() => setCurrentStep(3), 300);
     }
   };
 
   const handleChildrenCount = (count: number) => {
-    setAnswers({ ...answers, childrenCount: count });
+    const newAnswers = { ...answers, childrenCount: count };
+    setAnswers(newAnswers);
+    saveAnswers(newAnswers);
+    toast.success('כל הכבוד! ✓');
     setTimeout(() => setCurrentStep(3), 300);
   };
 
   const handleRentingSelect = (value: boolean) => {
-    setAnswers({ ...answers, renting: value });
+    const newAnswers = { ...answers, renting: value };
+    setAnswers(newAnswers);
+    saveAnswers(newAnswers);
+    toast.success('כל הכבוד! ✓');
     setTimeout(() => setCurrentStep(4), 300);
   };
 

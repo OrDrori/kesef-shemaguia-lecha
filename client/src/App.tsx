@@ -7,12 +7,14 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Questionnaire from "./pages/Questionnaire";
 import Results from "./pages/Results";
+import UrgentHelp from "./pages/UrgentHelp";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path="/questionnaire" component={Questionnaire} />
+      <Route path={"/urgent"} component={UrgentHelp} />
+      <Route path={"/questionnaire"} component={Questionnaire} />
       <Route path="/results" component={Results} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
