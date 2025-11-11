@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
+import PersonalStory from "@/components/PersonalStory";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -53,28 +54,9 @@ export default function Home() {
           זה בחינם. זה פשוט. זה זכות שלך.
         </p>
 
-        {/* Transparency section */}
-        <div className="mt-16 max-w-3xl mx-auto bg-primary/5 border border-primary/20 rounded-2xl p-8 text-right">
-          <h3 className="text-2xl font-bold mb-4 flex items-center justify-center gap-2">
-            💚 למה בניתי את זה?
-          </h3>
-          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              שלום, אני אור דרורי. ראיתי הרבה אנשים טובים שלא יודעים שמגיע להם כסף מהמדינה.
-              אנשים שפשוט לא מבינים את הבירוקרטיה המסובכת.
-            </p>
-            <p>
-              אז בניתי את הכלי הזה. <strong>זה בחינם לגמרי. תמיד.</strong>
-            </p>
-            <div className="text-base space-y-1 bg-background/50 p-4 rounded-lg">
-              <p>✓ אני לא שומר מידע אישי</p>
-              <p>✓ אני לא מוכר כלום</p>
-              <p>✓ אני לא מקבל עמלה</p>
-            </div>
-            <p>
-              זה פשוט החסד שלי. זה מה שאני מאמין בו - לעזור לחלשים בחברה.
-            </p>
-          </div>
+        {/* Personal Story */}
+        <div className="mt-16 max-w-3xl mx-auto">
+          <PersonalStory />
         </div>
       </div>
 
