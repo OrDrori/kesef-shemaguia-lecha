@@ -19,7 +19,7 @@ export default function UrgentHelp() {
         {
           type: "link",
           label: "לשכת רווחה באזור שלך",
-          url: "https://www.gov.il/he/departments/guides/welfare-offices-list"
+          url: "https://www.gov.il/he/departments/dynamiccollectors/molsa-social-departmentsd-list"
         }
       ]
     },
@@ -34,9 +34,10 @@ export default function UrgentHelp() {
           value: "03-6878790"
         },
         {
-          type: "link",
-          label: "טופס בקשה לקרן חירום",
-          url: "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA_%D7%97%D7%99%D7%A8%D7%95%D7%9D"
+          type: "phone",
+          label: "לשכת רווחה - קרנות חירום",
+          value: "118",
+          note: "התקשרו למוקד 118 ובקשו חיבור ללשכת הרווחה"
         }
       ]
     },
@@ -117,14 +118,14 @@ export default function UrgentHelp() {
                           </p>
                         )}
                       </a>
-                    ) : (
+                    ) : action.type === "link" && 'url' in action ? (
                       <a href={action.url} target="_blank" rel="noopener noreferrer" className="block">
                         <Button variant="outline" className="w-full text-lg py-6" size="lg">
                           <ExternalLink className="ml-2 h-5 w-5" />
                           {action.label}
                         </Button>
                       </a>
-                    )}
+                    ) : null}
                   </div>
                 ))}
               </div>
