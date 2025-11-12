@@ -1,12 +1,12 @@
 export interface Answers {
   employment: 'employed' | 'unemployed' | 'pensioner' | 'student' | null;
-  hasChildren: boolean | null;
-  childrenCount: number | null;
-  renting: boolean | null;
-  healthIssues: 'yes' | 'no' | 'skip' | null;
+  hasChildren: 'yes' | 'no' | null;
+  numChildren: number | null;
+  housing: 'rent' | 'own' | null;
+  health: 'yes' | 'no' | 'skip' | null;
 }
 
-const STORAGE_KEY = 'questionnaire-answers';
+const STORAGE_KEY = 'questionnaire_answers';
 
 export function saveAnswers(answers: Answers): void {
   try {

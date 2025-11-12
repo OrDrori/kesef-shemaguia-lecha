@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { type Answers, saveAnswers } from "@/lib/answers";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
 
@@ -11,9 +11,9 @@ export default function Questionnaire() {
   const [answers, setAnswers] = useState<Answers>({
     employment: null,
     hasChildren: null,
-    childrenCount: null,
-    renting: null,
-    healthIssues: null
+    numChildren: null,
+    housing: null,
+    health: null
   });
 
   const handleEmploymentSelect = (value: 'employed' | 'unemployed' | 'pensioner' | 'student') => {
@@ -24,15 +24,15 @@ export default function Questionnaire() {
     setTimeout(() => setCurrentStep(2), 300);
   };
 
-  const handleChildrenSelect = (value: boolean) => {
-    if (value) {
+  const handleChildrenSelect = (value: 'yes' | 'no') => {
+    if (value === 'yes') {
       const newAnswers = { ...answers, hasChildren: value };
       setAnswers(newAnswers);
       saveAnswers(newAnswers);
       toast.success('✓ שמרנו בשבילך');
       setTimeout(() => setCurrentStep(2.5), 300); // Go to children count
     } else {
-      const newAnswers = { ...answers, hasChildren: value, childrenCount: 0 };
+      const newAnswers = { ...answers, hasChildren: value, numChildren: 0 };
       setAnswers(newAnswers);
       saveAnswers(newAnswers);
       toast.success('✓ שמרנו בשבילך');
@@ -41,15 +41,15 @@ export default function Questionnaire() {
   };
 
   const handleChildrenCount = (count: number) => {
-    const newAnswers = { ...answers, childrenCount: count };
+    const newAnswers = { ...answers, numChildren: count };
     setAnswers(newAnswers);
     saveAnswers(newAnswers);
     toast.success('כל הכבוד! ✓');
     setTimeout(() => setCurrentStep(3), 300);
   };
 
-  const handleRentingSelect = (value: boolean) => {
-    const newAnswers = { ...answers, renting: value };
+  const handleRentingSelect = (value: 'rent' | 'own') => {
+    const newAnswers = { ...answers, housing: value };
     setAnswers(newAnswers);
     saveAnswers(newAnswers);
     toast.success('כל הכבוד! ✓');
@@ -57,7 +57,7 @@ export default function Questionnaire() {
   };
 
   const handleHealthSelect = (value: 'yes' | 'no' | 'skip') => {
-    const finalAnswers = { ...answers, healthIssues: value };
+    const finalAnswers = { ...answers, health: value };
     setAnswers(finalAnswers);
     saveAnswers(finalAnswers);
     setTimeout(() => {
@@ -68,7 +68,7 @@ export default function Questionnaire() {
   const goBack = () => {
     if (currentStep === 2.5) {
       setCurrentStep(2);
-      setAnswers({ ...answers, childrenCount: null });
+      setAnswers({ ...answers, numChildren: null });
     } else if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
     } else {
@@ -127,13 +127,13 @@ export default function Questionnaire() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { value: true, label: 'כן', icon: '👶' },
-                { value: false, label: 'לא', icon: '🙅' }
+                { value: 'yes', label: 'כן', icon: '👶' },
+                { value: 'no', label: 'לא', icon: '🙅' }
               ].map((option) => (
                 <Card
                   key={option.label}
                   className="p-8 cursor-pointer hover:bg-accent hover:border-primary transition-all"
-                  onClick={() => handleChildrenSelect(option.value)}
+                  onClick={() => handleChildrenSelect(option.value as 'yes' | 'no')}
                 >
                   <div className="text-center space-y-3">
                     <div className="text-5xl">{option.icon}</div>
@@ -176,13 +176,13 @@ export default function Questionnaire() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { value: true, label: 'כן, אני שוכר', icon: '🔑' },
-                { value: false, label: 'לא, דירה בבעלות', icon: '🏡' }
+                { value: 'rent', label: 'כן, אני שוכר', icon: '🔑' },
+                { value: 'own', label: 'לא, דירה בבעלות', icon: '🏡' }
               ].map((option) => (
                 <Card
                   key={option.label}
                   className="p-8 cursor-pointer hover:bg-accent hover:border-primary transition-all"
-                  onClick={() => handleRentingSelect(option.value)}
+                  onClick={() => handleRentingSelect(option.value as 'rent' | 'own')}
                 >
                   <div className="text-center space-y-3">
                     <div className="text-5xl">{option.icon}</div>

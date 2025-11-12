@@ -28,13 +28,13 @@ export default function Results() {
     if (answers.employment === 'student' && !eligibility.student) return false;
     
     // Check children
-    if (eligibility.hasChildren && !answers.hasChildren) return false;
+    if (eligibility.hasChildren && answers.hasChildren !== 'yes') return false;
     
     // Check renting
-    if (eligibility.renting && !answers.renting) return false;
+    if (eligibility.renting && answers.housing !== 'rent') return false;
     
     // Check health
-    if (eligibility.healthIssues && answers.healthIssues !== 'yes') return false;
+    if (eligibility.healthIssues && answers.health !== 'yes') return false;
     
     return true;
   });
