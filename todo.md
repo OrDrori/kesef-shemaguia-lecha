@@ -405,3 +405,147 @@
 - [x] בניית רכיב CategoryCard
 - [x] החלפת רשימה ארוכה בקטגוריות
 - [x] בדיקת UX - האם זה יותר קל?
+
+## v3.3 - הסרת פרטי קשר + עיצוב אחיד 🎨
+
+### הסרת פרטי קשר של הבעלים
+- [ ] הסרת טלפון ווואטסאפ מ-NoResultsHelp
+- [ ] בדיקה שאין פרטי קשר בשום מקום (חוץ מדף תרומות)
+- [ ] החלפה בהודעה כללית "צרו קשר דרך הטופס באתר"
+
+### עיצוב אחיד בכל העמודים
+- [ ] בדיקת עמוד הבית (Home)
+- [ ] בדיקת Level 1 (Questionnaire)
+- [ ] בדיקת Results Level 1
+- [ ] בדיקת Level 2 (QuestionnaireLevel2)
+- [ ] בדיקת Results Level 2
+- [ ] אחידות בצבעים, פונטים, spacing
+- [ ] השראה מאתרים שהמשתמש שלח
+
+## v4.0 - 5 וריאציות עיצוב לבחירה 🎨
+
+### עקרונות עיצוב לקהל היעד (החלשים ביותר)
+- פשוט ונקי - ללא עומס ויזואלי
+- קריא מאוד - פונטים גדולים, ניגודיות טובה
+- נגיש - צבעים שלא מלחיצים, spacing נדיב
+- מנחה - ברור מה לעשות בכל שלב
+- מרגיע - לא צעקני, לא מאיים
+
+### וריאציות עיצוב
+- [ ] וריאציה 1: רך וממוקד (צבעים פסטליים, spacing מקסימלי)
+- [ ] וריאציה 2: ממשלתי נקי (בהשראת Gov.il)
+- [ ] וריאציה 3: חם ותומך (צבעים חמים, אייקונים גדולים)
+- [ ] וריאציה 4: מינימליסטי (רק מה שצריך)
+- [ ] וריאציה 5: נגיש מקסימלי (ניגודיות גבוהה, פונטים ענקיים)
+
+### צילומי מסך
+- [ ] 2-3 עמודים ראשיים (Home, Questionnaire, Results)
+- [ ] 5 וריאציות × 3 עמודים = 15 תמונות
+- [ ] שליחה למשתמש לבחירה
+
+## v4.1 - יצירת תמונות mockup עיצוביות 🎨
+
+### יצירת תמונות Variation A (מילואים)
+- [ ] Home page mockup
+- [ ] Questionnaire page mockup
+- [ ] Results page mockup
+
+### יצירת תמונות Variation B (Gov.il)
+- [ ] Home page mockup
+- [ ] Questionnaire page mockup
+- [ ] Results page mockup
+
+### יצירת תמונות Variation C (שילוב)
+- [ ] Home page mockup
+- [ ] Questionnaire page mockup
+- [ ] Results page mockup
+
+### יצירת תמונות Variation D (נגישות מקסימלית)
+- [ ] Home page mockup
+- [ ] Questionnaire page mockup
+- [ ] Results page mockup
+
+### אריזה ומסירה
+- [ ] ארגון כל התמונות
+- [ ] יצירת README
+- [ ] שליחה למשתמש
+
+## v4.0 - מחקר עמוק ועיצוב מחדש 🔬
+
+### מחקר מעמיק על אתרי ייחוס
+- [ ] ניתוח miluim.idf.il - צבעים, spacing, טיפוגרפיה, shadows
+- [ ] ניתוח gov.il - מבנה, רכיבים, UX patterns
+- [ ] תיעוד כל הממצאים בקובץ מחקר
+
+### יצירת וריאציות CSS אמיתיות
+- [ ] וריאציה A: בהשראת מילואים (כחול-אפור רך)
+- [ ] וריאציה B: בהשראת Gov.il (כחול ממשלתי)
+- [ ] וריאציה C: שילוב של שניהם
+- [ ] וריאציה D: גרסה נגישה מקסימלית
+
+### יישום על כל העמודים
+- [ ] החלפת index.css לכל וריאציה
+- [ ] צילום Home page
+- [ ] צילום Questionnaire page
+- [ ] צילום Results page
+- [ ] 4 וריאציות × 3 עמודים = 12 screenshots
+
+### אריזה ומסירה
+- [ ] ארגון כל התמונות בתיקיות
+- [ ] יצירת README עם הסבר
+- [ ] שליחה למשתמש
+
+## v5.0 - Design Brief ל-Figma/Canva/UX Pilot 📐
+
+### כתיבת Design Brief מקיף
+- [x] חלק 1: הוויז'ן, קהל היעד, עקרונות עיצוב
+- [x] חלק 2: פלטת צבעים, spacing, טיפוגרפיה, רכיבים
+- [x] חלק 3: תיעוד כל העמודים עם specifications
+- [x] אריזה ומסירה למשתמש
+
+## v6.0 - חוקת נגישות ויישום מלא ♿
+
+### מחקר נגישות מקיף
+- [x] מחקר תקנים בינלאומיים (WCAG 2.1, WCAG 3.0, ADA, Section 508)
+- [x] מחקר חוקי נגישות בישראל (תקן 5568, חוק שוויון זכויות)
+- [x] מחקר סוגי מוגבלויות (ראייה, שמיעה, מוטורי, קוגניטיבי, נוירודיברגנטי)
+- [x] מחקר best practices מאתרים נגישים מצוינים
+- [x] שמירת ממצאים לקובץ
+
+### יצירת חוקת נגישות
+- [x] כתיבת חוקת נגישות מקיפה
+- [x] דרישות לכל סוג מוגבלות
+- [x] דרישות טכניות ספציפיות
+- [x] checklist לבדיקה
+
+### יישום Design Brief בקוד
+- [x] החלפת אמוג'י באייקונים וקטוריים (Lucide React)
+- [x] עדכון פלטת צבעים (Primary Blue #0067B9, Soft Green #4A7C59)
+- [x] עדכון טיפוגרפיה (Assistant font, 18px+ body text)
+- [x] עדכון spacing system (4px increments)
+- [x] עדכון כפתורים (48px height, rounded corners)
+- [x] עדכון כרטיסים (12px radius, subtle shadows)
+- [x] עדכון progress indicators
+
+### יישום דרישות נגישות בקוד
+- [ ] ARIA labels לכל רכיבים אינטראקטיביים
+- [ ] Keyboard navigation מלא
+- [ ] Focus indicators ברורים
+- [ ] Screen reader support
+- [ ] Color contrast WCAG AA (4.5:1)
+- [ ] Touch targets 48px+
+- [ ] Skip to content links
+- [ ] Alt text לכל תמונות
+- [ ] Form labels ו-error messages נגישים
+- [ ] Responsive design מלא
+
+### בדיקה ואימות
+- [ ] בדיקת נגישות עם screen reader
+- [ ] בדיקת keyboard navigation
+- [ ] בדיקת color contrast
+- [ ] בדיקת responsive design
+- [ ] בדיקת WCAG compliance
+
+### Checkpoint ומסירה
+- [ ] שמירת checkpoint
+- [ ] מסירה למשתמש

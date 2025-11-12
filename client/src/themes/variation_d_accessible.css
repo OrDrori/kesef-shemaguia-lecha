@@ -1,0 +1,108 @@
+/**
+ * Variation D: נגישות מקסימלית
+ * צבעים: ניגודיות גבוהה - כחול כהה + לבן
+ * Spacing: מקסימלי
+ * Typography: פונטים ענקיים וברורים
+ */
+
+@layer base {
+  :root {
+    /* צבעי רקע */
+    --background: 0 0% 100%; /* לבן */
+    --foreground: 0 0% 0%; /* שחור */
+    
+    /* צבעי כרטיסים */
+    --card: 0 0% 100%; /* לבן */
+    --card-foreground: 0 0% 0%;
+    
+    /* צבעי popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    
+    /* צבע ראשי - כחול כהה (ניגודיות גבוהה) */
+    --primary: 210 100% 25%; /* #003D7A */
+    --primary-foreground: 0 0% 100%;
+    
+    /* צבע משני - אפור בהיר */
+    --secondary: 0 0% 95%; /* #F2F2F2 */
+    --secondary-foreground: 0 0% 0%;
+    
+    /* צבע muted */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 20%;
+    
+    /* צבע accent - כחול בהיר */
+    --accent: 210 100% 90%;
+    --accent-foreground: 210 100% 20%;
+    
+    /* צבעי destructive */
+    --destructive: 0 100% 40%; /* אדום כהה */
+    --destructive-foreground: 0 0% 100%;
+    
+    /* צבעי border */
+    --border: 0 0% 80%; /* #CCCCCC */
+    --input: 0 0% 80%;
+    --ring: 210 100% 25%;
+    
+    /* radius */
+    --radius: 0.5rem; /* 8px - גדול יותר */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Assistant', 'Rubik', sans-serif;
+    font-size: 20px; /* גדול! */
+    line-height: 1.8; /* ריווח גדול */
+    font-weight: 500; /* משקל בינוני-כבד */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  
+  h1 { font-size: 3rem; } /* 48px - ענק! */
+  h2 { font-size: 2.5rem; } /* 40px */
+  h3 { font-size: 2rem; } /* 32px */
+  
+  /* Spacing מקסימלי */
+  .container {
+    @apply mx-auto px-8 lg:px-16;
+    max-width: 1280px;
+  }
+  
+  /* כפתורים גדולים */
+  button, .btn {
+    @apply px-8 py-4 text-lg font-bold;
+    border-radius: var(--radius);
+    min-height: 56px; /* גובה מינימלי */
+  }
+  
+  /* כרטיסים */
+  .card {
+    @apply bg-card text-card-foreground p-8 lg:p-12;
+    border-radius: var(--radius);
+    border: 2px solid var(--border); /* מסגרת עבה */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  /* צללים בולטים */
+  .shadow-sm {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  /* focus rings בולטים */
+  *:focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+  }
+}

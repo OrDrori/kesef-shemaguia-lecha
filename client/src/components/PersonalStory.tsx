@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Heart, ArrowLeft, Check } from 'lucide-react';
 import { Button } from './ui/button';
 
 export default function PersonalStory() {
@@ -7,8 +7,8 @@ export default function PersonalStory() {
 
   return (
     <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-6 md:p-8">
-      <h2 className="text-2xl font-bold text-center mb-4 flex items-center justify-center gap-2">
-        <span className="text-4xl">💚</span>
+      <h2 id="personal-story-heading" className="text-2xl font-bold text-center mb-4 flex items-center justify-center gap-2">
+        <Heart className="w-8 h-8 text-secondary fill-secondary" aria-hidden="true" />
         למה בניתי את זה?
       </h2>
 
@@ -34,7 +34,7 @@ export default function PersonalStory() {
         </p>
 
         {isExpanded && (
-          <div className="space-y-4 mt-4 pt-4 border-t-2 border-green-200">
+          <div id="personal-story-full" className="space-y-4 mt-4 pt-4 border-t-2 border-green-200">
             <p className="text-gray-700">
               אני לא מבטיח לך כלום. לא כל תוכנית תתאים לך, ולא תמיד תקבל את מה שאתה צריך. 
               אבל אני <strong>מבטיח לך</strong> שאני אנסה. שאני אמשיך לחפש. שאני לא אעזוב אותך.
@@ -51,19 +51,29 @@ export default function PersonalStory() {
             </p>
 
             <div className="bg-white rounded-lg p-4 mt-4">
-              <p className="text-sm text-gray-600 space-y-2">
-                <span className="block">✓ אנחנו לא שומרים מידע אישי</span>
-                <span className="block">✓ אנחנו לא מוכרים כלום</span>
-                <span className="block">✓ אנחנו לא מקבל עמלה</span>
-              </p>
+              <ul className="text-sm text-gray-600 space-y-2" role="list">
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-secondary flex-shrink-0" aria-hidden="true" />
+                  <span>אנחנו לא שומרים מידע אישי</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-secondary flex-shrink-0" aria-hidden="true" />
+                  <span>אנחנו לא מוכרים כלום</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-secondary flex-shrink-0" aria-hidden="true" />
+                  <span>אנחנו לא מקבל עמלה</span>
+                </li>
+              </ul>
             </div>
 
             <p className="text-gray-700 italic">
               זה פשוט החסד שלי. זה מה שאני מאמין בו.
             </p>
 
-            <p className="text-gray-700 font-semibold text-center mt-6">
-              אז בוא נתחיל. ביחד. 💚
+            <p className="text-gray-700 font-semibold text-center mt-6 flex items-center justify-center gap-2">
+              אז בוא נתחיל. ביחד.
+              <Heart className="w-5 h-5 text-secondary fill-secondary" aria-hidden="true" />
             </p>
           </div>
         )}
@@ -72,7 +82,9 @@ export default function PersonalStory() {
           <Button
             variant="ghost"
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-green-700 hover:text-green-800 hover:bg-green-100"
+            className="text-green-700 hover:text-green-800 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+            aria-expanded={isExpanded}
+            aria-controls="personal-story-full"
           >
             {isExpanded ? (
               <>
@@ -96,10 +108,12 @@ export default function PersonalStory() {
             </p>
             <Button 
               size="lg" 
-              className="bg-green-600 hover:bg-green-700 text-white text-xl px-8 py-6"
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-xl px-8 py-6 min-h-[60px] focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               onClick={() => window.location.href = '/questionnaire'}
+              aria-label="התחל שאלון לבדיקת זכאות"
             >
-              בוא נתחיל →
+              <ArrowLeft className="w-5 h-5 ml-2" aria-hidden="true" />
+              בוא נתחיל
             </Button>
           </div>
         )}

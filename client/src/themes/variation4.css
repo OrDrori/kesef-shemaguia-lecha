@@ -1,0 +1,85 @@
+/* Variation 4: Minimalist - מינימליסטי */
+/* Only what's needed - clean, simple, no distractions */
+
+@layer base {
+  :root {
+    /* Minimal color palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 0% 20%; /* Dark gray */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 30%;
+
+    --radius: 0.25rem; /* Minimal border radius */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-bold mb-3;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold mb-3;
+  }
+
+  p {
+    @apply leading-normal mb-3;
+  }
+
+  button {
+    @apply px-6 py-2.5 text-base;
+  }
+
+  .card {
+    @apply border border-gray-200;
+  }
+
+  .container {
+    @apply px-4 md:px-6;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary;
+  }
+}

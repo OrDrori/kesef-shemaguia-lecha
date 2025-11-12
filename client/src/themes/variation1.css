@@ -1,0 +1,125 @@
+/* Variation 1: Soft and Focused - רך וממוקד */
+/* Pastel colors, maximum spacing, calming and supportive */
+
+@layer base {
+  :root {
+    /* Soft pastel color palette */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 20%;
+
+    --primary: 200 80% 85%; /* Soft blue */
+    --primary-foreground: 200 80% 25%;
+
+    --secondary: 340 60% 90%; /* Soft pink */
+    --secondary-foreground: 340 60% 30%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 10% 40%;
+
+    --accent: 160 50% 85%; /* Soft green */
+    --accent-foreground: 160 50% 25%;
+
+    --destructive: 0 60% 90%;
+    --destructive-foreground: 0 60% 35%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 200 80% 70%;
+
+    --radius: 1rem; /* Larger border radius for softer feel */
+  }
+
+  .dark {
+    --background: 240 10% 15%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 18%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 18%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 200 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 50% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 25%;
+    --muted-foreground: 210 10% 70%;
+
+    --accent: 160 40% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 25%;
+    --input: 210 20% 25%;
+    --ring: 200 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Larger base font size for better readability */
+  html {
+    font-size: 18px;
+  }
+
+  /* Headings with generous spacing */
+  h1 {
+    @apply text-4xl md:text-5xl font-bold mb-6 leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold mb-5 leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold mb-4 leading-snug;
+  }
+
+  /* Paragraphs with generous line height */
+  p {
+    @apply leading-relaxed mb-4;
+  }
+
+  /* Buttons with maximum padding */
+  button {
+    @apply px-8 py-4 text-lg;
+  }
+
+  /* Cards with soft shadows */
+  .card {
+    @apply shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  /* Maximum spacing utilities */
+  .container {
+    @apply px-6 md:px-12;
+  }
+
+  /* Soft focus states */
+  *:focus-visible {
+    @apply outline-none ring-4 ring-primary/30;
+  }
+}

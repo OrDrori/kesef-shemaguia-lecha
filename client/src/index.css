@@ -43,40 +43,65 @@
 }
 
 :root {
-  /* Warm, hopeful color palette - green (growth/hope) + blue (trust/calm) */
-  --primary: oklch(0.55 0.15 145); /* Warm green */
-  --primary-foreground: oklch(0.98 0 0); /* White */
-  --secondary: oklch(0.60 0.12 220); /* Calm blue */
-  --secondary-foreground: oklch(0.98 0 0);
-  --radius: 1rem; /* Softer, friendlier corners */
-  --background: oklch(0.98 0.005 90); /* Warm off-white */
-  --foreground: oklch(0.25 0.01 90); /* Dark warm gray */
-  --card: oklch(1 0 0); /* Pure white cards */
-  --card-foreground: oklch(0.25 0.01 90);
+  /* Design Brief Color Palette - Government Blue + Soft Green */
+  /* Primary: Government Blue #0067B9 - Trust, authority, official */
+  --primary: oklch(0.50 0.15 240); /* #0067B9 Government Blue */
+  --primary-foreground: oklch(1 0 0); /* White text on blue */
+  
+  /* Secondary: Soft Green #4A7C59 - Growth, hope, nature */
+  --secondary: oklch(0.52 0.08 150); /* #4A7C59 Soft Green */
+  --secondary-foreground: oklch(1 0 0); /* White text on green */
+  
+  /* Radius: 12px for cards, 8px for buttons */
+  --radius: 0.75rem; /* 12px - friendly, modern */
+  
+  /* Backgrounds: Light and airy */
+  --background: oklch(1 0 0); /* Pure white #FFFFFF */
+  --foreground: oklch(0.25 0.01 240); /* Dark text #1F2937 - 16.1:1 contrast */
+  
+  /* Cards: White with subtle shadows */
+  --card: oklch(1 0 0); /* Pure white */
+  --card-foreground: oklch(0.25 0.01 240); /* Dark text */
+  
+  /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.01 90);
-  --muted: oklch(0.95 0.005 90);
-  --muted-foreground: oklch(0.50 0.01 90);
-  --accent: oklch(0.92 0.02 145); /* Light green accent */
-  --accent-foreground: oklch(0.25 0.01 90);
-  --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.88 0.01 90);
-  --input: oklch(0.88 0.01 90);
-  --ring: oklch(0.55 0.15 145);
-  --sidebar: oklch(0.98 0.005 90);
-  --sidebar-foreground: oklch(0.25 0.01 90);
-  --sidebar-primary: oklch(0.55 0.15 145);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.92 0.02 145);
-  --sidebar-accent-foreground: oklch(0.25 0.01 90);
-  --sidebar-border: oklch(0.88 0.01 90);
-  --sidebar-ring: oklch(0.55 0.15 145);
-  --chart-1: oklch(0.55 0.15 145);
-  --chart-2: oklch(0.60 0.12 220);
-  --chart-3: oklch(0.65 0.18 160);
-  --chart-4: oklch(0.50 0.10 200);
-  --chart-5: oklch(0.70 0.15 180);
+  --popover-foreground: oklch(0.25 0.01 240);
+  
+  /* Muted: Light gray backgrounds */
+  --muted: oklch(0.96 0.005 240); /* #F3F4F6 Light Gray */
+  --muted-foreground: oklch(0.45 0.01 240); /* #6B7280 Medium Gray */
+  
+  /* Accent: Light Blue */
+  --accent: oklch(0.92 0.03 240); /* #E0F2FE Light Blue */
+  --accent-foreground: oklch(0.25 0.01 240); /* Dark text */
+  
+  /* Destructive: Red for errors */
+  --destructive: oklch(0.55 0.22 25); /* #EF4444 Red */
+  --destructive-foreground: oklch(1 0 0); /* White */
+  
+  /* Borders: Light gray */
+  --border: oklch(0.90 0.005 240); /* #E5E7EB Light Gray Border */
+  --input: oklch(0.90 0.005 240);
+  
+  /* Focus ring: Government Blue */
+  --ring: oklch(0.50 0.15 240); /* #0067B9 */
+  
+  /* Sidebar (if needed) */
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.25 0.01 240);
+  --sidebar-primary: oklch(0.50 0.15 240);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.92 0.03 240);
+  --sidebar-accent-foreground: oklch(0.25 0.01 240);
+  --sidebar-border: oklch(0.90 0.005 240);
+  --sidebar-ring: oklch(0.50 0.15 240);
+  
+  /* Charts: Blue and Green variations */
+  --chart-1: oklch(0.50 0.15 240); /* Government Blue */
+  --chart-2: oklch(0.52 0.08 150); /* Soft Green */
+  --chart-3: oklch(0.60 0.12 240); /* Light Blue */
+  --chart-4: oklch(0.60 0.10 150); /* Light Green */
+  --chart-5: oklch(0.70 0.08 200); /* Teal */
 }
 
 .dark {
@@ -116,13 +141,14 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 18px; /* Larger base font for readability */
-    line-height: 1.6;
+    font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 18px; /* Larger base font for accessibility (WCAG 2.1) */
+    line-height: 1.6; /* WCAG 2.1 - 1.4.12 Text Spacing (minimum 1.5) */
+    letter-spacing: 0.02em; /* WCAG 2.1 - 1.4.12 Text Spacing */
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
