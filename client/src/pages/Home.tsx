@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import PersonalStory from "@/components/PersonalStory";
 
 export default function Home() {
@@ -58,6 +58,18 @@ export default function Home() {
         <div className="mt-16 max-w-3xl mx-auto">
           <PersonalStory />
         </div>
+
+        {/* Subtle Footer */}
+        <footer className="mt-16 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            רוצים לעזור לנו להמשיך לפתח ולשפר את האתר?{' '}
+            <Link href="/donate">
+              <a className="text-green-600 hover:text-green-700 underline">
+                לחצו כאן
+              </a>
+            </Link>
+          </p>
+        </footer>
       </div>
 
       {/* Decorative elements for warmth */}

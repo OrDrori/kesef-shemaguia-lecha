@@ -10,6 +10,7 @@ import Results from "./pages/Results";
 import UrgentHelp from "./pages/UrgentHelp";
 import QuestionnaireLevel2 from "./pages/QuestionnaireLevel2";
 import ResultsLevel2 from "./pages/ResultsLevel2";
+import Donate from "./pages/Donate";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/results" component={Results} />
       <Route path="/questionnaire-level2" component={QuestionnaireLevel2} />
       <Route path="/results-level2" component={ResultsLevel2} />
+      <Route path="/donate" component={Donate} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
