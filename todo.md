@@ -549,3 +549,107 @@
 ### Checkpoint ומסירה
 - [ ] שמירת checkpoint
 - [ ] מסירה למשתמש
+
+## v7.0 - THE ULTIMATE DESIGN CONSTITUTION 🔥
+
+### מחקר מקיף - עקרונות עיצוב אגדיים
+- [ ] Dieter Rams - 10 Principles of Good Design
+- [ ] Jony Ive - Apple Design Philosophy
+- [ ] Don Norman - Design of Everyday Things
+- [ ] Jakob Nielsen - Usability Heuristics
+- [ ] Massimo Vignelli - Design Principles
+- [ ] Paul Rand - Design Philosophy
+- [ ] Milton Glaser - Design Thinking
+
+### מחקר מקיף - Design Systems עולמיים
+- [ ] Apple Human Interface Guidelines
+- [ ] Google Material Design 3
+- [ ] Microsoft Fluent Design System
+- [ ] IBM Carbon Design System
+- [ ] Atlassian Design System
+- [ ] Shopify Polaris
+- [ ] Airbnb Design System
+
+### מחקר מקיף - פסיכולוגיה קוגניטיבית ונוירו-דיזיין
+- [ ] Gestalt Principles
+- [ ] Cognitive Load Theory
+- [ ] Visual Perception
+- [ ] Color Psychology
+- [ ] Typography Psychology
+- [ ] Attention and Focus
+- [ ] Memory and Recognition
+
+### מחקר מקיף - אסתטיקה ותיאוריית אמנות
+- [ ] Golden Ratio and Fibonacci
+- [ ] Visual Hierarchy
+- [ ] Balance and Symmetry
+- [ ] Contrast and Emphasis
+- [ ] Rhythm and Movement
+- [ ] Unity and Harmony
+- [ ] Minimalism vs Maximalism
+
+### מחקר מקיף - UX Patterns ו-Interaction Design
+- [ ] Micro-interactions
+- [ ] Animation Principles
+- [ ] Feedback Mechanisms
+- [ ] Progressive Disclosure
+- [ ] Affordances and Signifiers
+- [ ] Mental Models
+- [ ] User Flow Optimization
+
+### יצירת החוקה האולטימטיבית
+- [ ] סינתזה של כל המחקרים
+- [ ] כתיבת החוקה המאוחדת
+- [ ] עקרונות יסוד אוניברסליים
+- [ ] כללים מעשיים ליישום
+- [ ] דוגמאות ו-case studies
+- [ ] checklist מקיף
+
+### יישום החוקה בפרויקט
+- [ ] החלת עקרונות החוקה על כל העמודים
+- [ ] בדיקה מול החוקה
+- [ ] תיקונים ושיפורים
+
+## v7.1 - תרגום החוקה האולטימטיבית + תכונות חדשות 🎯
+
+### תרגום החוקה לעברית
+- [x] תרגום Part I: Foundational Principles
+- [x] תרגום Part II: Cognitive Foundations
+- [x] תרגום Part III: Design Excellence
+- [x] תרגום Part IV: Motion and Life
+- [x] תרגום Part V: Accessibility and Inclusion
+- [x] תרגום Part VI: Application and Practice
+- [x] תרגום כל הטבלאות והדוגמאות
+- [x] בדיקת התרגום
+
+### שיפור החוקה - הפיכתה ל-Actionable
+- [x] הוספת דוגמאות קוד React/Tailwind לכל עיקרון
+- [x] הוספת Checklists מפורטים לכל קטגוריה
+- [x] הוספת תנאים "אם...אז" למצבים שונים
+- [x] הוספת תבניות רכיבים מוכנות
+- [x] הוספת מדריכים צעד אחר צעד
+- [x] הוספת טבלאות החלטה
+- [x] הוספת דוגמאות לפני/אחרי
+
+### יישום עקרונות החוקה באתר
+- [x] יישום Clarity principles
+- [x] יישום Accessibility principles - כל העמודים
+- [x] יישום Consistency principles
+- [x] יישום Feedback principles
+- [x] יישום Simplicity principles
+
+### מערכת התראות מותאמת אישית
+- [ ] תכנון מערכת ההתראות
+- [ ] בניית קומפוננטת Notification
+- [ ] אינטגרציה באתר
+- [ ] בדיקות
+
+### Stripe Payment לתרומות
+- [ ] הוספת feature Stripe
+- [ ] אינטגרציה בדף Donate
+- [ ] בדיקות תשלום
+- [ ] אבטחה
+
+### בדיקות ו-Checkpoint
+- [ ] בדיקת כל התכונות החדשות
+- [ ] Checkpoint סופי
