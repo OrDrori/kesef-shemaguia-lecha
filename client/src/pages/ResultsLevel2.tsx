@@ -7,6 +7,8 @@ import { assistancePrograms, charityOrganizations } from '@/data/programs';
 import { toast } from 'sonner';
 import HarHabituachCard from '@/components/HarHabituachCard';
 import NoResultsHelp from '@/components/NoResultsHelp';
+import CategoryCard from '@/components/CategoryCard';
+import { programCategories } from '@/data/categories';
 
 interface Answers {
   employment: string;
@@ -213,85 +215,31 @@ export default function ResultsLevel2() {
             מצאנו {filteredPrograms.length} תוכניות שמתאימות לכם! 🎯
           </h2>
           <p className="text-gray-600">
-            עכשיו תבדקו כל אחת ותראו מה באמת מגיע לכם
+            ארגנו את הכל בקטגוריות נוחות - לחצו על קטגוריה לראות את התוכניות 👇
           </p>
         </div>
 
-        {/* Programs */}
+        {/* Categories */}
         <div className="space-y-4 mb-8">
-          {filteredPrograms.map((program: any) => (
-            <Card key={program.id} className="p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <span className="text-4xl">{program.icon}</span>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800">{program.title}</h3>
-                    <p className="text-gray-600">{program.whatIsIt}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">כמה?</p>
-                  <p className="font-semibold text-green-600">{program.howMuch}</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">למי?</p>
-                  <p className="font-semibold">{program.forWhom}</p>
-                </div>
-              </div>
-
-              <Button
-                onClick={() => setExpandedProgram(expandedProgram === program.id ? null : program.id)}
-                variant="outline"
-                className="w-full"
-              >
-                {expandedProgram === program.id ? 'סגור' : 'איך בודקים? 👇'}
-              </Button>
-
-              {expandedProgram === program.id && (
-                <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                  <h4 className="font-bold mb-3">צעדים לבדיקה:</h4>
-                  <ol className="space-y-2 mb-4">
-                    {program.howToCheck.steps.map((step: string, idx: number) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="font-bold text-green-600">{idx + 1}.</span>
-                        <span>{step}</span>
-                      </li>
-                    ))}
-                  </ol>
-
-                  <div className="flex flex-col gap-2">
-                    {program.howToCheck.url && (
-                      <Button
-                        onClick={() => window.open(program.howToCheck.url, '_blank')}
-                        className="w-full"
-                      >
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                        פתחו את האתר
-                      </Button>
-                    )}
-                    {program.howToCheck.phone && (
-                      <Button
-                        onClick={() => window.location.href = `tel:${program.howToCheck.phone}`}
-                        variant="outline"
-                        className="w-full"
-                      >
-                        <Phone className="ml-2 h-4 w-4" />
-                        {program.howToCheck.phoneDisplay}
-                      </Button>
-                    )}
-                    {program.howToCheck.hours && (
-                      <p className="text-sm text-gray-500 text-center mt-2">
-                        ⏰ {program.howToCheck.hours}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              )}
-            </Card>
-          ))}
+          {programCategories.map((category) => {
+            const categoryPrograms = filteredPrograms.filter((p: any) => 
+              category.programIds.includes(p.id)
+            );
+            
+            if (categoryPrograms.length === 0) return null;
+            
+            return (
+              <CategoryCard
+                key={category.id}
+                title={category.title}
+                icon={category.icon}
+                description={category.description}
+                programs={categoryPrograms}
+                onProgramClick={(id) => setExpandedProgram(expandedProgram === id ? null : id)}
+                expandedProgram={expandedProgram}
+              />
+            );
+          })}
         </div>
 
         {/* Charity Organizations */}
