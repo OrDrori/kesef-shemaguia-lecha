@@ -54,6 +54,40 @@ export default function Results() {
           </p>
         </div>
 
+        {/* Level 2 Upgrade Card */}
+        <Card className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200">
+          <CardHeader className="text-center">
+            <div className="flex justify-center mb-4">
+              <div className="text-6xl">💡</div>
+            </div>
+            <CardTitle className="text-3xl">רוצה תוצאות מדויקות יותר?</CardTitle>
+            <CardDescription className="text-lg mt-2">
+              ענה על עוד כמה שאלות ונחשב לך בדיוק כמה כסף מגיע לך!
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-center space-y-4">
+            <div className="bg-white/60 rounded-lg p-4 max-w-md mx-auto">
+              <p className="text-gray-700 font-medium">
+                💰 נחשב לך: <strong>15,000-35,000 ₪ בשנה!</strong>
+                <br />
+                <span className="text-sm text-gray-600">
+                  (בהתאם למצב הכלכלי שלך)
+                </span>
+              </p>
+            </div>
+            <Button
+              size="lg"
+              className="text-xl px-8 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+              onClick={() => navigate('/questionnaire-level2')}
+            >
+              🚀 כן! תנ לי תוצאות מדויקות
+            </Button>
+            <p className="text-sm text-gray-500">
+              רק 5 שאלות נוספות • לוקח 2 דקות
+            </p>
+          </CardContent>
+        </Card>
+
         {/* Programs List */}
         <div className="space-y-4">
           {relevantPrograms.map((program) => (
