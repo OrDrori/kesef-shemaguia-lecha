@@ -653,3 +653,58 @@
 ### בדיקות ו-Checkpoint
 - [ ] בדיקת כל התכונות החדשות
 - [ ] Checkpoint סופי
+
+## v8.0 - QA מקיף ושיפורים
+
+### הכנת סביבת בדיקה
+- [ ] התקנת Playwright browser
+- [ ] הגדרת כלי בדיקה
+
+### בדיקות ויזואליות (Playwright)
+- [ ] בדיקת עמוד הבית - Desktop
+- [ ] בדיקת עמוד הבית - Mobile
+- [ ] בדיקת עמוד השאלון - כל השאלות
+- [ ] בדיקת עמוד התוצאות - עם תוצאות
+- [ ] בדיקת עמוד עזרה דחופה
+- [ ] בדיקת כל האינטראקציות (clicks, hovers, focus)
+- [ ] צילומי מסך של כל מצב
+
+### בדיקות נגישות
+- [ ] WCAG 2.1 Level AA - בדיקה אוטומטית
+- [ ] Keyboard navigation - כל העמודים
+- [ ] Screen reader compatibility
+- [ ] Color contrast ratios
+- [ ] Focus indicators visibility
+- [ ] ARIA labels correctness
+- [ ] Semantic HTML structure
+
+### בדיקות ביצועים
+- [ ] Loading time - עמוד הבית
+- [ ] Loading time - עמוד השאלון
+- [ ] Bundle size analysis
+- [ ] Image optimization
+- [ ] CSS optimization
+- [ ] Lighthouse score
+
+### בדיקות UX
+- [ ] User flow: Home → Questionnaire → Results
+- [ ] User flow: Home → Urgent Help
+- [ ] Error states
+- [ ] Empty states
+- [ ] Loading states
+- [ ] Mobile usability
+- [ ] Touch target sizes
+
+### בדיקות תוכן
+- [ ] כל הטקסטים בעברית תקינים
+- [ ] כל הקישורים עובדים
+- [ ] מספרי טלפון נכונים
+- [ ] URLs חיצוניים תקינים
+
+### תיקון בעיות
+- [ ] תיקון כל הבעיות שנמצאו
+- [ ] אימות התיקונים
+
+### אימות סופי
+- [ ] בדיקה חוזרת של כל הזרימות
+- [ ] Checkpoint סופי

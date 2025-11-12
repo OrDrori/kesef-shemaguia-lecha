@@ -17,8 +17,54 @@ import {
   Users,
   UserRound,
   Heart,
-  Clock
+  Clock,
+  Building,
+  Baby,
+  Building2,
+  Bus,
+  Home,
+  GraduationCap,
+  Pill,
+  BarChart,
+  Banknote,
+  Hospital,
+  Landmark,
+  Scale,
+  Laptop,
+  Receipt,
+  Search,
+  Trophy,
+  Zap,
+  BookOpen,
+  Wheat,
+  type LucideIcon
 } from "lucide-react";
+
+// Icon mapping for programs
+const iconMap: Record<string, LucideIcon> = {
+  DollarSign,
+  Building,
+  Baby,
+  Building2,
+  Lightbulb,
+  Bus,
+  Home,
+  GraduationCap,
+  Pill,
+  BarChart,
+  Banknote,
+  Hospital,
+  Landmark,
+  Scale,
+  Target,
+  Laptop,
+  Receipt,
+  Search,
+  Trophy,
+  Zap,
+  BookOpen,
+  Wheat
+};
 import { useState } from "react";
 import { useLocation } from "wouter";
 
@@ -218,7 +264,10 @@ ${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
                 <Card key={category.category}>
                   <CardHeader>
                     <CardTitle className="text-2xl flex items-center gap-2">
-                      <span className="text-3xl" aria-hidden="true">{category.icon}</span>
+                      {(() => {
+                        const IconComponent = iconMap[category.icon];
+                        return IconComponent ? <IconComponent className="w-8 h-8 text-primary" aria-hidden="true" /> : <span className="text-3xl" aria-hidden="true">{category.icon}</span>;
+                      })()}
                       <span>{category.category}</span>
                     </CardTitle>
                   </CardHeader>
@@ -294,7 +343,12 @@ function ProgramCard({ program }: { program: AssistanceProgram }) {
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-4 flex-1">
-                <div className="text-4xl" aria-hidden="true">{program.icon}</div>
+                <div className="w-12 h-12 flex items-center justify-center" aria-hidden="true">
+                  {(() => {
+                    const IconComponent = iconMap[program.icon];
+                    return IconComponent ? <IconComponent className="w-10 h-10 text-primary" /> : <div className="text-4xl">{program.icon}</div>;
+                  })()}
+                </div>
                 <div className="flex-1 space-y-2">
                   <CardTitle className="text-2xl text-right">{program.title}</CardTitle>
                   <CardDescription className="text-lg space-y-1 text-right">

@@ -81,10 +81,8 @@ export default function Home() {
           <footer className="mt-16 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
               רוצים לעזור לנו להמשיך לפתח ולשפר את האתר?{' '}
-              <Link href="/donate">
-                <a className="text-primary hover:text-primary/80 underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">
-                  לחצו כאן
-                </a>
+              <Link href="/donate" className="text-primary hover:text-primary/80 underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">
+                לחצו כאן
               </Link>
             </p>
           </footer>
