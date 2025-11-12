@@ -24,8 +24,8 @@ interface Level2Answers {
 const questions = [
   {
     id: 'income',
-    question: 'מה ההכנסה החודשית שלך?',
-    subtitle: 'זה עוזר לנו למצוא בדיוק מה מגיע לך',
+    question: 'מה ההכנסה החודשית שלכם?',
+    subtitle: 'זה עוזר לנו למצוא בדיוק מה מגיע לכם',
     options: [
       { value: 'under-3000', label: 'פחות מ-3,000 ₪', icon: '💰' },
       { value: '3000-5000', label: '3,000-5,000 ₪', icon: '💵' },
@@ -36,7 +36,7 @@ const questions = [
   },
   {
     id: 'childrenAges',
-    question: 'בן כמה הילדים שלך?',
+    question: 'בני כמה הילדים שלכם?',
     subtitle: 'יש הטבות שונות לגילאים שונים',
     options: [
       { value: '0-3', label: 'תינוקות (0-3)', icon: '👶' },
@@ -49,7 +49,7 @@ const questions = [
   },
   {
     id: 'rentAmount',
-    question: 'כמה אתה משלם שכר דירה?',
+    question: 'כמה אתם משלמים שכר דירה?',
     subtitle: 'יש סיוע בשכר דירה למי שמשלם הרבה',
     options: [
       { value: 'under-2000', label: 'פחות מ-2,000 ₪', icon: '🏠' },
@@ -74,7 +74,7 @@ const questions = [
   },
   {
     id: 'age',
-    question: 'בן כמה אתה?',
+    question: 'בני כמה אתם?',
     subtitle: 'יש תוכניות מיוחדות לגילאים שונים',
     options: [
       { value: 'under-30', label: 'מתחת ל-30', icon: '🧑' },

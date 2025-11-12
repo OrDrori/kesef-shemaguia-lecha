@@ -144,7 +144,7 @@ export default function ResultsLevel2() {
   const shareResults = () => {
     if (!moneyEstimate) return;
     
-    const text = `מצאתי ${moneyEstimate.programs.length} תוכניות סיוע שיכולות לעזור לי!\n\nיכול להיות שמגיע לי ${moneyEstimate.min.toLocaleString()}-${moneyEstimate.max.toLocaleString()} ₪ בשנה! 💰\n\nבדקתי ב: כסף שמגיע לך`;
+    const text = `מצאנו ${moneyEstimate.programs.length} תוכניות סיוע שיכולות לעזור!\n\nעשוי להגיע לנו ${moneyEstimate.min.toLocaleString()}-${moneyEstimate.max.toLocaleString()} ₪ בשנה! 💰\n\nבדקנו ב: כסף שמגיע לך`;
     const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
@@ -157,29 +157,29 @@ export default function ResultsLevel2() {
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50 p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
         {/* Money Estimate Card */}
-        <Card className="p-8 mb-8 shadow-xl bg-gradient-to-r from-green-500 to-blue-500 text-white">
+        <Card className="p-6 md:p-8 mb-8 shadow-lg bg-gradient-to-br from-green-100 to-blue-100 border-2 border-green-200">
           <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <Sparkles className="h-16 w-16" />
+            <div className="flex justify-center mb-3">
+              <Sparkles className="h-10 w-10 text-green-600" />
             </div>
-            <h1 className="text-4xl font-bold mb-4">
-              יכול להיות שמגיע לך:
+            <h1 className="text-2xl md:text-3xl font-bold mb-3 text-gray-800">
+              עשוי להגיע לכם:
             </h1>
-            <div className="text-6xl font-black mb-6">
+            <div className="text-4xl md:text-5xl font-bold mb-4 text-green-700">
               {moneyEstimate.min.toLocaleString()}-{moneyEstimate.max.toLocaleString()} ₪
             </div>
-            <p className="text-xl opacity-90 mb-6">
-              בשנה! זה בערך {Math.round(moneyEstimate.min / 12).toLocaleString()}-{Math.round(moneyEstimate.max / 12).toLocaleString()} ₪ בחודש
+            <p className="text-lg md:text-xl text-gray-700 mb-5">
+              בשנה · בערך {Math.round(moneyEstimate.min / 12).toLocaleString()}-{Math.round(moneyEstimate.max / 12).toLocaleString()} ₪ בחודש
             </p>
             
             {/* Programs breakdown */}
-            <div className="bg-white/20 rounded-lg p-6 backdrop-blur-sm">
-              <h3 className="text-xl font-bold mb-4">מה כלול בחישוב:</h3>
+            <div className="bg-white rounded-lg p-5 shadow-sm border border-green-200">
+              <h3 className="text-lg font-bold mb-3 text-gray-800">מה כלול בחישוב:</h3>
               <div className="grid gap-2 text-right">
                 {moneyEstimate.programs.map((prog, idx) => (
-                  <div key={idx} className="flex justify-between items-center bg-white/10 rounded p-3">
-                    <span className="font-medium">{prog.name}</span>
-                    <span className="font-bold">{prog.amount}</span>
+                  <div key={idx} className="flex justify-between items-center bg-green-50 rounded p-2.5 text-sm md:text-base">
+                    <span className="font-medium text-gray-700">{prog.name}</span>
+                    <span className="font-bold text-green-700">{prog.amount}</span>
                   </div>
                 ))}
               </div>
@@ -187,11 +187,11 @@ export default function ResultsLevel2() {
 
             <Button
               onClick={shareResults}
-              className="mt-6 bg-white text-green-600 hover:bg-gray-100"
+              className="mt-5 bg-green-600 text-white hover:bg-green-700"
               size="lg"
             >
               <Share2 className="ml-2 h-5 w-5" />
-              שלח לעצמי בוואטסאפ
+              שלחו לעצמכם בוואטסאפ
             </Button>
           </div>
         </Card>

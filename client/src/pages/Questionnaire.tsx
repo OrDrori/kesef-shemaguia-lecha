@@ -95,7 +95,7 @@ export default function Questionnaire() {
         {currentStep === 1 && (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <h2 className="text-3xl md:text-4xl font-bold text-center">
-              מה המצב שלך עכשיו?
+              מה המצב שלכם עכשיו?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
@@ -123,7 +123,7 @@ export default function Questionnaire() {
         {currentStep === 2 && (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <h2 className="text-3xl md:text-4xl font-bold text-center">
-              יש לך ילדים?
+              יש לכם ילדים?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
@@ -172,11 +172,11 @@ export default function Questionnaire() {
         {currentStep === 3 && (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <h2 className="text-3xl md:text-4xl font-bold text-center">
-              אתה גר בדירה שכורה?
+              אתם גרים בדירה שכורה?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { value: 'rent', label: 'כן, אני שוכר', icon: '🔑' },
+                { value: 'rent', label: 'כן, אנחנו שוכרים', icon: '🔑' },
                 { value: 'own', label: 'לא, דירה בבעלות', icon: '🏡' }
               ].map((option) => (
                 <Card
@@ -198,7 +198,7 @@ export default function Questionnaire() {
         {currentStep === 4 && (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <h2 className="text-3xl md:text-4xl font-bold text-center">
-              יש לך או למישהו במשפחה בעיות בריאות?
+              יש לכם או למישהו במשפחה בעיות בריאות?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
