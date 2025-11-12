@@ -48,7 +48,7 @@ export default function Results() {
             מצאנו לכם {relevantPrograms.length} דברים שכדאי לבדוק! 🎯
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            כל אחד מהדברים האלה יכול לעזור לכם.
+            כל אחד מהדברים האלה יכולים לעזור לכם.
             <br />
             לחצו על כל אחד כדי לראות איך בודקים.
           </p>
@@ -80,7 +80,7 @@ export default function Results() {
               className="text-xl px-8 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
               onClick={() => navigate('/questionnaire-level2')}
             >
-              🚀 כן! תנ לי תוצאות מדויקות
+              🚀 כן! תנו לי תוצאות מדויקות
             </Button>
             <p className="text-sm text-gray-500">
               רק 5 שאלות נוספות • לוקח 2 דקות
@@ -98,15 +98,15 @@ export default function Results() {
         {/* WhatsApp Share */}
         <div className="mt-12 text-center">
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">📱 שמור את זה לעצמך</h3>
+            <h3 className="text-2xl font-bold mb-4">📱 שמרו את זה לעצמכם</h3>
             <p className="text-muted-foreground mb-4">
-              שלח לעצמך את התוצאות בוואטסאפ כדי שלא תשכח
+              שלחו לעצמכם את התוצאות בוואטסאפ כדי שלא תשכחו
             </p>
             <Button
               size="lg"
               className="text-xl px-8 py-6"
               onClick={() => {
-                const text = `היי! מצאתי כלי שבודק מה מגיע לי מהמדינה.
+                const text = `היי! מצאנו כלי שבודק מה מגיע לנו מהמדינה.
 
 הנה התוצאות שלי:
 ${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
@@ -131,8 +131,8 @@ ${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
                   <div className="text-4xl">👨‍👩‍👧‍👦</div>
                   <div className="flex-1">
                     <blockquote className="text-lg italic">
-                      "לא האמנתי שזה אמיתי. אבל עשיתי את מה שהכלי אמר לי,
-                      ואחרי חודשיים קיבלתי 12,000 ₪ מהמדינה.
+                      "לא האמנו שזה אמיתי. אבל עשינו את מה שהכלי אמר לנו,
+                      ואחרי חודשיים קיבלנו 12,000 ₪ מהמדינה.
                       זה שינה לנו את החיים."
                     </blockquote>
                     <cite className="text-sm text-muted-foreground mt-2 block">
@@ -148,8 +148,8 @@ ${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
                   <div className="text-4xl">👵</div>
                   <div className="flex-1">
                     <blockquote className="text-lg italic">
-                      "הייתי בטוחה שלא מגיע לי כלום. הכלי הראה לי שאני זכאית
-                      להנחות בארנונה ובחשמל. זה חוסך לי אלפים בשנה."
+                      "היינו בטוחים שלא מגיע לנו כלום. הכלי הראה לנו שאנחנו זכאים
+                      להנחות בארנונה ובחשמל. זה חוסך לנו אלפים בשנה."
                     </blockquote>
                     <cite className="text-sm text-muted-foreground mt-2 block">
                       — רחל, פנסיונרית, חיפה
@@ -283,7 +283,7 @@ function ProgramCard({ program }: { program: AssistanceProgram }) {
                       rel="noopener noreferrer"
                     >
                       <ExternalLink className="w-5 h-5 ml-2" />
-                      פתח את האתר
+                      פתחו את האתר
                     </a>
                   </Button>
                 </div>

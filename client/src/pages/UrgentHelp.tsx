@@ -18,7 +18,7 @@ export default function UrgentHelp() {
         },
         {
           type: "link",
-          label: "לשכת רווחה באזור שלך",
+          label: "לשכת רווחה באזור שלכם",
           url: "https://www.gov.il/he/departments/dynamiccollectors/molsa-social-departmentsd-list"
         }
       ]
@@ -87,7 +87,7 @@ export default function UrgentHelp() {
             עזרה דחופה
           </h1>
           <p className="text-xl text-muted-foreground">
-            אני מבין שאתה צריך עזרה מהר. הנה דרכים לקבל תמיכה היום או בימים הקרובים.
+            אנחנו מבינים שאתם צריכים עזרה מהר. הנה דרכים לקבל תמיכה היום או בימים הקרובים.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export default function UrgentHelp() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">💬 צריך לדבר עם מישהו?</h3>
             <p className="text-muted-foreground">
-              אם אתה במצב קשה ורוצה לדבר עם מישהו, יש אנשים שיכולים לעזור:
+              אם אתם במצב קשה ורוצים לדבר עם מישהו, יש אנשים שיכולים לעזור:
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="tel:1201" className="block">
@@ -160,7 +160,7 @@ export default function UrgentHelp() {
         {/* Back to main flow */}
         <div className="text-center space-y-4 pt-8">
           <p className="text-muted-foreground">
-            רוצה לבדוק גם מה עוד מגיע לך לטווח הארוך?
+            רוצים לבדוק גם מה עוד מגיע לכם לטווח הארוך?
           </p>
           <Link href="/">
             <Button variant="outline" size="lg" className="text-xl px-8 py-6">

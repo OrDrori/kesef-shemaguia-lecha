@@ -124,7 +124,7 @@ export default function QuestionnaireLevel2() {
     sessionStorage.setItem('questionnaire_level2_answers', JSON.stringify(newAnswers));
     
     // Show feedback
-    toast.success('✓ שמרנו את התשובה');
+    toast.success('✓ שמרנו בשבילכם');
 
     // Move to next question or results
     if (currentQuestion < filteredQuestions.length - 1) {

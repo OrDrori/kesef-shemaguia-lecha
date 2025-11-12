@@ -20,7 +20,7 @@ export default function Questionnaire() {
     const newAnswers = { ...answers, employment: value };
     setAnswers(newAnswers);
     saveAnswers(newAnswers);
-    toast.success('✓ שמרנו בשבילך');
+    toast.success('✓ שמרנו בשבילכם');
     setTimeout(() => setCurrentStep(2), 300);
   };
 
@@ -29,13 +29,13 @@ export default function Questionnaire() {
       const newAnswers = { ...answers, hasChildren: value };
       setAnswers(newAnswers);
       saveAnswers(newAnswers);
-      toast.success('✓ שמרנו בשבילך');
+      toast.success('✓ שמרנו בשבילכם');
       setTimeout(() => setCurrentStep(2.5), 300); // Go to children count
     } else {
       const newAnswers = { ...answers, hasChildren: value, numChildren: 0 };
       setAnswers(newAnswers);
       saveAnswers(newAnswers);
-      toast.success('✓ שמרנו בשבילך');
+      toast.success('✓ שמרנו בשבילכם');
       setTimeout(() => setCurrentStep(3), 300);
     }
   };

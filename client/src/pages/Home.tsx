@@ -11,12 +11,12 @@ export default function Home() {
         {/* Main heading */}
         <div className="space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-            כסף שמגיע לך 💚
+            כסף שמגיע לכם 💚
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground font-medium">
             יש הרבה עזרה שהמדינה נותנת.
             <br />
-            בוא נבדוק ביחד מה מגיע לך.
+            בואו נבדוק ביחד מה מגיע לכם.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function Home() {
             זה לוקח רק 2 דקות.
           </p>
           <p className="text-xl md:text-2xl text-foreground">
-            אנחנו נראה לך בדיוק מה לעשות.
+            אנחנו נראה לכם בדיוק מה לעשות.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function Home() {
 
         {/* Bottom reassurance */}
         <p className="text-lg text-muted-foreground pt-6">
-          זה בחינם. זה פשוט. זה זכות שלך.
+          זה בחינם. זה פשוט. זה זכות שלכם.
         </p>
 
         {/* Personal Story */}

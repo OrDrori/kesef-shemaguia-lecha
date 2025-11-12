@@ -208,10 +208,10 @@ export default function ResultsLevel2() {
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
-            מצאנו {filteredPrograms.length} תוכניות שמתאימות לך! 🎯
+            מצאנו {filteredPrograms.length} תוכניות שמתאימות לכם! 🎯
           </h2>
           <p className="text-gray-600">
-            עכשיו תבדוק כל אחת ותראה מה באמת מגיע לך
+            עכשיו תבדקו כל אחת ותראו מה באמת מגיע לכם
           </p>
         </div>
 
@@ -267,7 +267,7 @@ export default function ResultsLevel2() {
                         className="w-full"
                       >
                         <ExternalLink className="ml-2 h-4 w-4" />
-                        פתח את האתר
+                        פתחו את האתר
                       </Button>
                     )}
                     {program.howToCheck.phone && (
