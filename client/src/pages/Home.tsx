@@ -25,22 +25,22 @@ export default function Home() {
                 className="w-12 h-12 md:w-16 md:h-16 text-secondary fill-secondary" 
                 aria-hidden="true"
               />
-              כסף שמגיע לכם
+              כסף שמגיע לך
             </h1>
             <p className="text-2xl md:text-3xl text-muted-foreground font-medium">
-              יש הרבה עזרה שהמדינה נותנת.
+              המדינה נותנת הרבה עזרה שאולי לא ידעת עליה.
               <br />
-              בואו נבדוק ביחד מה מגיע לכם.
+              בוא נבדוק ביחד מה מגיע לך.
             </p>
           </header>
 
           {/* Supporting text - Clear, simple language (COGA) */}
           <div className="space-y-3">
             <p className="text-xl md:text-2xl text-foreground">
-              זה לוקח רק 2 דקות.
+              זה לוקח רק שתי דקות.
             </p>
             <p className="text-xl md:text-2xl text-foreground">
-              אנחנו נראה לכם בדיוק מה לעשות.
+              אני אראה לך בדיוק מה לעשות.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export default function Home() {
 
           {/* Bottom reassurance */}
           <p className="text-lg text-muted-foreground pt-6">
-            זה בחינם. זה פשוט. זה זכות שלכם.
+            זה בחינם. זה פשוט. זה זכות שלך.
           </p>
 
           {/* Personal Story */}
@@ -80,9 +80,9 @@ export default function Home() {
           {/* Subtle Footer */}
           <footer className="mt-16 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              רוצים לעזור לנו להמשיך לפתח ולשפר את האתר?{' '}
+              רוצה לעזור לנו להמשיך לפתח ולשפר את האתר?{' '}
               <Link href="/donate" className="text-primary hover:text-primary/80 underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">
-                לחצו כאן
+                לחץ כאן
               </Link>
             </p>
           </footer>

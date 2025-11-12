@@ -34,7 +34,7 @@ export default function Questionnaire() {
     const newAnswers = { ...answers, employment: value };
     setAnswers(newAnswers);
     saveAnswers(newAnswers);
-    toast.success('שמרנו בשבילכם', {
+    toast.success('שמרנו בשבילך את התשובה', {
       icon: <CheckCircle2 className="w-5 h-5" />,
     });
     setTimeout(() => setCurrentStep(2), 300);
@@ -45,7 +45,7 @@ export default function Questionnaire() {
       const newAnswers = { ...answers, hasChildren: value };
       setAnswers(newAnswers);
       saveAnswers(newAnswers);
-      toast.success('שמרנו בשבילכם', {
+      toast.success('שמרנו בשבילך את התשובה', {
         icon: <CheckCircle2 className="w-5 h-5" />,
       });
       setTimeout(() => setCurrentStep(2.5), 300);
@@ -53,7 +53,7 @@ export default function Questionnaire() {
       const newAnswers = { ...answers, hasChildren: value, numChildren: 0 };
       setAnswers(newAnswers);
       saveAnswers(newAnswers);
-      toast.success('שמרנו בשבילכם', {
+      toast.success('שמרנו בשבילך את התשובה', {
         icon: <CheckCircle2 className="w-5 h-5" />,
       });
       setTimeout(() => setCurrentStep(3), 300);
@@ -139,7 +139,7 @@ export default function Questionnaire() {
           {currentStep === 1 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground">
-                מה המצב שלכם עכשיו?
+                מה המצב שלך עכשיו?
               </h1>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4" role="group" aria-label="בחירת מצב תעסוקה">
                 {[
@@ -168,7 +168,7 @@ export default function Questionnaire() {
           {currentStep === 2 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground">
-                יש לכם ילדים?
+                יש לך ילדים?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4" role="group" aria-label="בחירה האם יש ילדים">
                 {[
@@ -219,7 +219,7 @@ export default function Questionnaire() {
           {currentStep === 3 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground">
-                אתם גרים בדירה שכורה?
+                אתה גר בדירה שכורה?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4" role="group" aria-label="בחירת סוג דיור">
                 {[
@@ -246,7 +246,7 @@ export default function Questionnaire() {
           {currentStep === 4 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground">
-                יש לכם או למישהו במשפחה בעיות בריאות?
+                יש לך או למישהו במשפחה בעיות בריאות?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4" role="group" aria-label="בחירת מצב בריאות">
                 {[

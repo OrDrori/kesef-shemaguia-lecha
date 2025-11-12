@@ -116,10 +116,10 @@ export default function Results() {
           <header className="text-center space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground flex items-center justify-center gap-3">
               <Target className="w-10 h-10 md:w-12 md:h-12 text-primary" aria-hidden="true" />
-              מצאנו לכם {relevantPrograms.length} דברים שכדאי לבדוק!
+              כל הכבוד! מצאנו לך {relevantPrograms.length} דברים שכדאי לבדוק!
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground">
-              כל אחד מהדברים האלה יכולים לעזור לכם.
+              כל אחד מהדברים האלה יכולים לעזור לך.
               <br />
               לחצו על כל אחד כדי לראות איך בודקים.
             </p>
@@ -135,7 +135,7 @@ export default function Results() {
               </div>
               <CardTitle className="text-3xl">רוצה תוצאות מדויקות יותר?</CardTitle>
               <CardDescription className="text-lg mt-2">
-                ענו על עוד כמה שאלות ונחשב לכם בדיוק כמה כסף מגיע לכם!
+                ענה על עוד כמה שאלות ואחשב לך בדיוק כמה כסף מגיע לך!
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center space-y-4">
@@ -143,11 +143,11 @@ export default function Results() {
                 <p className="text-foreground dark:text-gray-300 font-medium flex items-center justify-center gap-2">
                   <DollarSign className="w-5 h-5 text-secondary" aria-hidden="true" />
                   <span>
-                    נחשב לכם: <strong>15,000-35,000 ₪ בשנה!</strong>
+                    נחשב לך: <strong>15,000-35,000 ₪ בשנה!</strong>
                   </span>
                 </p>
                 <p className="text-sm text-muted-foreground dark:text-gray-400 mt-2">
-                  (בהתאם למצב הכלכלי שלכם)
+                  (בהתאם למצב הכלכלי שלך)
                 </p>
               </div>
               <Button

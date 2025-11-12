@@ -27,7 +27,7 @@ export default function UrgentHelp() {
         },
         {
           type: "link",
-          label: "לשכת רווחה באזור שלכם",
+          label: "לשכת רווחה באזור שלך",
           url: "https://www.gov.il/he/departments/dynamiccollectors/molsa-social-departmentsd-list"
         }
       ]
@@ -109,7 +109,7 @@ export default function UrgentHelp() {
               עזרה דחופה
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              אנחנו מבינים שאתם צריכים עזרה מהר. הנה דרכים לקבל תמיכה היום או בימים הקרובים.
+              אני מבין שאתה צריך עזרה מהר. הנה דרכים לקבל תמיכה היום או בימים הקרובים.
             </p>
           </header>
 
@@ -184,7 +184,7 @@ export default function UrgentHelp() {
                   צריך לדבר עם מישהו?
                 </h2>
                 <p className="text-muted-foreground">
-                  אם אתם במצב קשה ורוצים לדבר עם מישהו, יש אנשים שיכולים לעזור:
+                  אם אתה במצב קשה ורוצה לדבר עם מישהו, יש אנשים שיכולים לעזור:
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href="tel:1201">
@@ -217,7 +217,7 @@ export default function UrgentHelp() {
           {/* Back to main flow */}
           <div className="text-center space-y-4 pt-8">
             <p className="text-muted-foreground">
-              רוצים לבדוק גם מה עוד מגיע לכם לטווח הארוך?
+              רוצה לבדוק גם מה עוד מגיע לך לטווח הארוך?
             </p>
             <Link href="/">
               <Button 
