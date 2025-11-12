@@ -5,6 +5,8 @@ import { Card } from '@/components/ui/card';
 import { ArrowRight, ExternalLink, Phone, Share2, Sparkles } from 'lucide-react';
 import { assistancePrograms, charityOrganizations } from '@/data/programs';
 import { toast } from 'sonner';
+import HarHabituachCard from '@/components/HarHabituachCard';
+import NoResultsHelp from '@/components/NoResultsHelp';
 
 interface Answers {
   employment: string;
@@ -326,6 +328,12 @@ export default function ResultsLevel2() {
               </Card>
             ))}
           </div>
+        </div>
+
+        {/* Additional Help Sections */}
+        <div className="space-y-6">
+          <HarHabituachCard />
+          <NoResultsHelp />
         </div>
 
         {/* Back Button */}

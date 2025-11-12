@@ -62,7 +62,7 @@ export const assistancePrograms: AssistanceProgram[] = [
         'תמלא פרטים',
         'תראה אם מגיע לך'
       ],
-      url: 'http://www.btl.gov.il/Simulators/Pages/IncomeSupportCalc.aspx',
+      url: 'https://www.btl.gov.il/benefits/Income_support/Pages/default.aspx',
       phone: '*6050',
       phoneDisplay: 'ביטוח לאומי (6050*)',
       hours: 'א\'-ה\', 8:00-16:00'
@@ -497,6 +497,76 @@ export const assistancePrograms: AssistanceProgram[] = [
       unemployed: true,
       pensioner: true,
       student: true
+    }
+  },
+  {
+    id: 'heating-grant',
+    title: 'מענק חימום',
+    icon: '⚡',
+    category: 'money',
+    whatIsIt: 'כסף מהביטוח הלאומי לעזרה בחימום הדירה בחורף.',
+    howMuch: '325-649 ₪ בשנה (תלוי אם יחיד או משפחה).',
+    forWhom: 'אזרחים ותיקים, נכים, נפגעי פעולות איבה.',
+    howToCheck: {
+      steps: [
+        'המענק משולם אוטומטי באוקטובר',
+        'אם אתם מקבלים קצבת זקנה - זה מגיע אוטומטי',
+        'אם לא קיבלתם - תתקשרו לביטוח הלאומי'
+      ],
+      url: 'http://www.btl.gov.il/benefits/old_age/Pages/מענק%20חימום.aspx',
+      phone: '*6050',
+      phoneDisplay: 'ביטוח לאומי (6050*)',
+      hours: 'א\'-ה\', 8:00-16:00'
+    },
+    eligibility: {
+      pensioner: true,
+      healthIssues: true
+    }
+  },
+  {
+    id: 'study-grant',
+    title: 'מענק לימודים',
+    icon: '📚',
+    category: 'education',
+    whatIsIt: 'עזרה כספית לכיסוי הוצאות לימודיות (ספרים, תיקים, ציוד).',
+    howMuch: 'תלוי בהכנסה ובמספר הילדים.',
+    forWhom: 'משפחות עם ילדים בכיתות א\'-י"ב עם הכנסה נמוכה.',
+    howToCheck: {
+      steps: [
+        'לכו לאתר הביטוח הלאומי',
+        'תמלאו בקשה למענק לימודים',
+        'תצרפו אישורים על הכנסה'
+      ],
+      url: 'http://www.btl.gov.il/benefits/Pages/m.limudim1.aspx',
+      phone: '*6050',
+      phoneDisplay: 'ביטוח לאומי (6050*)',
+      hours: 'א\'-ה\', 8:00-16:00'
+    },
+    eligibility: {
+      hasChildren: true
+    }
+  },
+  {
+    id: 'child-savings',
+    title: 'תוכנית חיסכון לכל ילד',
+    icon: '💰',
+    category: 'money',
+    whatIsIt: 'המדינה מפקידה 50 ₪ בחודש לחסכון עבור כל ילד עד גיל 18.',
+    howMuch: '50 ₪ בחודש מהמדינה (נצבר עד גיל 18).',
+    forWhom: 'כל ילד שנולד מ-2017 ואילך.',
+    howToCheck: {
+      steps: [
+        'התוכנית פועלת אוטומטית',
+        'תוכלו לבדוק את היתרה באתר הביטוח הלאומי',
+        'הכסף ישוחרר בגיל 18 או 21 (תלוי בתנאים)'
+      ],
+      url: 'http://www.btl.gov.il/benefits/children/HisahoLayeled/Pages/default.aspx',
+      phone: '*6050',
+      phoneDisplay: 'ביטוח לאומי (6050*)',
+      hours: 'א\'-ה\', 8:00-16:00'
+    },
+    eligibility: {
+      hasChildren: true
     }
   }
 ];
