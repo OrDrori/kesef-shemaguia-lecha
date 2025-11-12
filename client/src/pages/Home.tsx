@@ -78,7 +78,7 @@ export default function Home() {
           </section>
 
           {/* Subtle Footer */}
-          <footer className="mt-16 pt-8 border-t border-gray-200">
+          <footer className="mt-16 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
               רוצים לעזור לנו להמשיך לפתח ולשפר את האתר?{' '}
               <Link href="/donate">

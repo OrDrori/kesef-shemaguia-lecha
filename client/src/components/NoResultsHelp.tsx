@@ -10,7 +10,7 @@ export default function NoResultsHelp() {
         <h3 className="text-xl font-bold text-gray-900 mb-2">
           לא מצאתם תוכניות מתאימות?
         </h3>
-        <p className="text-gray-700 mb-6">
+        <p className="text-foreground mb-6">
           יכול להיות שיש עוד תוכניות שמתאימות לכם. הנה כמה משאבים נוספים שיכולים לעזור:
         </p>
 
@@ -53,7 +53,7 @@ export default function NoResultsHelp() {
         </div>
 
         <div className="mt-6 pt-4 border-t border-amber-200">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-muted-foreground">
             💡 <strong>טיפ:</strong> נסו לחפש בגוגל "זכויות סוציאליות" + המצב שלכם (למשל: "זכויות סוציאליות משפחה חד הורית")
           </p>
         </div>

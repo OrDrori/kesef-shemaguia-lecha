@@ -156,10 +156,10 @@ export default function QuestionnaireLevel2() {
         {/* Progress Bar */}
         <div className="mb-8">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm text-gray-600">שאלה {currentQuestion + 1} מתוך {filteredQuestions.length}</span>
-            <span className="text-sm font-medium text-green-600">{Math.round(progress)}%</span>
+            <span className="text-sm text-muted-foreground">שאלה {currentQuestion + 1} מתוך {filteredQuestions.length}</span>
+            <span className="text-sm font-medium text-secondary">{Math.round(progress)}%</span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full bg-muted rounded-full h-2">
             <div 
               className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full transition-all duration-300"
               style={{ width: `${progress}%` }}
@@ -170,10 +170,10 @@ export default function QuestionnaireLevel2() {
         {/* Question Card */}
         <Card className="p-8 mb-6 shadow-lg">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-3">
+            <h2 className="text-3xl font-bold text-foreground mb-3">
               {question.question}
             </h2>
-            <p className="text-gray-600">{question.subtitle}</p>
+            <p className="text-muted-foreground">{question.subtitle}</p>
           </div>
 
           {/* Options */}
@@ -183,7 +183,7 @@ export default function QuestionnaireLevel2() {
                 key={option.value}
                 onClick={() => handleAnswer(option.value)}
                 variant="outline"
-                className="w-full h-auto py-6 text-xl hover:bg-green-50 hover:border-green-500 transition-all"
+                className="w-full h-auto py-6 text-xl hover:bg-secondary/5 hover:border-secondary transition-all"
               >
                 <span className="text-5xl mr-4">{option.icon}</span>
                 <span>{option.label}</span>
@@ -197,13 +197,13 @@ export default function QuestionnaireLevel2() {
           <Button
             onClick={handleBack}
             variant="ghost"
-            className="text-gray-600"
+            className="text-muted-foreground"
           >
             <ArrowLeft className="ml-2 h-5 w-5" />
             חזור
           </Button>
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-muted-foreground">
             💚 כל המידע נשמר אוטומטית
           </p>
         </div>

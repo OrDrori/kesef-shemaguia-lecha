@@ -11,13 +11,13 @@ export default function HarHabituachCard() {
           <h3 className="text-xl font-bold text-gray-900 mb-2">
             הר הביטוח - סדר בתיק הביטוחי
           </h3>
-          <p className="text-gray-700 mb-4">
+          <p className="text-foreground mb-4">
             אתר ממשלתי **חינמי** שמראה לכם את כל הביטוחים שלכם במקום אחד ועוזר למצוא ביטוחים מיותרים שאתם משלמים עליהם בלי לדעת.
           </p>
           
           <div className="bg-white/70 rounded-lg p-4 mb-4">
             <h4 className="font-semibold text-gray-900 mb-2">מה האתר עושה?</h4>
-            <ul className="space-y-1 text-sm text-gray-700">
+            <ul className="space-y-1 text-sm text-foreground">
               <li>✅ מאגד את כל הפוליסות מכל חברות הביטוח</li>
               <li>✅ מזהה כפל ביטוח (בזבוז כסף!)</li>
               <li>✅ מציג את המחירים שאתם משלמים</li>

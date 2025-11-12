@@ -54,11 +54,11 @@ export default function DonorsList() {
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-8">
       <div className="text-center mb-8">
-        <Heart className="h-12 w-12 text-green-600 mx-auto mb-4" />
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+        <Heart className="h-12 w-12 text-secondary mx-auto mb-4" />
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
           תודה לתורמים שלנו 💚
         </h2>
-        <p className="text-gray-600">
+        <p className="text-muted-foreground">
           אנשים טובים שעוזרים לנו להמשיך לעזור לאחרים
         </p>
       </div>
@@ -72,35 +72,35 @@ export default function DonorsList() {
                 <img
                   src={donor.photoUrl}
                   alt={donor.showName ? donor.name : 'תורם'}
-                  className="w-20 h-20 rounded-full object-cover border-2 border-green-200"
+                  className="w-20 h-20 rounded-full object-cover border-2 border-secondary/20"
                 />
               </div>
             )}
 
             {/* Name */}
             {donor.showName && donor.name && (
-              <h3 className="text-xl font-bold text-gray-800 text-center mb-2">
+              <h3 className="text-xl font-bold text-foreground text-center mb-2">
                 {donor.name}
               </h3>
             )}
 
             {/* Business */}
             {donor.showBusiness && donor.businessName && (
-              <p className="text-gray-600 text-center mb-2">
+              <p className="text-muted-foreground text-center mb-2">
                 {donor.businessName}
               </p>
             )}
 
             {/* Amount */}
             {donor.showAmount && donor.amount && (
-              <p className="text-green-600 font-bold text-center mb-2">
+              <p className="text-secondary font-bold text-center mb-2">
                 תרם {donor.amount.toLocaleString()} ₪
               </p>
             )}
 
             {/* Date */}
             {donor.showDate && donor.date && (
-              <p className="text-sm text-gray-500 text-center">
+              <p className="text-sm text-muted-foreground text-center">
                 {new Date(donor.date).toLocaleDateString('he-IL', { 
                   year: 'numeric', 
                   month: 'long' 
@@ -111,8 +111,8 @@ export default function DonorsList() {
             {/* If nothing is shown, just show a heart */}
             {!donor.showName && !donor.showPhoto && !donor.showBusiness && !donor.showAmount && !donor.showDate && (
               <div className="text-center">
-                <Heart className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                <p className="text-gray-600">תורם אנונימי</p>
+                <Heart className="h-8 w-8 text-secondary mx-auto mb-2" />
+                <p className="text-muted-foreground">תורם אנונימי</p>
               </div>
             )}
           </Card>
@@ -120,7 +120,7 @@ export default function DonorsList() {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-muted-foreground">
           רוצים להצטרף לרשימה? שלחו לנו הודעה אחרי התרומה 💚
         </p>
       </div>

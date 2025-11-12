@@ -66,7 +66,7 @@ export default function DesignComparison() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">השוואת סגנונות עיצוב</h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-muted-foreground">
             5 וריאציות שונות - מותאמות לקהל היעד (החלשים ביותר בחברה)
           </p>
         </div>
@@ -83,7 +83,7 @@ export default function DesignComparison() {
                   <div className="text-lg font-semibold mb-2">
                     {variation.name}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-muted-foreground">
                     {variation.description}
                   </div>
                 </div>
@@ -100,7 +100,7 @@ export default function DesignComparison() {
                     ראשי
                   </div>
                   <div 
-                    className="h-12 rounded flex items-center justify-center text-gray-800 text-xs font-medium"
+                    className="h-12 rounded flex items-center justify-center text-foreground text-xs font-medium"
                     style={{ backgroundColor: variation.colors.secondary }}
                   >
                     משני
@@ -147,7 +147,7 @@ export default function DesignComparison() {
                     <Heart className="h-5 w-5" style={{ color: variation.colors.primary }} />
                     <span className="font-semibold text-sm">כותרת</span>
                   </div>
-                  <p className="text-xs text-gray-600 mb-3">
+                  <p className="text-xs text-muted-foreground mb-3">
                     זהו טקסט לדוגמה שמראה איך נראה תוכן בכרטיס. הטקסט צריך להיות קריא ונוח לעין.
                   </p>
                   <button 
@@ -166,7 +166,7 @@ export default function DesignComparison() {
                   <div className="text-lg font-bold">כותרת ראשית</div>
                   <div className="text-base font-semibold">כותרת משנית</div>
                   <div className="text-sm">טקסט רגיל לקריאה</div>
-                  <div className="text-xs text-gray-600">טקסט קטן</div>
+                  <div className="text-xs text-muted-foreground">טקסט קטן</div>
                 </div>
               </Card>
 
@@ -188,7 +188,7 @@ export default function DesignComparison() {
         <div className="mt-12 text-center">
           <Card className="p-8 bg-white max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-4">המלצות לבחירה</h2>
-            <div className="text-right space-y-3 text-gray-700">
+            <div className="text-right space-y-3 text-foreground">
               <p><strong>וריאציה 1 (רך וממוקד):</strong> מתאים למי שצריך סביבה מרגיעה מאוד</p>
               <p><strong>וריאציה 2 (ממשלתי נקי):</strong> מתאים למי שרגיל לאתרי ממשלה ואוהב מראה מקצועי</p>
               <p><strong>וריאציה 3 (חם ותומך):</strong> מתאים למי שצריך תחושה של חום ותמיכה</p>

@@ -94,13 +94,13 @@ export default function Results() {
             </CardHeader>
             <CardContent className="text-center space-y-4">
               <div className="bg-white/60 dark:bg-black/20 rounded-lg p-4 max-w-md mx-auto">
-                <p className="text-gray-700 dark:text-gray-300 font-medium flex items-center justify-center gap-2">
-                  <DollarSign className="w-5 h-5 text-green-600" aria-hidden="true" />
+                <p className="text-foreground dark:text-gray-300 font-medium flex items-center justify-center gap-2">
+                  <DollarSign className="w-5 h-5 text-secondary" aria-hidden="true" />
                   <span>
                     נחשב לכם: <strong>15,000-35,000 ₪ בשנה!</strong>
                   </span>
                 </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                <p className="text-sm text-muted-foreground dark:text-gray-400 mt-2">
                   (בהתאם למצב הכלכלי שלכם)
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function Results() {
                 <Rocket className="w-5 h-5 ml-2" aria-hidden="true" />
                 כן! תנו לי תוצאות מדויקות
               </Button>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-muted-foreground dark:text-gray-400">
                 רק 5 שאלות נוספות • לוקח 2 דקות
               </p>
             </CardContent>

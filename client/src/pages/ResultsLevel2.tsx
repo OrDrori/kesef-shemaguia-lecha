@@ -161,29 +161,29 @@ export default function ResultsLevel2() {
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50 p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
         {/* Money Estimate Card */}
-        <Card className="p-6 md:p-8 mb-8 shadow-lg bg-gradient-to-br from-green-100 to-blue-100 border-2 border-green-200">
+        <Card className="p-6 md:p-8 mb-8 shadow-lg bg-gradient-to-br from-secondary/10 to-primary/10 border-2 border-secondary/20">
           <div className="text-center">
             <div className="flex justify-center mb-3">
-              <Sparkles className="h-10 w-10 text-green-600" />
+              <Sparkles className="h-10 w-10 text-secondary" />
             </div>
-            <h1 className="text-2xl md:text-3xl font-bold mb-3 text-gray-800">
+            <h1 className="text-2xl md:text-3xl font-bold mb-3 text-foreground">
               עשוי להגיע לכם:
             </h1>
-            <div className="text-4xl md:text-5xl font-bold mb-4 text-green-700">
+            <div className="text-4xl md:text-5xl font-bold mb-4 text-secondary">
               {moneyEstimate.min.toLocaleString()}-{moneyEstimate.max.toLocaleString()} ₪
             </div>
-            <p className="text-lg md:text-xl text-gray-700 mb-5">
+            <p className="text-lg md:text-xl text-foreground mb-5">
               בשנה · בערך {Math.round(moneyEstimate.min / 12).toLocaleString()}-{Math.round(moneyEstimate.max / 12).toLocaleString()} ₪ בחודש
             </p>
             
             {/* Programs breakdown */}
-            <div className="bg-white rounded-lg p-5 shadow-sm border border-green-200">
-              <h3 className="text-lg font-bold mb-3 text-gray-800">מה כלול בחישוב:</h3>
+            <div className="bg-white rounded-lg p-5 shadow-sm border border-secondary/20">
+              <h3 className="text-lg font-bold mb-3 text-foreground">מה כלול בחישוב:</h3>
               <div className="grid gap-2 text-right">
                 {moneyEstimate.programs.map((prog, idx) => (
-                  <div key={idx} className="flex justify-between items-center bg-green-50 rounded p-2.5 text-sm md:text-base">
-                    <span className="font-medium text-gray-700">{prog.name}</span>
-                    <span className="font-bold text-green-700">{prog.amount}</span>
+                  <div key={idx} className="flex justify-between items-center bg-secondary/5 rounded p-2.5 text-sm md:text-base">
+                    <span className="font-medium text-foreground">{prog.name}</span>
+                    <span className="font-bold text-secondary">{prog.amount}</span>
                   </div>
                 ))}
               </div>
@@ -191,7 +191,7 @@ export default function ResultsLevel2() {
 
             <Button
               onClick={shareResults}
-              className="mt-5 bg-green-600 text-white hover:bg-green-700"
+              className="mt-5 bg-secondary text-white hover:bg-secondary/90"
               size="lg"
             >
               <Share2 className="ml-2 h-5 w-5" />
@@ -202,7 +202,7 @@ export default function ResultsLevel2() {
 
         {/* Important Note */}
         <Card className="p-6 mb-8 bg-yellow-50 border-yellow-200">
-          <p className="text-center text-gray-700">
+          <p className="text-center text-foreground">
             <strong>חשוב:</strong> זה חישוב משוער בלבד! הסכום המדויק תלוי בהרבה גורמים.
             <br />
             כדי לדעת בדיוק, תצטרך לבדוק כל תוכנית בנפרד 👇
@@ -211,10 +211,10 @@ export default function ResultsLevel2() {
 
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+          <h2 className="text-3xl font-bold text-foreground mb-2">
             מצאנו {filteredPrograms.length} תוכניות שמתאימות לכם! 🎯
           </h2>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             ארגנו את הכל בקטגוריות נוחות - לחצו על קטגוריה לראות את התוכניות 👇
           </p>
         </div>
@@ -244,7 +244,7 @@ export default function ResultsLevel2() {
 
         {/* Charity Organizations */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+          <h2 className="text-2xl font-bold text-foreground mb-4 text-center">
             עמותות וקרנות שיכולות לעזור 🤝
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -256,9 +256,9 @@ export default function ResultsLevel2() {
                 </h3>
                 <div className="space-y-3">
                   {data.organizations.map((org: any, idx: number) => (
-                    <div key={idx} className="border-r-4 border-green-500 pr-3">
+                    <div key={idx} className="border-r-4 border-secondary pr-3">
                       <p className="font-semibold">{org.name}</p>
-                      <p className="text-sm text-gray-600 mb-2">{org.description}</p>
+                      <p className="text-sm text-muted-foreground mb-2">{org.description}</p>
                       {org.phone && (
                         <Button
                           onClick={() => window.location.href = `tel:${org.phone}`}

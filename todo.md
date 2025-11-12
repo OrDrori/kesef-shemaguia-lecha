@@ -634,7 +634,7 @@
 ### יישום עקרונות החוקה באתר
 - [x] יישום Clarity principles
 - [x] יישום Accessibility principles - כל העמודים
-- [x] יישום Consistency principles
+- [x] יישום Consistency principles - מערכת צבעים אחידה
 - [x] יישום Feedback principles
 - [x] יישום Simplicity principles
 
