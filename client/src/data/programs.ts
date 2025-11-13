@@ -573,6 +573,41 @@ export const assistancePrograms: AssistanceProgram[] = [
 
 export const charityOrganizations = [
   {
+    category: 'סיוע למשפחות עם תינוקות',
+    icon: '👶',
+    organizations: [
+      { 
+        name: 'תינוקות של החיים', 
+        description: 'חבילות מזון וציוד לתינוקות בשנה הראשונה', 
+        phone: '077-9920451',
+        url: 'https://babylife.org.il' 
+      },
+      { 
+        name: 'הבנק החברתי למזון תינוקות', 
+        description: 'מזון תינוקות חודשי ל-600+ תינוקות בכל הארץ', 
+        url: 'https://2help.org.il' 
+      },
+      { 
+        name: 'אגודת אפרת', 
+        description: 'ציוד מלא לתינוק + סלים חודשיים + תמיכה נפשית', 
+        phone: '3042*',
+        url: 'https://efrat.org.il' 
+      },
+      { 
+        name: 'יד עזרא ושולמית', 
+        description: 'סלי מזון לתינוקות + חיתולים + ציוד בסיסי', 
+        phone: '9171*',
+        url: 'https://yadezra.org.il' 
+      },
+      { 
+        name: 'בית לחם יהודה', 
+        description: 'סלי מוצרי תינוקות + ביגוד + מזון', 
+        phone: '03-628-1155',
+        url: 'https://www.bly.org.il' 
+      }
+    ]
+  },
+  {
     category: 'ייעוץ וסיוע משפטי',
     icon: '⚖️',
     organizations: [

@@ -549,3 +549,107 @@
 ### Checkpoint ומסירה
 - [ ] שמירת checkpoint
 - [ ] מסירה למשתמש
+
+## v7.0 - THE ULTIMATE DESIGN CONSTITUTION 🔥
+
+### מחקר מקיף - עקרונות עיצוב אגדיים
+- [ ] Dieter Rams - 10 Principles of Good Design
+- [ ] Jony Ive - Apple Design Philosophy
+- [ ] Don Norman - Design of Everyday Things
+- [ ] Jakob Nielsen - Usability Heuristics
+- [ ] Massimo Vignelli - Design Principles
+- [ ] Paul Rand - Design Philosophy
+- [ ] Milton Glaser - Design Thinking
+
+### מחקר מקיף - Design Systems עולמיים
+- [ ] Apple Human Interface Guidelines
+- [ ] Google Material Design 3
+- [ ] Microsoft Fluent Design System
+- [ ] IBM Carbon Design System
+- [ ] Atlassian Design System
+- [ ] Shopify Polaris
+- [ ] Airbnb Design System
+
+### מחקר מקיף - פסיכולוגיה קוגניטיבית ונוירו-דיזיין
+- [ ] Gestalt Principles
+- [ ] Cognitive Load Theory
+- [ ] Visual Perception
+- [ ] Color Psychology
+- [ ] Typography Psychology
+- [ ] Attention and Focus
+- [ ] Memory and Recognition
+
+### מחקר מקיף - אסתטיקה ותיאוריית אמנות
+- [ ] Golden Ratio and Fibonacci
+- [ ] Visual Hierarchy
+- [ ] Balance and Symmetry
+- [ ] Contrast and Emphasis
+- [ ] Rhythm and Movement
+- [ ] Unity and Harmony
+- [ ] Minimalism vs Maximalism
+
+### מחקר מקיף - UX Patterns ו-Interaction Design
+- [ ] Micro-interactions
+- [ ] Animation Principles
+- [ ] Feedback Mechanisms
+- [ ] Progressive Disclosure
+- [ ] Affordances and Signifiers
+- [ ] Mental Models
+- [ ] User Flow Optimization
+
+### יצירת החוקה האולטימטיבית
+- [ ] סינתזה של כל המחקרים
+- [ ] כתיבת החוקה המאוחדת
+- [ ] עקרונות יסוד אוניברסליים
+- [ ] כללים מעשיים ליישום
+- [ ] דוגמאות ו-case studies
+- [ ] checklist מקיף
+
+### יישום החוקה בפרויקט
+- [ ] החלת עקרונות החוקה על כל העמודים
+- [ ] בדיקה מול החוקה
+- [ ] תיקונים ושיפורים
+
+## v12.0 - מחקר ארגונים לתינוקות ומשפחות 👶💚
+
+### מחקר ארגונים
+- [ ] חיפוש עמותות לתינוקות ומשפחות נזקקות
+- [ ] חיפוש בנקי מזון לתינוקות
+- [ ] חיפוש ארגוני חסד
+- [ ] חיפוש קבוצות יד שנייה (פייסבוק, טלגרם)
+- [ ] איסוף פרטי קשר (טלפון, כתובת, אתר)
+- [ ] בדיקת אמינות הארגונים
+
+### הוספה לאתר
+- [ ] יצירת רשימה מסודרת
+- [ ] הוספה לעמוד UrgentHelp
+- [ ] הוספה לעמוד Results
+- [ ] בדיקה ויזואלית
+
+### תיקוני טקסט נוספים
+- [ ] סריקת טקסטים שנותרו
+- [ ] תיקונים סופיים
+
+## v3.1 - תוספת ארגוני סיוע לתינוקות 👶
+
+### מחקר וריכוז מידע
+- [x] מחקר מקיף על ארגונים לסיוע למשפחות עם תינוקות
+- [x] איסוף פרטי קשר מלאים (טלפון, כתובת, אימייל)
+- [x] 10 ארגונים מרכזיים + 6 קבוצות פייסבוק יד שנייה
+- [x] יצירת קובץ מחקר מפורט
+
+### הוספה לאתר
+- [x] הוספת קטגוריה חדשה "סיוע למשפחות עם תינוקות" 👶
+- [x] הוספת 5 ארגונים מרכזיים עם פרטי קשר מלאים:
+  - [x] תינוקות של החיים - 077-9920451
+  - [x] הבנק החברתי למזון תינוקות
+  - [x] אגודת אפרת - 3042*
+  - [x] יד עזרא ושולמית - 9171*
+  - [x] בית לחם יהודה - 03-628-1155
+- [x] הקטגוריה מופיעה ראשונה ברשימת העמותות
+- [x] בדיקה באתר - הכל עובד!
+
+### תוספות עתידיות
+- [ ] הוספת 5 ארגונים נוספים (איש צדיק היה, אילני חסד, עמותת צדקה, מאיר פנים, ארגון לתת)
+- [ ] הוספת קישורים לקבוצות פייסבוק יד שנייה
+- [ ] הוספת מידע על מה כל ארגון נותן (פירוט מלא)
