@@ -28,7 +28,7 @@ export default function Home() {
                 className="w-12 h-12 md:w-16 md:h-16 text-secondary fill-secondary" 
                 aria-hidden="true"
               />
-              כסף שמגיע לכם
+              כסף שמגיע לכם ✨
             </h1>
             <p className="text-2xl md:text-3xl text-muted-foreground font-medium">
               יש הרבה עזרה שהמדינה נותנת.
