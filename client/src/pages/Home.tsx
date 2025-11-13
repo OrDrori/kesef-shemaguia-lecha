@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { useLocation, Link } from "wouter";
 import PersonalStory from "@/components/PersonalStory";
-import { Heart, AlertCircle, ArrowLeft } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Heart, ArrowLeft } from "lucide-react";
 
 export default function Home() {
   const [, setLocation] = useLocation();
 
   return (
     <>
+      <Header />
       {/* Skip to main content link - WCAG 2.1 - 2.4.1 Bypass Blocks */}
       <a
         href="#main-content"
@@ -55,16 +58,7 @@ export default function Home() {
               <ArrowLeft className="w-6 h-6 ml-2" aria-hidden="true" />
               בוא נתחיל
             </Button>
-            <Button
-              size="lg"
-              variant="destructive"
-              className="text-xl md:text-2xl px-8 py-6 h-auto min-h-[60px] rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-              onClick={() => setLocation('/urgent')}
-              aria-label="עזרה דחופה - אני צריך כסף עכשיו"
-            >
-              <AlertCircle className="w-6 h-6 ml-2" aria-hidden="true" />
-              אני צריך כסף עכשיו
-            </Button>
+
           </div>
 
           {/* Bottom reassurance */}
@@ -96,6 +90,7 @@ export default function Home() {
           <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

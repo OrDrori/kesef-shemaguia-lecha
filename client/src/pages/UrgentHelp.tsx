@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { ExternalLink, Phone } from "lucide-react";
 import { Link } from "wouter";
 
@@ -78,7 +80,9 @@ export default function UrgentHelp() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-accent/20 px-4 py-12">
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-b from-background to-accent/20 px-4 py-12">
       <div className="container max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-4">
@@ -170,5 +174,7 @@ export default function UrgentHelp() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }

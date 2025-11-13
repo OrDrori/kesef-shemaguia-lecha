@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { assistancePrograms, charityOrganizations, type AssistanceProgram } from "@/data/programs";
 import { type Answers, getAnswers } from "@/lib/answers";
 import { ChevronDown, ExternalLink, Phone, Share2 } from "lucide-react";
@@ -39,59 +41,161 @@ export default function Results() {
     return true;
   });
 
+  // Categorize programs
+  const moneyPrograms = relevantPrograms.filter(p => p.category === 'money');
+  const discountPrograms = relevantPrograms.filter(p => p.category === 'discounts');
+  const housingPrograms = relevantPrograms.filter(p => p.category === 'housing');
+  const educationPrograms = relevantPrograms.filter(p => p.category === 'education');
+  const healthPrograms = relevantPrograms.filter(p => p.category === 'health');
+
+  // Get top 3 most important programs
+  const top3Programs = relevantPrograms.slice(0, 3);
+
+  // Calculate estimated amount (rough estimate)
+  const estimatedMin = relevantPrograms.length * 1500;
+  const estimatedMax = relevantPrograms.length * 3500;
+
   return (
-    <div className="min-h-screen py-8 px-4">
+    <>
+      <Header />
+      <div className="min-h-screen py-8 px-4">
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
-            מצאנו לכם {relevantPrograms.length} דברים שכדאי לבדוק! 🎯
+            מצאנו לכם {relevantPrograms.length} דרכים לקבל כסף וסיוע! 🎯
           </h1>
+          
+          {/* Estimated amount */}
+          {relevantPrograms.length > 0 && (
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-2xl p-6 max-w-2xl mx-auto">
+              <p className="text-2xl md:text-3xl font-bold text-green-700">
+                💰 סכום משוער: {estimatedMin.toLocaleString()}-{estimatedMax.toLocaleString()} ₪ בשנה
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                (בהתאם למצב הכלכלי שלכם והתוכניות שתקבלו)
+              </p>
+            </div>
+          )}
+
           <p className="text-xl md:text-2xl text-muted-foreground">
-            כל אחד מהדברים האלה יכולים לעזור לכם.
-            <br />
-            לחצו על כל אחד כדי לראות איך בודקים.
+            לחצו על כל תוכנית כדי לראות איך מקבלים אותה
           </p>
         </div>
 
-        {/* Level 2 Upgrade Card */}
-        <Card className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200">
-          <CardHeader className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="text-6xl">💡</div>
+        {/* Top 3 - Most Important */}
+        {top3Programs.length > 0 && (
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold text-center">📌 הכי חשוב לכם עכשיו</h2>
+            <div className="space-y-4">
+              {top3Programs.map((program) => (
+                <ProgramCard key={program.id} program={program} highlighted />
+              ))}
             </div>
-            <CardTitle className="text-3xl">רוצה תוצאות מדויקות יותר?</CardTitle>
-            <CardDescription className="text-lg mt-2">
-              ענו על עוד כמה שאלות ונחשב לכם בדיוק כמה כסף מגיע לכם!
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-center space-y-4">
-            <div className="bg-white/60 rounded-lg p-4 max-w-md mx-auto">
-              <p className="text-gray-700 font-medium">
-                💰 נחשב לכם: <strong>15,000-35,000 ₪ בשנה!</strong>
-                <br />
-                <span className="text-sm text-gray-600">
-                  (בהתאם למצב הכלכלי שלכם)
-                </span>
-              </p>
-            </div>
-            <Button
-              size="lg"
-              className="text-xl px-8 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-              onClick={() => navigate('/questionnaire-level2')}
-            >
-              🚀 כן! תנו לי תוצאות מדויקות
-            </Button>
-            <p className="text-sm text-gray-500">
-              רק 5 שאלות נוספות • לוקח 2 דקות
-            </p>
-          </CardContent>
-        </Card>
+          </div>
+        )}
 
-        {/* Programs List */}
-        <div className="space-y-4">
-          {relevantPrograms.map((program) => (
-            <ProgramCard key={program.id} program={program} />
+        {/* Money Programs */}
+        {moneyPrograms.length > 3 && (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">💵 כסף נוסף שאפשר לקבל</h2>
+            <div className="space-y-4">
+              {moneyPrograms.slice(3).map((program) => (
+                <ProgramCard key={program.id} program={program} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Discounts & Benefits */}
+        {discountPrograms.length > 0 && (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">🎁 הנחות וטבות</h2>
+            <div className="space-y-4">
+              {discountPrograms.map((program) => (
+                <ProgramCard key={program.id} program={program} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Housing */}
+        {housingPrograms.length > 0 && (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">🏠 דיור</h2>
+            <div className="space-y-4">
+              {housingPrograms.map((program) => (
+                <ProgramCard key={program.id} program={program} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Education */}
+        {educationPrograms.length > 0 && (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">📚 חינוך</h2>
+            <div className="space-y-4">
+              {educationPrograms.map((program) => (
+                <ProgramCard key={program.id} program={program} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Health */}
+        {healthPrograms.length > 0 && (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">💊 בריאות</h2>
+            <div className="space-y-4">
+              {healthPrograms.map((program) => (
+                <ProgramCard key={program.id} program={program} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Charity Organizations - PROMINENT! */}
+        <div className="space-y-4 mt-12 pt-8 border-t-2 border-primary/20">
+          <div className="text-center space-y-2 mb-6">
+            <h2 className="text-3xl font-bold">💙 צריכים עזרה נוספת?</h2>
+            <p className="text-xl text-muted-foreground">
+              ארגוני סיוע שיכולים לעזור לכם
+            </p>
+          </div>
+
+          {charityOrganizations.map((category) => (
+            <div key={category.category} className="space-y-4">
+              <h3 className="text-2xl font-bold">{category.icon} {category.category}</h3>
+              <div className="grid gap-4">
+                {category.organizations.map((org, index) => (
+                  <Card key={index} className="p-6 bg-primary/5 hover:bg-primary/10 transition-colors">
+                    <div className="space-y-3">
+                      <h4 className="text-xl font-bold">{org.name}</h4>
+                      <p className="text-muted-foreground">{org.description}</p>
+                      <div className="flex flex-wrap gap-3">
+                        {'phone' in org && org.phone && (
+                          <a href={`tel:${org.phone}`}>
+                            <Button variant="default" size="lg">
+                              <Phone className="ml-2 h-5 w-5" />
+                              {org.phone}
+                            </Button>
+                          </a>
+                        )}
+                        {'url' in org && org.url && (
+                          <a href={org.url} target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" size="lg">
+                              <ExternalLink className="ml-2 h-5 w-5" />
+                              לאתר
+                            </Button>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 
@@ -109,9 +213,9 @@ export default function Results() {
                 const text = `היי! מצאנו כלי שבודק מה מגיע לנו מהמדינה.
 
 הנה התוצאות שלי:
-${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
+${relevantPrograms.slice(0, 10).map(p => `✓ ${p.title}`).join('\n')}
 
-כנס לכאן: ${window.location.origin}`;
+כנסו לכאן: ${window.location.origin}`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
               }}
             >
@@ -148,8 +252,8 @@ ${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
                   <div className="text-4xl">👵</div>
                   <div className="flex-1">
                     <blockquote className="text-lg italic">
-                      "היינו בטוחים שלא מגיע לנו כלום. הכלי הראה לנו שאנחנו זכאים
-                      להנחות בארנונה ובחשמל. זה חוסך לנו אלפים בשנה."
+                      "בת שלי עזרה לי למלא. גיליתי שמגיע לי הנחה בארנונה
+                      וגם בחשמל. חוסכת 500 ₪ בחודש!"
                     </blockquote>
                     <cite className="text-sm text-muted-foreground mt-2 block">
                       — רחל, פנסיונרית, חיפה
@@ -161,60 +265,9 @@ ${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
           </div>
         </div>
 
-        {/* Additional Help Section */}
-        <div className="pt-8 space-y-6">
-          <h2 className="text-3xl font-bold text-center">צריך עזרה נוספת? 💙</h2>
-          
-          <div className="space-y-6">
-            {charityOrganizations.map((category) => (
-              <Card key={category.category}>
-                <CardHeader>
-                  <CardTitle className="text-2xl flex items-center gap-2">
-                    <span>{category.icon}</span>
-                    <span>{category.category}</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {category.organizations.map((org, idx) => (
-                      <div key={idx} className="border-r-4 border-primary pr-4 space-y-1">
-                        <div className="font-semibold text-lg">{org.name}</div>
-                        <div className="text-muted-foreground">{org.description}</div>
-                        <div className="flex flex-wrap gap-3 pt-2">
-                          {('phone' in org) && org.phone && (
-                            <a
-                              href={`tel:${org.phone}`}
-                              className="inline-flex items-center gap-1 text-primary hover:underline"
-                            >
-                              <Phone className="w-4 h-4" />
-                              <span>{org.phone}</span>
-                            </a>
-                          )}
-                          {org.url && (
-                            <a
-                              href={org.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-secondary hover:underline"
-                            >
-                              <ExternalLink className="w-4 h-4" />
-                              <span>אתר</span>
-                            </a>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Start Over Button */}
-        <div className="flex justify-center pt-8">
+        {/* Actions */}
+        <div className="text-center space-y-4 pt-8">
           <Button
-            size="lg"
             variant="outline"
             onClick={() => navigate('/')}
             className="text-xl px-8 py-6"
@@ -224,91 +277,96 @@ ${relevantPrograms.map(p => `✓ ${p.title}`).join('\n')}
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 
-function ProgramCard({ program }: { program: AssistanceProgram }) {
+function ProgramCard({ program, highlighted = false }: { program: AssistanceProgram; highlighted?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <Card className="overflow-hidden">
+      <Card className={`overflow-hidden ${highlighted ? 'border-2 border-primary shadow-lg' : ''}`}>
         <CollapsibleTrigger asChild>
           <CardHeader className="cursor-pointer hover:bg-accent transition-colors">
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-start gap-4 flex-1">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
                 <div className="text-4xl">{program.icon}</div>
-                <div className="flex-1 space-y-2">
+                <div className="text-right">
                   <CardTitle className="text-2xl">{program.title}</CardTitle>
-                  <CardDescription className="text-lg space-y-1">
-                    <div><strong>מה זה?</strong> {program.whatIsIt}</div>
-                    <div><strong>כמה?</strong> {program.howMuch}</div>
-                    <div><strong>למי?</strong> {program.forWhom}</div>
+                  <CardDescription className="text-lg mt-1">
+                    {program.whatIsIt}
                   </CardDescription>
+                  <p className="text-xl font-bold text-primary mt-2">
+                    💰 {program.howMuch}
+                  </p>
                 </div>
               </div>
               <ChevronDown
-                className={`w-6 h-6 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                className={`h-6 w-6 transition-transform ${isOpen ? 'rotate-180' : ''}`}
               />
             </div>
           </CardHeader>
         </CollapsibleTrigger>
 
         <CollapsibleContent>
-          <CardContent className="pt-0 space-y-6">
-            <div className="bg-accent/50 rounded-lg p-6 space-y-4">
-              <h3 className="text-xl font-bold">איך בודקים?</h3>
-              
-              <div className="space-y-3">
-                {program.howToCheck.steps.map((step, idx) => (
-                  <div key={idx} className="flex gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                      {idx + 1}
-                    </div>
-                    <div className="flex-1 text-lg pt-0.5">{step}</div>
-                  </div>
+          <CardContent className="pt-6 space-y-6">
+            {/* For whom */}
+            <div>
+              <h4 className="font-bold text-lg mb-2">👥 למי זה מתאים?</h4>
+              <p className="text-muted-foreground">{program.forWhom}</p>
+            </div>
+
+            {/* How to check */}
+            <div>
+              <h4 className="font-bold text-lg mb-3">✅ איך מקבלים?</h4>
+              <ol className="space-y-2">
+                {program.howToCheck.steps.map((step, index) => (
+                  <li key={index} className="flex gap-3">
+                    <span className="font-bold text-primary flex-shrink-0">
+                      {index + 1}.
+                    </span>
+                    <span>{step}</span>
+                  </li>
                 ))}
-              </div>
+              </ol>
+            </div>
 
+            {/* Contact buttons */}
+            <div className="flex flex-wrap gap-3 pt-4">
               {program.howToCheck.url && (
-                <div className="pt-2">
-                  <Button
-                    size="lg"
-                    className="w-full text-xl"
-                    asChild
-                  >
-                    <a
-                      href={program.howToCheck.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-5 h-5 ml-2" />
-                      פתחו את האתר
-                    </a>
+                <a
+                  href={program.howToCheck.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-[200px]"
+                >
+                  <Button className="w-full" size="lg">
+                    <ExternalLink className="ml-2 h-5 w-5" />
+                    לאתר
                   </Button>
-                </div>
+                </a>
               )}
-
               {program.howToCheck.phone && (
-                <div className="space-y-2">
-                  <div className="font-semibold text-lg">צריך עזרה?</div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-5 h-5 text-primary" />
-                    <a
-                      href={`tel:${program.howToCheck.phone}`}
-                      className="text-xl text-primary hover:underline font-semibold"
-                    >
-                      {program.howToCheck.phoneDisplay || program.howToCheck.phone}
-                    </a>
-                  </div>
-                  {program.howToCheck.hours && (
-                    <div className="text-muted-foreground">
-                      ⏰ {program.howToCheck.hours}
-                    </div>
-                  )}
-                </div>
+                <a
+                  href={`tel:${program.howToCheck.phone}`}
+                  className="flex-1 min-w-[200px]"
+                >
+                  <Button variant="outline" className="w-full" size="lg">
+                    <Phone className="ml-2 h-5 w-5" />
+                    {program.howToCheck.phoneDisplay || program.howToCheck.phone}
+                  </Button>
+                </a>
               )}
             </div>
+
+            {/* Hours */}
+            {program.howToCheck.hours && (
+              <div className="text-sm text-muted-foreground text-center pt-2">
+                🕐 שעות פעילות: {program.howToCheck.hours}
+              </div>
+            )}
           </CardContent>
         </CollapsibleContent>
       </Card>

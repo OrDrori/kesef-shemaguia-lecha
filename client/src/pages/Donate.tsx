@@ -1,12 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { ArrowRight, Heart, Phone, ExternalLink, Building2, Smartphone, CreditCard, Banknote } from "lucide-react";
 import DonorsList from "@/components/DonorsList";
 
 export default function Donate() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50 p-4 md:p-8">
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50 p-4 md:p-8">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -192,5 +196,7 @@ export default function Donate() {
       {/* Donors List - will show when there are donors */}
       <DonorsList />
     </div>
+    <Footer />
+    </>
   );
 }
