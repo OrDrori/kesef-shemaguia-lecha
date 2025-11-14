@@ -797,3 +797,40 @@
 - [x] Verify all icons render correctly
 - [x] Push to GitHub
 - [x] Auto-deploy to Cloudflare Pages
+
+
+## v3.4 - Comprehensive QA & Bug Fixes 🔍
+
+### Visual QA
+- [ ] Check Home page - all icons visible
+- [ ] Check Questionnaire page - all icons visible
+- [ ] Check Results page - all icons visible
+- [ ] Check Results Level 2 page - all icons visible
+- [ ] Check UrgentHelp page - all icons visible
+- [ ] Check Donate page - all icons visible
+- [ ] Check all images load correctly
+- [ ] Check all colors match design system
+
+### Functional QA
+- [ ] Test full questionnaire flow Level 1
+- [ ] Test full questionnaire flow Level 2
+- [ ] Test "עזרה דחופה" button
+- [ ] Test "שלח לוואטסאפ" button
+- [ ] Test "שתף באינסטגרם" button
+- [ ] Test all external links
+- [ ] Test all phone numbers (tel: links)
+- [ ] Test category expansion/collapse
+
+### Responsive QA
+- [ ] Test mobile view (375px)
+- [ ] Test tablet view (768px)
+- [ ] Test desktop view (1440px)
+- [ ] Check all touch targets (min 44px)
+- [ ] Check text readability on all sizes
+
+### Bug Fixes
+- [ ] Fix any missing icons
+- [ ] Fix any broken layouts
+- [ ] Fix any color inconsistencies
+- [ ] Fix any spacing issues
+- [ ] Fix any accessibility issues

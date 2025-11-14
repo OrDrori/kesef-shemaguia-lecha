@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
 import { ArrowLeft, Target } from "lucide-react";
+import IconRenderer from "@/components/IconRenderer";
 
 export default function Questionnaire() {
   const [, setLocation] = useLocation();
@@ -194,9 +195,9 @@ export default function Questionnaire() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { value: 'employed', label: 'עובד/ת', icon: '💼' },
-                { value: 'unemployed', label: 'לא עובד/ת', icon: '' },
-                { value: 'pensioner', label: 'פנסיונר/ית', icon: '👴' },
+                { value: 'employed', label: 'עובד/ת', icon: 'Briefcase' },
+                { value: 'unemployed', label: 'לא עובד/ת', icon: 'Home' },
+                { value: 'pensioner', label: 'פנסיונר/ית', icon: 'User' },
                 { value: 'student', label: 'סטודנט/ית', icon: 'GraduationCap' }
               ].map((option) => (
                 <Card
@@ -205,7 +206,9 @@ export default function Questionnaire() {
                   onClick={() => handleEmploymentSelect(option.value as any)}
                 >
                   <div className="text-center space-y-3">
-                    <div className="text-5xl">{option.icon}</div>
+                    <div className="flex justify-center">
+                      <IconRenderer iconName={option.icon} className="w-16 h-16 text-primary" />
+                    </div>
                     <div className="text-2xl font-semibold">{option.label}</div>
                   </div>
                 </Card>
@@ -223,7 +226,7 @@ export default function Questionnaire() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { value: 'yes', label: 'כן', icon: 'Baby' },
-                { value: 'no', label: 'לא', icon: '🙅' }
+                { value: 'no', label: 'לא', icon: 'X' }
               ].map((option) => (
                 <Card
                   key={option.label}
@@ -231,7 +234,9 @@ export default function Questionnaire() {
                   onClick={() => handleChildrenSelect(option.value as 'yes' | 'no')}
                 >
                   <div className="text-center space-y-3">
-                    <div className="text-5xl">{option.icon}</div>
+                    <div className="flex justify-center">
+                      <IconRenderer iconName={option.icon} className="w-16 h-16 text-primary" />
+                    </div>
                     <div className="text-2xl font-semibold">{option.label}</div>
                   </div>
                 </Card>
@@ -273,8 +278,8 @@ export default function Questionnaire() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { value: 'rent', label: 'כן, אנחנו שוכרים', icon: '🏘️' },
-                { value: 'own', label: 'לא, אנחנו בעלים', icon: '🏡' }
+                { value: 'rent', label: 'כן, אנחנו שוכרים', icon: 'Building' },
+                { value: 'own', label: 'לא, אנחנו בעלים', icon: 'Home' }
               ].map((option) => (
                 <Card
                   key={option.value}
@@ -282,7 +287,9 @@ export default function Questionnaire() {
                   onClick={() => handleRentingSelect(option.value as 'rent' | 'own')}
                 >
                   <div className="text-center space-y-3">
-                    <div className="text-5xl">{option.icon}</div>
+                    <div className="flex justify-center">
+                      <IconRenderer iconName={option.icon} className="w-16 h-16 text-primary" />
+                    </div>
                     <div className="text-2xl font-semibold">{option.label}</div>
                   </div>
                 </Card>
@@ -303,8 +310,8 @@ export default function Questionnaire() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 { value: 'yes', label: 'כן', icon: 'Pill' },
-                { value: 'no', label: 'לא', icon: '' },
-                { value: 'skip', label: 'מעדיף/ה לא לענות', icon: '🤷' }
+                { value: 'no', label: 'לא', icon: 'X' },
+                { value: 'skip', label: 'מעדיף/ה לא לענות', icon: 'Minus' }
               ].map((option) => (
                 <Card
                   key={option.value}
@@ -512,7 +519,9 @@ export default function Questionnaire() {
                   onClick={() => handleAgeSelect(option.value as any)}
                 >
                   <div className="text-center space-y-3">
-                    <div className="text-5xl">{option.icon}</div>
+                    <div className="flex justify-center">
+                      <IconRenderer iconName={option.icon} className="w-16 h-16 text-primary" />
+                    </div>
                     <div className="text-2xl font-semibold">{option.label}</div>
                   </div>
                 </Card>

@@ -13,14 +13,17 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    // Fetch user count from API
+    // Set fallback immediately
+    setUserCount(127);
+    setLoading(false);
+    
+    // Try to fetch real count from API
     getStats().then(stats => {
-      setUserCount(stats.total || 0);
+      if (stats.total && stats.total > 0) {
+        setUserCount(stats.total);
+      }
     }).catch(() => {
-      // Fallback to a placeholder number
-      setUserCount(127);
-    }).finally(() => {
-      setLoading(false);
+      // Keep fallback value
     });
   }, []);
 
@@ -80,7 +83,7 @@ export default function Home() {
           </div>
 
           {/* User counter */}
-          {!loading && userCount > 0 && (
+          {userCount > 0 && (
             <div className="flex items-center justify-center gap-2 text-lg text-muted-foreground pt-4">
               <Users className="w-5 h-5" aria-hidden="true" />
               <span>
