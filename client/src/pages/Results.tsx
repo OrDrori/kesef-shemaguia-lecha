@@ -5,9 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { assistancePrograms, charityOrganizations, type AssistanceProgram } from "@/data/programs";
 import { type Answers, getAnswers } from "@/lib/answers";
-import { ChevronDown, ExternalLink, Phone, Share2 } from "lucide-react";
-import { useState } from "react";
+import { ChevronDown, ExternalLink, Phone, Share2, Instagram } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
+import { trackCompletion } from "@/lib/api";
 
 export default function Results() {
   const [, navigate] = useLocation();
@@ -18,6 +19,11 @@ export default function Results() {
     navigate('/');
     return null;
   }
+
+  // Track completion (only once)
+  useEffect(() => {
+    trackCompletion(answers);
+  }, []);
 
   // Filter programs based on answers
   const relevantPrograms = assistancePrograms.filter((program) => {
@@ -206,22 +212,32 @@ export default function Results() {
             <p className="text-muted-foreground mb-4">
               שלחו לעצמכם את התוצאות בוואטסאפ כדי שלא תשכחו
             </p>
-            <Button
-              size="lg"
-              className="text-xl px-8 py-6"
-              onClick={() => {
-                const text = `היי! מצאנו כלי שבודק מה מגיע לנו מהמדינה.
-
-הנה התוצאות שלי:
-${relevantPrograms.slice(0, 10).map(p => `✓ ${p.title}`).join('\n')}
-
-כנסו לכאן: ${window.location.origin}`;
-                window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-              }}
-            >
-              <Share2 className="ml-2 h-5 w-5" />
-              שלח לוואטסאפ
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button
+                size="lg"
+                className="text-xl px-8 py-6"
+                onClick={() => {
+                  const text = `היי! מצאנו כלי שבודק מה מגיע לנו מהמדינה.\n\nהנה התוצאות שלי:\n${relevantPrograms.slice(0, 10).map(p => `✓ ${p.title}`).join('\n')}\n\nכנסו לכאן: ${window.location.origin}`;
+                  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+                }}
+              >
+                <Share2 className="ml-2 h-5 w-5" />
+                שלח לוואטסאפ
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-xl px-8 py-6"
+                onClick={() => {
+                  // Copy link to clipboard for Instagram story
+                  navigator.clipboard.writeText(window.location.origin);
+                  alert('הקישור הועתק! עכשיו אפשר להדביק אותו בסטורי של אינסטגרם 📱');
+                }}
+              >
+                <Instagram className="ml-2 h-5 w-5" />
+                שתף באינסטגרם
+              </Button>
+            </div>
           </div>
         </div>
 
