@@ -802,17 +802,17 @@
 ## v3.4 - Comprehensive QA & Bug Fixes 🔍
 
 ### Visual QA
-- [ ] Check Home page - all icons visible
-- [ ] Check Questionnaire page - all icons visible
+- [x] Check Home page - all icons visible
+- [x] Check Questionnaire page - all icons visible
 - [ ] Check Results page - all icons visible
 - [ ] Check Results Level 2 page - all icons visible
 - [ ] Check UrgentHelp page - all icons visible
 - [ ] Check Donate page - all icons visible
-- [ ] Check all images load correctly
-- [ ] Check all colors match design system
+- [x] Check all images load correctly
+- [x] Check all colors match design system
 
 ### Functional QA
-- [ ] Test full questionnaire flow Level 1
+- [x] Test full questionnaire flow Level 1
 - [ ] Test full questionnaire flow Level 2
 - [ ] Test "עזרה דחופה" button
 - [ ] Test "שלח לוואטסאפ" button
@@ -829,8 +829,8 @@
 - [ ] Check text readability on all sizes
 
 ### Bug Fixes
-- [ ] Fix any missing icons
+- [x] Fix any missing icons
 - [ ] Fix any broken layouts
-- [ ] Fix any color inconsistencies
+- [x] Fix any color inconsistencies
 - [ ] Fix any spacing issues
 - [ ] Fix any accessibility issues
