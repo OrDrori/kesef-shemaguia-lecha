@@ -10,6 +10,7 @@ import { getStats } from "@/lib/api";
 export default function Home() {
   const [, setLocation] = useLocation();
   const [userCount, setUserCount] = useState<number>(0);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     // Fetch user count from API
@@ -18,6 +19,8 @@ export default function Home() {
     }).catch(() => {
       // Fallback to a placeholder number
       setUserCount(127);
+    }).finally(() => {
+      setLoading(false);
     });
   }, []);
 
@@ -75,7 +78,7 @@ export default function Home() {
           </div>
 
           {/* User counter */}
-          {userCount > 0 && (
+          {!loading && userCount > 0 && (
             <div className="flex items-center justify-center gap-2 text-lg text-muted-foreground pt-4">
               <Users className="w-5 h-5" aria-hidden="true" />
               <span>
