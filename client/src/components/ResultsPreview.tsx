@@ -45,7 +45,7 @@ export default function ResultsPreview({ answers, onClose, onContinue }: Results
         <div className="sticky top-0 bg-gradient-to-b from-primary/10 to-background border-b border-border p-6 rounded-t-3xl">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-3xl md:text-4xl font-bold">
-              מצאנו לכם {relevantPrograms.length} דברים! 🎯
+              מצאנו לכם {relevantPrograms.length} דברים!
             </h2>
             <Button
               variant="ghost"
@@ -116,7 +116,7 @@ function ProgramPreviewCard({ program }: { program: AssistanceProgram }) {
         <div className="flex-1 space-y-2">
           <h4 className="text-xl font-bold">{program.title}</h4>
           <p className="text-muted-foreground">{program.whatIsIt}</p>
-          <p className="text-lg font-semibold text-primary">💰 {program.howMuch}</p>
+          <p className="text-lg font-semibold text-primary">{program.howMuch}</p>
         </div>
       </div>
     </Card>

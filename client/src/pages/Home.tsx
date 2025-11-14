@@ -35,8 +35,10 @@ export default function Home() {
         דלג לתוכן הראשי
       </a>
 
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
-        <main id="main-content" className="max-w-4xl w-full text-center space-y-8 animate-fade-in">
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 relative">
+        {/* Background image */}
+        <div className="absolute inset-0 opacity-10 bg-cover bg-center" style={{backgroundImage: 'url(/hero-bg.jpg)'}} aria-hidden="true" />
+        <main id="main-content" className="max-w-4xl w-full text-center space-y-8 animate-fade-in relative z-10">
           {/* Main heading - WCAG 2.1 - 2.4.2 Page Titled, 1.3.1 Info and Relationships */}
           <header className="space-y-4">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight flex items-center justify-center gap-3">
@@ -44,7 +46,7 @@ export default function Home() {
                 className="w-12 h-12 md:w-16 md:h-16 text-secondary fill-secondary" 
                 aria-hidden="true"
               />
-              כסף שמגיע לכם ✨
+              כסף שמגיע לכם
             </h1>
             <p className="text-2xl md:text-3xl text-muted-foreground font-medium">
               יש הרבה עזרה שהמדינה נותנת.

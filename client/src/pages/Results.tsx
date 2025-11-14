@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { assistancePrograms, charityOrganizations, type AssistanceProgram } from "@/data/programs";
 import { type Answers, getAnswers } from "@/lib/answers";
-import { ChevronDown, ExternalLink, Phone, Share2, Instagram } from "lucide-react";
+import { ChevronDown, ExternalLink, Phone, Share2, Instagram, BookOpen, Pill } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { trackCompletion } from "@/lib/api";
@@ -67,16 +67,20 @@ export default function Results() {
       <div className="min-h-screen py-8 px-4">
       <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
         {/* Header */}
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-4 relative">
+          {/* Success illustration */}
+          <div className="mx-auto w-48 h-48 mb-4 rounded-full overflow-hidden border-4 border-green-200">
+            <img src="/success-illustration.jpg" alt="" className="w-full h-full object-cover" aria-hidden="true" />
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold">
-            מצאנו לכם {relevantPrograms.length} דרכים לקבל כסף וסיוע! 🎯
+            מצאנו לכם {relevantPrograms.length} דרכים לקבל כסף וסיוע!
           </h1>
           
           {/* Estimated amount */}
           {relevantPrograms.length > 0 && (
             <div className="bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-2xl p-6 max-w-2xl mx-auto">
               <p className="text-2xl md:text-3xl font-bold text-green-700">
-                💰 סכום משוער: {estimatedMin.toLocaleString()}-{estimatedMax.toLocaleString()} ₪ בשנה
+                סכום משוער: {estimatedMin.toLocaleString()}-{estimatedMax.toLocaleString()} ₪ בשנה
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 (בהתאם למצב הכלכלי שלכם והתוכניות שתקבלו)
@@ -128,7 +132,7 @@ export default function Results() {
         {/* Housing */}
         {housingPrograms.length > 0 && (
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold">🏠 דיור</h2>
+            <h2 className="text-2xl font-bold"> דיור</h2>
             <div className="space-y-4">
               {housingPrograms.map((program) => (
                 <ProgramCard key={program.id} program={program} />
@@ -140,7 +144,7 @@ export default function Results() {
         {/* Education */}
         {educationPrograms.length > 0 && (
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold">📚 חינוך</h2>
+            <h2 className="text-2xl font-bold flex items-center gap-2"><BookOpen className="w-6 h-6" /><span>חינוך</span></h2>
             <div className="space-y-4">
               {educationPrograms.map((program) => (
                 <ProgramCard key={program.id} program={program} />
@@ -152,7 +156,7 @@ export default function Results() {
         {/* Health */}
         {healthPrograms.length > 0 && (
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold">💊 בריאות</h2>
+            <h2 className="text-2xl font-bold flex items-center gap-2"><Pill className="w-6 h-6" /><span>בריאות</span></h2>
             <div className="space-y-4">
               {healthPrograms.map((program) => (
                 <ProgramCard key={program.id} program={program} />
@@ -208,7 +212,7 @@ export default function Results() {
         {/* WhatsApp Share */}
         <div className="mt-12 text-center">
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">📱 שמרו את זה לעצמכם</h3>
+            <h3 className="text-2xl font-bold mb-4">שמרו את זה לעצמכם</h3>
             <p className="text-muted-foreground mb-4">
               שלחו לעצמכם את התוצאות בוואטסאפ כדי שלא תשכחו
             </p>
@@ -231,7 +235,7 @@ export default function Results() {
                 onClick={() => {
                   // Copy link to clipboard for Instagram story
                   navigator.clipboard.writeText(window.location.origin);
-                  alert('הקישור הועתק! עכשיו אפשר להדביק אותו בסטורי של אינסטגרם 📱');
+                  alert('הקישור הועתק! עכשיו אפשר להדביק אותו בסטורי של אינסטגרם');
                 }}
               >
                 <Instagram className="ml-2 h-5 w-5" />
@@ -243,12 +247,12 @@ export default function Results() {
 
         {/* Success Stories */}
         <div className="mt-16 space-y-6">
-          <h2 className="text-3xl font-bold text-center">💬 אנשים שזה עבד להם</h2>
+          <h2 className="text-3xl font-bold text-center">אנשים שזה עבד להם</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-6 bg-primary/5">
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="text-4xl">👨‍👩‍👧‍👦</div>
+                  <div className="text-4xl"></div>
                   <div className="flex-1">
                     <blockquote className="text-lg italic">
                       "לא האמנו שזה אמיתי. אבל עשינו את מה שהכלי אמר לנו,
@@ -315,7 +319,7 @@ function ProgramCard({ program, highlighted = false }: { program: AssistanceProg
                     {program.whatIsIt}
                   </CardDescription>
                   <p className="text-xl font-bold text-primary mt-2">
-                    💰 {program.howMuch}
+                    {program.howMuch}
                   </p>
                 </div>
               </div>

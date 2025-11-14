@@ -1,12 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Search, HelpCircle } from "lucide-react";
+import { ExternalLink, Search, HelpCircle, HandHeart } from "lucide-react";
 
 export default function NoResultsHelp() {
   return (
     <Card className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 border-amber-200">
       <div className="text-center">
-        <div className="text-5xl mb-4">🤝</div>
+        <HandHeart className="w-16 h-16 text-primary mb-4" />
         <h3 className="text-xl font-bold text-gray-900 mb-2">
           לא מצאתם תוכניות מתאימות?
         </h3>

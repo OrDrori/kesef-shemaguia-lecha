@@ -28,7 +28,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'work-grants',
     title: 'מענקי עבודה',
-    icon: '💰',
+    icon: 'Coins',
     category: 'money',
     whatIsIt: 'כסף מהמדינה לעובדים עם משכורת נמוכה.',
     howMuch: 'עד כמה אלפי שקלים בשנה (תלוי בהכנסה ובמשפחה).',
@@ -51,7 +51,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'income-guarantee',
     title: 'הבטחת הכנסה',
-    icon: '🏦',
+    icon: 'Building2',
     category: 'money',
     whatIsIt: 'כסף מהביטוח הלאומי למי שאין לו הכנסה או הכנסה נמוכה מאוד.',
     howMuch: 'תלוי במשפחה. יכול להיות אלפי שקלים בחודש.',
@@ -74,7 +74,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'child-allowance',
     title: 'קצבת ילדים',
-    icon: '👶',
+    icon: 'Baby',
     category: 'money',
     whatIsIt: 'כסף מהביטוח הלאומי לכל משפחה עם ילדים.',
     howMuch: 'תלוי במספר ילדים. מאות שקלים בחודש.',
@@ -162,7 +162,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'rent-assistance',
     title: 'סיוע בשכר דירה',
-    icon: '🏠',
+    icon: '',
     category: 'housing',
     whatIsIt: 'כסף מהמדינה לעזרה בתשלום שכר דירה.',
     howMuch: 'מאות עד אלפי שקלים בחודש.',
@@ -186,7 +186,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'scholarships',
     title: 'מלגות לימודים',
-    icon: '🎓',
+    icon: 'GraduationCap',
     category: 'education',
     whatIsIt: 'כסף לעזרה בתשלום לימודים.',
     howMuch: 'אלפי עד עשרות אלפי שקלים.',
@@ -206,7 +206,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'medicine-exemption',
     title: 'פטורים בתרופות',
-    icon: '💊',
+    icon: 'Pill',
     category: 'health',
     whatIsIt: 'פטור או הנחה בתשלום על תרופות.',
     howMuch: 'חיסכון של מאות שקלים בחודש.',
@@ -250,7 +250,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'paamonim',
     title: 'פעמונים - ייעוץ כלכלי',
-    icon: '📊',
+    icon: 'BarChart3',
     category: 'charity',
     whatIsIt: 'ארגון שעוזר לסדר את הכלכלה שלך. לא נותנים כסף, אבל עוזרים לך לארגן.',
     howMuch: 'בחינם לגמרי!',
@@ -361,7 +361,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'vocational-training',
     title: 'שוברים להכשרה מקצועית',
-    icon: '🎯',
+    icon: 'Target',
     category: 'education',
     whatIsIt: 'מימון חלקי לקורסים מקצועיים (מחשבים, בנייה, טיפולים).',
     howMuch: 'עד 7,000 ₪ למימון הקורס.',
@@ -452,7 +452,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'ogen-loan',
     title: 'הלוואות ללא ריבית - קרן עוגן',
-    icon: '💰',
+    icon: 'Coins',
     category: 'money',
     whatIsIt: 'הלוואה ללא ריבית לכל מטרה (לא צריך לשלם יותר ממה שלקחת).',
     howMuch: 'עד 40,000 ₪ (תלוי במטרה).',
@@ -477,7 +477,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'lost-money',
     title: 'כספים אבודים - "הר הכסף"',
-    icon: '🔍',
+    icon: 'Search',
     category: 'money',
     whatIsIt: 'חשבונות בנק, פנסיות וביטוחים ששכחת עליהם.',
     howMuch: 'יכול להיות אלפי שקלים!',
@@ -502,7 +502,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'heating-grant',
     title: 'מענק חימום',
-    icon: '⚡',
+    icon: 'Zap',
     category: 'money',
     whatIsIt: 'כסף מהביטוח הלאומי לעזרה בחימום הדירה בחורף.',
     howMuch: '325-649 ₪ בשנה (תלוי אם יחיד או משפחה).',
@@ -526,7 +526,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'study-grant',
     title: 'מענק לימודים',
-    icon: '📚',
+    icon: 'BookOpen',
     category: 'education',
     whatIsIt: 'עזרה כספית לכיסוי הוצאות לימודיות (ספרים, תיקים, ציוד).',
     howMuch: 'תלוי בהכנסה ובמספר הילדים.',
@@ -549,7 +549,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'child-savings',
     title: 'תוכנית חיסכון לכל ילד',
-    icon: '💰',
+    icon: 'Coins',
     category: 'money',
     whatIsIt: 'המדינה מפקידה 50 ₪ בחודש לחסכון עבור כל ילד עד גיל 18.',
     howMuch: '50 ₪ בחודש מהמדינה (נצבר עד גיל 18).',
@@ -574,7 +574,7 @@ export const assistancePrograms: AssistanceProgram[] = [
 export const charityOrganizations = [
   {
     category: 'סיוע למשפחות עם תינוקות',
-    icon: '👶',
+    icon: 'Baby',
     organizations: [
       { 
         name: 'תינוקות של החיים', 
@@ -628,7 +628,7 @@ export const charityOrganizations = [
   },
   {
     category: 'תרופות ובריאות',
-    icon: '💊',
+    icon: 'Pill',
     organizations: [
       { name: 'חברים לרפואה', description: 'עזרה בתרופות', phone: '03-5792220', url: 'https://www.haverim.org.il' },
       { name: 'קרן מכבי', description: 'למבוטחי מכבי - עד 3,500 ₪ לשנה', url: 'https://www.keren-maccabi.co.il' },

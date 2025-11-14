@@ -45,7 +45,7 @@ export default function Donate() {
             <br />
             האתר נבנה כדי לעזור, לא כדי להרוויח.
             <br />
-            רק אם אתם יכולים ורוצים - נשמח מאוד 💚
+            רק אם אתם יכולים ורוצים - נשמח מאוד
           </p>
         </Card>
 
@@ -163,7 +163,7 @@ export default function Donate() {
             פשוט שלחו לנו הודעה בוואטסאפ ונתאם את הפרטים.
           </p>
           <p className="text-sm text-gray-600 text-center">
-            אתם בוחרים מה להציג: שם, תמונה, עסק, סכום, תאריך - או כלום. הכל בשליטה שלכם 💚
+            אתם בוחרים מה להציג: שם, תמונה, עסק, סכום, תאריך - או כלום. הכל בשליטה שלכם
           </p>
         </Card>
 
@@ -172,7 +172,7 @@ export default function Donate() {
           <div className="text-center">
             <Heart className="h-12 w-12 text-green-600 mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-gray-800 mb-3">
-              תודה שאתם כאן 💚
+              תודה שאתם כאן
             </h2>
             <p className="text-gray-700 text-lg">
               בין אם תרמתם ובין אם לא -

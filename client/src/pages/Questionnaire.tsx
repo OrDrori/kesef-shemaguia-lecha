@@ -7,7 +7,7 @@ import { type Answers, saveAnswers } from "@/lib/answers";
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Target } from "lucide-react";
 
 export default function Questionnaire() {
   const [, setLocation] = useLocation();
@@ -89,7 +89,7 @@ export default function Questionnaire() {
   const handleContinueToLevel2 = () => {
     setShowPreview(false);
     setCurrentStep(5);
-    toast.success('בואו נמצא לכם עוד יותר כסף! 💰');
+    toast.success('בואו נמצא לכם עוד יותר כסף!');
   };
 
   const handleSkipToResults = () => {
@@ -195,9 +195,9 @@ export default function Questionnaire() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { value: 'employed', label: 'עובד/ת', icon: '💼' },
-                { value: 'unemployed', label: 'לא עובד/ת', icon: '🏠' },
+                { value: 'unemployed', label: 'לא עובד/ת', icon: '' },
                 { value: 'pensioner', label: 'פנסיונר/ית', icon: '👴' },
-                { value: 'student', label: 'סטודנט/ית', icon: '🎓' }
+                { value: 'student', label: 'סטודנט/ית', icon: 'GraduationCap' }
               ].map((option) => (
                 <Card
                   key={option.value}
@@ -222,7 +222,7 @@ export default function Questionnaire() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { value: 'yes', label: 'כן', icon: '👶' },
+                { value: 'yes', label: 'כן', icon: 'Baby' },
                 { value: 'no', label: 'לא', icon: '🙅' }
               ].map((option) => (
                 <Card
@@ -302,8 +302,8 @@ export default function Questionnaire() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { value: 'yes', label: 'כן', icon: '💊' },
-                { value: 'no', label: 'לא', icon: '💪' },
+                { value: 'yes', label: 'כן', icon: 'Pill' },
+                { value: 'no', label: 'לא', icon: '' },
                 { value: 'skip', label: 'מעדיף/ה לא לענות', icon: '🤷' }
               ].map((option) => (
                 <Card
@@ -325,7 +325,7 @@ export default function Questionnaire() {
         {currentStep === 4.5 && (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="text-center space-y-4">
-              <div className="text-6xl">🎯</div>
+              <Target className="w-16 h-16 text-primary" />
               <h2 className="text-3xl md:text-4xl font-bold">
                 כל הכבוד! סיימתם את השאלות הבסיסיות
               </h2>
@@ -337,7 +337,7 @@ export default function Questionnaire() {
             <div className="grid gap-4">
               <Card className="p-6 bg-primary/5 border-2 border-primary">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">📊 רוצים לראות תוצאות?</h3>
+                  <h3 className="text-2xl font-bold">רוצים לראות תוצאות?</h3>
                   <p className="text-muted-foreground">
                     תראו מה מצאנו לכם על בסיס התשובות עד כה
                   </p>
@@ -353,7 +353,7 @@ export default function Questionnaire() {
 
               <Card className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">💰 רוצים תוצאות מדויקות יותר?</h3>
+                  <h3 className="text-2xl font-bold">רוצים תוצאות מדויקות יותר?</h3>
                   <p className="text-muted-foreground">
                     ענו על עוד 4 שאלות קצרות ונחשב לכם בדיוק כמה כסף מגיע לכם!
                   </p>
@@ -397,8 +397,8 @@ export default function Questionnaire() {
                 { value: 'under-5000', label: 'פחות מ-5,000 ₪', icon: '💵' },
                 { value: '5000-10000', label: '5,000-10,000 ₪', icon: '💵💵' },
                 { value: '10000-15000', label: '10,000-15,000 ₪', icon: '💵💵💵' },
-                { value: '15000-20000', label: '15,000-20,000 ₪', icon: '💰' },
-                { value: 'over-20000', label: 'מעל 20,000 ₪', icon: '💰💰' }
+                { value: '15000-20000', label: '15,000-20,000 ₪', icon: 'Coins' },
+                { value: 'over-20000', label: 'מעל 20,000 ₪', icon: '' }
               ].map((option) => (
                 <Card
                   key={option.value}

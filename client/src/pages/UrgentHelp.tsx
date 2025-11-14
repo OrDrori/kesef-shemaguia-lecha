@@ -28,7 +28,7 @@ export default function UrgentHelp() {
     {
       title: "קרן חירום (3-7 ימים)",
       description: "עד 5,000 ₪ למצבי חירום",
-      icon: "💰",
+      icon: "Coins",
       actions: [
         {
           type: "phone",
@@ -46,7 +46,7 @@ export default function UrgentHelp() {
     {
       title: "עזרה רפואית דחופה",
       description: "תרופות, ציוד רפואי, טיפולים",
-      icon: "💊",
+      icon: "Pill",
       actions: [
         {
           type: "phone",
@@ -140,7 +140,7 @@ export default function UrgentHelp() {
         {/* Additional help */}
         <Card className="p-6 bg-primary/5 border-primary/20">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">💬 צריך לדבר עם מישהו?</h3>
+            <h3 className="text-xl font-bold">צריך לדבר עם מישהו?</h3>
             <p className="text-muted-foreground">
               אם אתם במצב קשה ורוצים לדבר עם מישהו, יש אנשים שיכולים לעזור:
             </p>

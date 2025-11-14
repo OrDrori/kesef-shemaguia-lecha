@@ -56,7 +56,7 @@ export default function DonorsList() {
       <div className="text-center mb-8">
         <Heart className="h-12 w-12 text-green-600 mx-auto mb-4" />
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-          תודה לתורמים שלנו 💚
+          תודה לתורמים שלנו
         </h2>
         <p className="text-gray-600">
           אנשים טובים שעוזרים לנו להמשיך לעזור לאחרים
@@ -121,7 +121,7 @@ export default function DonorsList() {
 
       <div className="mt-8 text-center">
         <p className="text-sm text-gray-500">
-          רוצים להצטרף לרשימה? שלחו לנו הודעה אחרי התרומה 💚
+          רוצים להצטרף לרשימה? שלחו לנו הודעה אחרי התרומה
         </p>
       </div>
     </div>
