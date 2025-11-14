@@ -28,7 +28,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'work-grants',
     title: 'מענקי עבודה',
-    icon: 'DollarSign',
+    icon: 'Coins',
     category: 'money',
     whatIsIt: 'כסף מהמדינה לעובדים עם משכורת נמוכה.',
     howMuch: 'עד כמה אלפי שקלים בשנה (תלוי בהכנסה ובמשפחה).',
@@ -94,7 +94,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'property-tax-discount',
     title: 'הנחות ארנונה',
-    icon: 'Building2',
+    icon: 'Home',
     category: 'discounts',
     whatIsIt: 'הנחה בתשלום לעירייה (ארנונה).',
     howMuch: 'עד 100% הנחה (תלוי בעירייה).',
@@ -162,7 +162,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'rent-assistance',
     title: 'סיוע בשכר דירה',
-    icon: 'Home',
+    icon: '',
     category: 'housing',
     whatIsIt: 'כסף מהמדינה לעזרה בתשלום שכר דירה.',
     howMuch: 'מאות עד אלפי שקלים בחודש.',
@@ -227,7 +227,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'daycare-assistance',
     title: 'סיוע במעונות יום',
-    icon: 'Baby',
+    icon: '🧸',
     category: 'education',
     whatIsIt: 'עזרה בתשלום למעון יום.',
     howMuch: 'אלפי שקלים בחודש.',
@@ -250,7 +250,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'paamonim',
     title: 'פעמונים - ייעוץ כלכלי',
-    icon: 'BarChart',
+    icon: 'BarChart3',
     category: 'charity',
     whatIsIt: 'ארגון שעוזר לסדר את הכלכלה שלך. לא נותנים כסף, אבל עוזרים לך לארגן.',
     howMuch: 'בחינם לגמרי!',
@@ -273,7 +273,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'free-loan',
     title: 'הלוואות ללא ריבית',
-    icon: 'Banknote',
+    icon: '💸',
     category: 'charity',
     whatIsIt: 'הלוואה ללא ריבית (לא צריך לשלם יותר ממה שלקחת).',
     howMuch: 'אלפי שקלים.',
@@ -296,7 +296,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'health-fund-exemptions',
     title: 'פטורים בקופות חולים',
-    icon: 'Hospital',
+    icon: '🏥',
     category: 'health',
     whatIsIt: 'פטור מתשלומים בקופת החולים (ביקור רופא, בדיקות, תרופות).',
     howMuch: 'חיסכון של מאות עד אלפי שקלים בשנה.',
@@ -361,7 +361,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'vocational-training',
     title: 'שוברים להכשרה מקצועית',
-    icon: 'Target',
+    icon: 'Coins',
     category: 'education',
     whatIsIt: 'מימון חלקי לקורסים מקצועיים (מחשבים, בנייה, טיפולים).',
     howMuch: 'עד 7,000 ₪ למימון הקורס.',
@@ -385,7 +385,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'campus-il',
     title: 'קמפוס IL - קורסים בחינם',
-    icon: 'Laptop',
+    icon: '💻',
     category: 'education',
     whatIsIt: 'קורסים אונליין בחינם מהמדינה (מחשבים, אנגלית, פסיכומטרי).',
     howMuch: 'בחינם לגמרי!',
@@ -408,7 +408,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'activities-discount',
     title: 'הנחות בחוגים וקייטנות',
-    icon: 'Trophy',
+    icon: '⚽',
     category: 'education',
     whatIsIt: 'הנחה בחוגים עירוניים וקייטנות לילדים.',
     howMuch: '10%-100% הנחה (תלוי בעירייה).',
@@ -428,7 +428,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'tax-refund',
     title: 'החזרי מס',
-    icon: 'Receipt',
+    icon: '💵',
     category: 'money',
     whatIsIt: 'כסף ששילמת יותר מדי מס ואפשר לקבל חזרה.',
     howMuch: 'אלפי שקלים (תלוי במשכורת ובניכויים).',
@@ -452,7 +452,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'ogen-loan',
     title: 'הלוואות ללא ריבית - קרן עוגן',
-    icon: 'DollarSign',
+    icon: 'Coins',
     category: 'money',
     whatIsIt: 'הלוואה ללא ריבית לכל מטרה (לא צריך לשלם יותר ממה שלקחת).',
     howMuch: 'עד 40,000 ₪ (תלוי במטרה).',
@@ -477,7 +477,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'lost-money',
     title: 'כספים אבודים - "הר הכסף"',
-    icon: 'Search',
+    icon: 'Coins',
     category: 'money',
     whatIsIt: 'חשבונות בנק, פנסיות וביטוחים ששכחת עליהם.',
     howMuch: 'יכול להיות אלפי שקלים!',
@@ -549,7 +549,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'child-savings',
     title: 'תוכנית חיסכון לכל ילד',
-    icon: 'DollarSign',
+    icon: 'Coins',
     category: 'money',
     whatIsIt: 'המדינה מפקידה 50 ₪ בחודש לחסכון עבור כל ילד עד גיל 18.',
     howMuch: '50 ₪ בחודש מהמדינה (נצבר עד גיל 18).',
@@ -573,6 +573,41 @@ export const assistancePrograms: AssistanceProgram[] = [
 
 export const charityOrganizations = [
   {
+    category: 'סיוע למשפחות עם תינוקות',
+    icon: 'Baby',
+    organizations: [
+      { 
+        name: 'תינוקות של החיים', 
+        description: 'חבילות מזון וציוד לתינוקות בשנה הראשונה', 
+        phone: '077-9920451',
+        url: 'https://babylife.org.il' 
+      },
+      { 
+        name: 'הבנק החברתי למזון תינוקות', 
+        description: 'מזון תינוקות חודשי ל-600+ תינוקות בכל הארץ', 
+        url: 'https://2help.org.il' 
+      },
+      { 
+        name: 'אגודת אפרת', 
+        description: 'ציוד מלא לתינוק + סלים חודשיים + תמיכה נפשית', 
+        phone: '3042*',
+        url: 'https://efrat.org.il' 
+      },
+      { 
+        name: 'יד עזרא ושולמית', 
+        description: 'סלי מזון לתינוקות + חיתולים + ציוד בסיסי', 
+        phone: '9171*',
+        url: 'https://yadezra.org.il' 
+      },
+      { 
+        name: 'בית לחם יהודה', 
+        description: 'סלי מוצרי תינוקות + ביגוד + מזון', 
+        phone: '03-628-1155',
+        url: 'https://www.bly.org.il' 
+      }
+    ]
+  },
+  {
     category: 'ייעוץ וסיוע משפטי',
     icon: 'Scale',
     organizations: [
@@ -584,7 +619,7 @@ export const charityOrganizations = [
   },
   {
     category: 'אוכל ומזון',
-    icon: 'Wheat',
+    icon: '🍞',
     organizations: [
       { name: 'פתחון לב', description: 'חלוקת סלי מזון', url: 'https://www.pitchonlev.org.il' },
       { name: 'היו שלום', description: 'סלי מזון לחגים', url: 'https://heushalom.com' },
@@ -602,7 +637,7 @@ export const charityOrganizations = [
   },
   {
     category: 'ציוד וטיפולים',
-    icon: 'Hospital',
+    icon: '🏥',
     organizations: [
       { name: 'לב אוהב', description: 'ציוד רפואי וטיפולים', phone: '09-9605604' },
       { name: 'וראייטי', description: 'טיפולים וציוד שיקומי', phone: '03-6447220', url: 'https://www.variety-israel.org' },

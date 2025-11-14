@@ -10,7 +10,7 @@ export const programCategories: ProgramCategory[] = [
   {
     id: 'direct-money',
     title: 'כסף ישיר מהמדינה',
-    icon: '💰',
+    icon: 'Coins',
     description: 'מענקים וקצבאות שמגיעים ישירות לחשבון הבנק',
     programIds: [
       'work-grants',
@@ -25,7 +25,7 @@ export const programCategories: ProgramCategory[] = [
   {
     id: 'housing',
     title: 'עזרה בדיור',
-    icon: '🏠',
+    icon: '',
     description: 'הנחות, סיוע בשכירות והלוואות לדיור',
     programIds: [
       'rent-assistance',
@@ -36,7 +36,7 @@ export const programCategories: ProgramCategory[] = [
   {
     id: 'children-families',
     title: 'משפחות וילדים',
-    icon: '👶',
+    icon: 'Baby',
     description: 'תוכניות לגנים, חינוך וסיוע למשפחות',
     programIds: [
       'kindergarten-scholarship',
@@ -48,7 +48,7 @@ export const programCategories: ProgramCategory[] = [
   {
     id: 'health',
     title: 'בריאות ותרופות',
-    icon: '💊',
+    icon: 'Pill',
     description: 'עזרה בתרופות, ציוד רפואי וטיפולים',
     programIds: [
       'social-electricity' // Can include health-related programs
@@ -57,7 +57,7 @@ export const programCategories: ProgramCategory[] = [
   {
     id: 'education-employment',
     title: 'חינוך ותעסוקה',
-    icon: '📚',
+    icon: 'BookOpen',
     description: 'הלוואות לסטודנטים, קורסים והכשרה מקצועית',
     programIds: [
       'campus-loans',
@@ -67,7 +67,7 @@ export const programCategories: ProgramCategory[] = [
   {
     id: 'financial-help',
     title: 'עזרה כלכלית וייעוץ',
-    icon: '🤝',
+    icon: 'HandHeart',
     description: 'הלוואות ללא ריבית, ייעוץ כלכלי ומשפטי',
     programIds: [
       'paamonim',
@@ -80,7 +80,7 @@ export const programCategories: ProgramCategory[] = [
   {
     id: 'lost-money',
     title: 'כספים שכוחים',
-    icon: '🔍',
+    icon: 'Search',
     description: 'איתור כסף שמגיע לכם ושכחתם',
     programIds: [
       'lost-funds'
@@ -89,7 +89,7 @@ export const programCategories: ProgramCategory[] = [
   {
     id: 'charity',
     title: 'ארגוני עזרה',
-    icon: '❤️',
+    icon: 'Heart',
     description: 'ארגונים שנותנים אוכל, ציוד רפואי ועזרה',
     programIds: [
       'yad-sarah',

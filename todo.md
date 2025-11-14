@@ -610,149 +610,271 @@
 - [ ] בדיקה מול החוקה
 - [ ] תיקונים ושיפורים
 
-## v7.1 - תרגום החוקה האולטימטיבית + תכונות חדשות 🎯
+## v12.0 - מחקר ארגונים לתינוקות ומשפחות 👶💚
 
-### תרגום החוקה לעברית
-- [x] תרגום Part I: Foundational Principles
-- [x] תרגום Part II: Cognitive Foundations
-- [x] תרגום Part III: Design Excellence
-- [x] תרגום Part IV: Motion and Life
-- [x] תרגום Part V: Accessibility and Inclusion
-- [x] תרגום Part VI: Application and Practice
-- [x] תרגום כל הטבלאות והדוגמאות
-- [x] בדיקת התרגום
+### מחקר ארגונים
+- [ ] חיפוש עמותות לתינוקות ומשפחות נזקקות
+- [ ] חיפוש בנקי מזון לתינוקות
+- [ ] חיפוש ארגוני חסד
+- [ ] חיפוש קבוצות יד שנייה (פייסבוק, טלגרם)
+- [ ] איסוף פרטי קשר (טלפון, כתובת, אתר)
+- [ ] בדיקת אמינות הארגונים
 
-### שיפור החוקה - הפיכתה ל-Actionable
-- [x] הוספת דוגמאות קוד React/Tailwind לכל עיקרון
-- [x] הוספת Checklists מפורטים לכל קטגוריה
-- [x] הוספת תנאים "אם...אז" למצבים שונים
-- [x] הוספת תבניות רכיבים מוכנות
-- [x] הוספת מדריכים צעד אחר צעד
-- [x] הוספת טבלאות החלטה
-- [x] הוספת דוגמאות לפני/אחרי
+### הוספה לאתר
+- [ ] יצירת רשימה מסודרת
+- [ ] הוספה לעמוד UrgentHelp
+- [ ] הוספה לעמוד Results
+- [ ] בדיקה ויזואלית
 
-### יישום עקרונות החוקה באתר
-- [x] יישום Clarity principles
-- [x] יישום Accessibility principles - כל העמודים
-- [x] יישום Consistency principles - מערכת צבעים אחידה
-- [x] יישום Feedback principles
-- [x] יישום Simplicity principles
+### תיקוני טקסט נוספים
+- [ ] סריקת טקסטים שנותרו
+- [ ] תיקונים סופיים
 
-### מערכת התראות מותאמת אישית
-- [ ] תכנון מערכת ההתראות
-- [ ] בניית קומפוננטת Notification
-- [ ] אינטגרציה באתר
-- [ ] בדיקות
+## v3.1 - תוספת ארגוני סיוע לתינוקות 👶
 
-### Stripe Payment לתרומות
-- [ ] הוספת feature Stripe
-- [ ] אינטגרציה בדף Donate
-- [ ] בדיקות תשלום
-- [ ] אבטחה
+### מחקר וריכוז מידע
+- [x] מחקר מקיף על ארגונים לסיוע למשפחות עם תינוקות
+- [x] איסוף פרטי קשר מלאים (טלפון, כתובת, אימייל)
+- [x] 10 ארגונים מרכזיים + 6 קבוצות פייסבוק יד שנייה
+- [x] יצירת קובץ מחקר מפורט
 
-### בדיקות ו-Checkpoint
-- [ ] בדיקת כל התכונות החדשות
-- [ ] Checkpoint סופי
+### הוספה לאתר
+- [x] הוספת קטגוריה חדשה "סיוע למשפחות עם תינוקות" 👶
+- [x] הוספת 5 ארגונים מרכזיים עם פרטי קשר מלאים:
+  - [x] תינוקות של החיים - 077-9920451
+  - [x] הבנק החברתי למזון תינוקות
+  - [x] אגודת אפרת - 3042*
+  - [x] יד עזרא ושולמית - 9171*
+  - [x] בית לחם יהודה - 03-628-1155
+- [x] הקטגוריה מופיעה ראשונה ברשימת העמותות
+- [x] בדיקה באתר - הכל עובד!
 
-## v8.0 - QA מקיף ושיפורים
+### תוספות עתידיות
+- [ ] הוספת 5 ארגונים נוספים (איש צדיק היה, אילני חסד, עמותת צדקה, מאיר פנים, ארגון לתת)
+- [ ] הוספת קישורים לקבוצות פייסבוק יד שנייה
+- [ ] הוספת מידע על מה כל ארגון נותן (פירוט מלא)
 
-### הכנת סביבת בדיקה
-- [ ] התקנת Playwright browser
-- [ ] הגדרת כלי בדיקה
+## v3.2 - הרחבת מידע על ארגוני תינוקות 🍼
 
-### בדיקות ויזואליות (Playwright)
-- [ ] בדיקת עמוד הבית - Desktop
-- [ ] בדיקת עמוד הבית - Mobile
-- [ ] בדיקת עמוד השאלון - כל השאלות
-- [ ] בדיקת עמוד התוצאות - עם תוצאות
-- [ ] בדיקת עמוד עזרה דחופה
-- [ ] בדיקת כל האינטראקציות (clicks, hovers, focus)
-- [ ] צילומי מסך של כל מצב
+### משימה 1: הוספת 5 ארגונים נוספים
+- [ ] איש צדיק היה - מציאת פרטי קשר מלאים
+- [ ] אילני חסד - מציאת פרטי קשר מלאים
+- [ ] עמותת צדקה - מציאת פרטי קשר מלאים
+- [ ] מאיר פנים - מציאת פרטי קשר מלאים
+- [ ] ארגון לתת - מציאת פרטי קשר מלאים
+- [ ] הוספה לקובץ programs.ts
 
-### בדיקות נגישות
-- [ ] WCAG 2.1 Level AA - בדיקה אוטומטית
-- [ ] Keyboard navigation - כל העמודים
-- [ ] Screen reader compatibility
-- [ ] Color contrast ratios
-- [ ] Focus indicators visibility
-- [ ] ARIA labels correctness
-- [ ] Semantic HTML structure
+### משימה 2: הוספת קבוצות פייסבוק יד שנייה
+- [ ] יצירת סקשן חדש בעמוד התוצאות
+- [ ] הוספת 6 קישורים לקבוצות פייסבוק
+- [ ] תיאור קצר לכל קבוצה
+- [ ] עיצוב מתאים (אייקון פייסבוק, צבעים)
 
-### בדיקות ביצועים
-- [ ] Loading time - עמוד הבית
-- [ ] Loading time - עמוד השאלון
-- [ ] Bundle size analysis
-- [ ] Image optimization
-- [ ] CSS optimization
-- [ ] Lighthouse score
+### משימה 3: דף מידע מפורט לכל ארגון
+- [ ] יצירת קומפוננטה OrganizationDetail
+- [ ] מידע מפורט: מה נותנים, תהליך קבלת סיוע, שעות פעילות
+- [ ] קישור מכל כרטיס ארגון לדף המפורט
+- [ ] עיצוב נגיש וקריא
 
-### בדיקות UX
-- [ ] User flow: Home → Questionnaire → Results
-- [ ] User flow: Home → Urgent Help
-- [ ] Error states
-- [ ] Empty states
-- [ ] Loading states
-- [ ] Mobile usability
-- [ ] Touch target sizes
 
-### בדיקות תוכן
-- [ ] כל הטקסטים בעברית תקינים
-- [ ] כל הקישורים עובדים
-- [ ] מספרי טלפון נכונים
-- [ ] URLs חיצוניים תקינים
+## v6.0 - פישוט UX מקיף על בסיס מחקר (UX Simplification) 🎯
 
-### תיקון בעיות
-- [ ] תיקון כל הבעיות שנמצאו
-- [ ] אימות התיקונים
+### Phase 1: הסרת מורכבות רמה 2 והוספת Header גלובלי
+- [x] מחק QuestionnaireLevel2.tsx
+- [x] מחק ResultsLevel2.tsx
+- [x] מחק DesignComparison.tsx
+- [x] הסר routes של רמה 2 מ-App.tsx
+- [x] צור Header component גלובלי
+- [x] הוסף Header לכל העמודים
+- [ ] הזז Donate לפוטר בלבד### Phase 2: שאלון אחד עם פופאפ תוצאות מתקדם (Progressive Results)
+- [x] שלב שאלות מרמה 1 ו-2 לשאלון אחד מפורט
+- [x] הוסף אומדן זמן ("2-3 דקות • 8 שאלות")
+- [x] שפר Progress Bar (הצג "שאלה X מתוך 8")
+- [x] הוסף כפתור "רוצה לראות תוצאות?" אחרי שאלה 4
+- [x] צור ResultsPreview component (פופאפ 80% מהמסך)
+- [x] הוסף כפתור "המשך לשאלות נוספות" בפופאפ (20% עליון)
+- [x] הוסף כפתור "חזור" בולטאפ נעלם, חזרה לשאלון
+- [ ] הוסף כפתור "חזור" בולט בשאלון
 
-### אימות סופי
-- [ ] בדיקה חוזרת של כל הזרימות
-- [ ] Checkpoint סופי
+### Phase 3: עיצוב מחדש של עמוד התוצאות
+- [x] הסר קארד "רמה 2" הגדול והמסיח
+- [x] הוסף סכום משוער בראש העמוד (15,000-25,000 ₪)
+- [x] צור "Top 3" section (הכי חשוב לך עכשיו)
+- [x] קבץ תוכניות לפי קטגוריות ברורות:
+  - 💵 כסף נוסף
+  - 🎁 הנחות וטבות
+  - 💙 צריך עזרה נוספת?
+- [x] הבלט ארגוני סיוע (לא בתחתית!)
+- [x] הוסף אפשרויות שמירה (וואטסאפ)
+- [x] פשט כרטיס תוכנית (מה זה, כמה, איך מקבל### Phase 4: הבלטת עזרה דחופה והוספת Footer
+- [x] הוסף כפתור "עזרה דחופה" ב-Header (אדום, בולט, תמיד נראה)
+- [x] שפר עמוד UrgentHelp עם מספרים ברורים וקטגוריות
+- [x] צור Footer component עם:
+  - קישורים לעמודים
+  - מידע על האתר
+  - זכויות יוצרים
+- [x] הוסף Footer לכל העמודיםתוכן (Plain Language)
+- [ ] החלף טקסטים טכניים בשפה פשוטה
+- [ ] הוסף סכומים ברורים (לא "כמה אלפי שקלים")
+- [ ] הוסף צעדים ברורים (לא "יש להגיש בקשה")
+- [ ] בדוק שכל הטקסטים ברבים ויוניסקס
 
-## v9.0 - פוליש סופי ל-10/10 🌟
+### Phase 6: בדיקות ושמירה
+- [ ] בדיקת ניווט בין עמודים
+- [ ] בדיקת שאלון ופופאפ תוצאות
+- [ ] בדיקת נגישות (keyboard navigation)
+- [ ] בדיקת responsive (mobile)
+- [ ] שמור checkpoint v6.0
 
-### אנימציות מיקרו
-- [x] הוספת transitions לכפתורים (hover, focus, active)
-- [x] הוספת transitions לכרטיסים (hover, expand/collapse)
-- [x] אנימציות לטעינת עמודים
-- [x] אנימציות ל-progress bar
-- [x] כיבוד prefers-reduced-motion
 
-### מערכת התראות נגישה
-- [x] בניית Notification component עם ARIA live regions
-- [x] תמיכה בסוגי התראות (success, error, info, warning)
-- [x] אנימציות כניסה/יציאה
-- [x] auto-dismiss עם טיימר
-- [x] כפתור סגירה נגיש
+## v3.1 - UX Improvements & Analytics (Live!) 🎉
 
-### Progressive Enhancement
-- [x] הוספת service worker
-- [x] cache של assets סטטיים
-- [x] שמירת תשובות ב-sessionStorage (כבר קיים)
-- [x] עבודה offline
-- [x] PWA support עם manifest.json
+### Completed Features
+- [x] Analytics tracking system (API client)
+- [x] User counter on home page
+- [x] Instagram share button
+- [x] Smooth animations (fade-in, scale, hover effects)
+- [x] Favicon added
+- [x] Accessibility improvements (reduced motion support)
+- [x] Performance optimizations
 
-### בדיקות סופיות
-- [ ] בדיקת כל האנימציות
-- [ ] בדיקת מערכת ההתראות
-- [ ] בדיקת offline mode
-- [ ] בדיקת ביצועים
-- [ ] Lighthouse score 90+
+### Next Steps
+- [ ] Deploy Cloudflare Workers API
+- [ ] Connect D1 database
+- [ ] Test analytics in production
+- [ ] Add more accessibility features
 
-## v10.0 - בדיקה גרמטית והעלאה לשרתים 🚀
 
-### בדיקה גרמטית
-- [x] סריקת כל הטקסטים בעמוד הבית
-- [x] סריקת כל הטקסטים ב-Questionnaire
-- [x] סריקת כל הטקסטים ב-Results
-- [x] סריקת כל הטקסטים ב-UrgentHelp
-- [x] סריקת כל הטקסטים ב-PersonalStory
-- [x] תיקון עקביות יחיד/רבים
-- [x] תיקון תחביר ושגיאות כתיב
-- [x] שיפור טון - חם ואנושי
+## v3.2 - SEO, Loading States & Polish 🎨
 
-### העלאה לשרתים
-- [ ] הגדרת Cloudflare Workers
-- [ ] הגדרת Neon Database
-- [ ] העלאת הקוד
-- [ ] בדיקת האתר המועלה
+### Completed
+- [x] SEO meta tags (description, keywords, author)
+- [x] Open Graph tags for Facebook sharing
+- [x] Twitter Card tags for Twitter sharing
+- [x] Loading component for better UX
+- [x] Loading state for user counter
+- [x] Smooth animations CSS file
+- [x] Favicon with brand colors
+
+### In Progress
+- [ ] Verify all links with Firecrawl
+- [ ] Mobile touch target optimization
+- [ ] Error boundaries for better error handling
+
+
+## v3.3 - Professional Design: Remove Emojis, Add Lottie & Images 🎨
+
+### Tasks
+- [ ] Remove ALL emojis from the website
+- [ ] Add Lottie animations (money, heart, success, etc.)
+- [ ] Generate atmospheric images for key sections
+- [ ] Integrate Lottie player library
+- [ ] Replace emoji in titles with Lottie animations
+- [ ] Replace emoji in cards with vector icons
+- [ ] Add background images to hero sections
+- [ ] Maintain design system (green, accessible, gov.il style)
+
+
+## v3.3 - Professional Design Without Emojis 🎨
+
+### Emoji Removal & Icon Replacement
+- [x] Remove all 36 emojis from the entire project
+- [x] Replace emojis with professional lucide-react icons
+- [x] Update all icon references in programs.ts
+- [x] Update all icon references in categories.ts
+- [x] Update all icon references in pages
+- [x] Add proper icon imports to all components
+
+### Atmospheric Images
+- [x] Generate hero background image (green, supportive hands)
+- [x] Generate success illustration (family with money plant)
+- [x] Generate help illustration (community safety net)
+- [x] Add hero background to Home page
+- [x] Add success illustration to Results page
+
+### Build & Deploy
+- [x] Test build locally
+- [x] Verify all icons render correctly
+- [x] Push to GitHub
+- [x] Auto-deploy to Cloudflare Pages
+
+
+## v3.4 - Comprehensive QA & Bug Fixes 🔍
+
+### Visual QA
+- [x] Check Home page - all icons visible
+- [x] Check Questionnaire page - all icons visible
+- [ ] Check Results page - all icons visible
+- [ ] Check Results Level 2 page - all icons visible
+- [ ] Check UrgentHelp page - all icons visible
+- [ ] Check Donate page - all icons visible
+- [x] Check all images load correctly
+- [x] Check all colors match design system
+
+### Functional QA
+- [x] Test full questionnaire flow Level 1
+- [ ] Test full questionnaire flow Level 2
+- [ ] Test "עזרה דחופה" button
+- [ ] Test "שלח לוואטסאפ" button
+- [ ] Test "שתף באינסטגרם" button
+- [ ] Test all external links
+- [ ] Test all phone numbers (tel: links)
+- [ ] Test category expansion/collapse
+
+### Responsive QA
+- [ ] Test mobile view (375px)
+- [ ] Test tablet view (768px)
+- [ ] Test desktop view (1440px)
+- [ ] Check all touch targets (min 44px)
+- [ ] Check text readability on all sizes
+
+### Bug Fixes
+- [x] Fix any missing icons
+- [ ] Fix any broken layouts
+- [x] Fix any color inconsistencies
+- [ ] Fix any spacing issues
+- [ ] Fix any accessibility issues
+
+
+## v3.5 - Critical Bug Fixes 🐛
+
+### Icon Rendering Issues
+- [ ] Fix IconRenderer - icons showing as text ("Minus", "X", "Pill", etc.)
+- [ ] Replace all icon strings with proper lucide-react components
+- [ ] Test all questionnaire options display correctly
+
+### Error Notifications
+- [ ] Remove "error 1" / "errors 2" notifications from UI
+- [ ] Handle API errors silently (no user-facing errors)
+- [ ] Add proper error boundaries
+
+### Remaining Emojis
+- [ ] Find and replace ALL remaining emojis in data files
+- [ ] Check programs.ts for emoji icons
+- [ ] Check categories.ts for emoji icons
+- [ ] Verify no emojis in Results pages
+
+### Testing
+- [ ] Test full questionnaire flow with all icons
+- [ ] Test Results page - all icons visible
+- [ ] Test ResultsLevel2 page - all icons visible
+- [ ] Verify no console errors
+
+## v3.1 - תיקון אייקונים בכל האתר 🎨
+
+### תיקון אייקונים
+- [x] תיקון IconRenderer - כל האייקונים מוצגים כקומפוננטות ולא טקסט
+- [x] הסרת כל האמוג'י מהקוד
+- [x] תיקון שאלת שכר דירה - אייקון Home
+- [x] תיקון שאלת גיל - אייקון User
+- [x] תיקון שאלת הכנסה - אייקון Coins
+- [x] תיקון שאלת בריאות - אייקונים Pill, X, Minus
+- [x] תיקון עמוד התוצאות - כל האייקונים
+- [x] תיקון עמוד העזרה הדחופה - כל האייקונים
+- [x] תיקון programs.ts - החלפת Building2, Target, Search באייקונים תקינים
+- [x] הסרת console.error מפונקציות אנליטיקס
+- [x] תיקון nested anchor tags ב-Header
+
+## באגים נוספים
+
+- [x] תיקון בעיית גלילה בעמוד התרומות - העמוד מתחיל באמצע במקום בראש

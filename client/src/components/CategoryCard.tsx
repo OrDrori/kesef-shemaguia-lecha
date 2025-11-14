@@ -33,11 +33,11 @@ export default function CategoryCard({
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             {isExpanded ? (
-              <ChevronUp className="h-5 w-5 text-muted-foreground" />
+              <ChevronUp className="h-5 w-5 text-gray-500" />
             ) : (
-              <ChevronDown className="h-5 w-5 text-muted-foreground" />
+              <ChevronDown className="h-5 w-5 text-gray-500" />
             )}
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-gray-600">
               {programs.length} תוכניות
             </span>
           </div>
@@ -45,7 +45,7 @@ export default function CategoryCard({
           <div className="flex items-center gap-3">
             <div>
               <h3 className="text-xl font-bold text-gray-900">{title}</h3>
-              <p className="text-sm text-muted-foreground mt-1">{description}</p>
+              <p className="text-sm text-gray-600 mt-1">{description}</p>
             </div>
             <div className="text-4xl">{icon}</div>
           </div>
@@ -71,8 +71,8 @@ export default function CategoryCard({
                         <span className="text-2xl">{program.icon}</span>
                         <h4 className="font-bold text-gray-900">{program.title}</h4>
                       </div>
-                      <p className="text-sm text-muted-foreground mb-2">{program.whatIsIt}</p>
-                      <p className="text-sm font-semibold text-secondary">{program.howMuch}</p>
+                      <p className="text-sm text-gray-600 mb-2">{program.whatIsIt}</p>
+                      <p className="text-sm font-semibold text-green-600">{program.howMuch}</p>
                     </div>
                   </div>
                 </button>
@@ -83,12 +83,12 @@ export default function CategoryCard({
                     <div className="space-y-4">
                       <div>
                         <h5 className="font-semibold text-gray-900 mb-2">למי זה מתאים?</h5>
-                        <p className="text-sm text-foreground">{program.forWhom}</p>
+                        <p className="text-sm text-gray-700">{program.forWhom}</p>
                       </div>
 
                       <div>
                         <h5 className="font-semibold text-gray-900 mb-2">איך לבדוק?</h5>
-                        <ol className="list-decimal list-inside space-y-1 text-sm text-foreground">
+                        <ol className="list-decimal list-inside space-y-1 text-sm text-gray-700">
                           {program.howToCheck.steps.map((step, idx) => (
                             <li key={idx}>{step}</li>
                           ))}
@@ -123,7 +123,7 @@ export default function CategoryCard({
                       </div>
 
                       {program.howToCheck.hours && (
-                        <p className="text-xs text-muted-foreground text-center">
+                        <p className="text-xs text-gray-500 text-center">
                           שעות פעילות: {program.howToCheck.hours}
                         </p>
                       )}

@@ -1,11 +1,6 @@
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import { registerServiceWorker } from "./lib/sw-register";
+import "./animations.css";
 
 createRoot(document.getElementById("root")!).render(<App />);
-
-// Register service worker for offline support
-if (import.meta.env.PROD) {
-  registerServiceWorker();
-}
