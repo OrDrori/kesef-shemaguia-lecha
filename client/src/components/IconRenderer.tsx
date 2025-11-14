@@ -1,3 +1,4 @@
+// Version: 3.2.2 - Force rebuild for deployment sync
 import { Briefcase, Home, User, GraduationCap, Baby, X, Building, Pill, Minus, Coins, Apple, Scale, AlertCircle, Lightbulb, Bus, Landmark } from "lucide-react";
 
 interface IconRendererProps {
