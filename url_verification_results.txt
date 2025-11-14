@@ -1,0 +1,85 @@
+URL Verification Results
+================================================================================
+
+Working: 16/31
+Broken: 15/31
+
+BROKEN LINKS:
+  https://campus.gov.il
+    Status: 405 - ERROR
+
+  https://milgapo.co.il
+    Status: 403 - ERROR
+
+  https://www.gov.il/he/service/assistance-rent-or-public-housing
+    Status: 403 - ERROR
+
+  https://www.freeloan.org.il
+    Status: 0 - CONNECTION_ERROR
+
+  https://www.gov.il/he/service/daycare-center-parents-request-degree-of-subsidy
+    Status: 403 - ERROR
+
+  https://www.gov.il/he/service/legal_aid_application
+    Status: 403 - ERROR
+
+  https://www.gov.il/he/service/pension_savings_search
+    Status: 403 - ERROR
+
+  https://www.gov.il/he/service/simulator-employee
+    Status: 403 - ERROR
+
+  https://heushalom.com
+    Status: 403 - ERROR
+
+  https://www.paamonim.org
+    Status: 403 - ERROR
+
+  https://www.variety-israel.org
+    Status: 0 - CONNECTION_ERROR
+
+  https://www.yadid.org.il
+    Status: 0 - CONNECTION_ERROR
+
+  https://yad-sarah.net
+    Status: 403 - ERROR
+
+  https://www.taasuka.gov.il/applicants/shovarim/
+    Status: 403 - ERROR
+
+  https://www.misim.gov.il/gmmhszakaut/
+    Status: 0 - CONNECTION_ERROR
+
+
+FULL RESULTS:
+0 - https://www.freeloan.org.il - CONNECTION_ERROR
+0 - https://www.variety-israel.org - CONNECTION_ERROR
+0 - https://www.yadid.org.il - CONNECTION_ERROR
+0 - https://www.misim.gov.il/gmmhszakaut/ - CONNECTION_ERROR
+200 - https://2help.org.il - OK
+200 - http://www.btl.gov.il/benefits/old_age/Pages/מענק%20חימום.aspx - OK
+200 - http://www.btl.gov.il/benefits/children/HisahoLayeled/Pages/default.aspx - OK
+200 - https://efrat.org.il - OK
+200 - https://babylife.org.il - OK
+200 - http://www.btl.gov.il/benefits/Pages/m.limudim1.aspx - OK
+200 - https://www.btl.gov.il/benefits/Income_support/Pages/default.aspx - OK
+200 - https://www.bly.org.il - OK
+200 - https://www.haverim.org.il - OK
+200 - https://www.iec.co.il/content/tariffs/contentpages/socialtariff - OK
+200 - https://www.ogen.org/ - OK
+200 - https://www.keren-maccabi.co.il - OK
+200 - https://www.pitchonlev.org.il - OK
+200 - https://www.leket.org - OK
+200 - https://www.naamat.org.il - OK
+200 - https://yadezra.org.il - OK
+403 - https://milgapo.co.il - ERROR
+403 - https://www.gov.il/he/service/assistance-rent-or-public-housing - ERROR
+403 - https://www.gov.il/he/service/daycare-center-parents-request-degree-of-subsidy - ERROR
+403 - https://www.gov.il/he/service/legal_aid_application - ERROR
+403 - https://www.gov.il/he/service/pension_savings_search - ERROR
+403 - https://www.gov.il/he/service/simulator-employee - ERROR
+403 - https://heushalom.com - ERROR
+403 - https://www.paamonim.org - ERROR
+403 - https://yad-sarah.net - ERROR
+403 - https://www.taasuka.gov.il/applicants/shovarim/ - ERROR
+405 - https://campus.gov.il - ERROR
