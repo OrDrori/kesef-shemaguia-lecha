@@ -227,7 +227,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'daycare-assistance',
     title: 'סיוע במעונות יום',
-    icon: '🧸',
+    icon: 'Pill',
     category: 'education',
     whatIsIt: 'עזרה בתשלום למעון יום.',
     howMuch: 'אלפי שקלים בחודש.',
@@ -296,7 +296,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'health-fund-exemptions',
     title: 'פטורים בקופות חולים',
-    icon: '🏥',
+    icon: 'Pill',
     category: 'health',
     whatIsIt: 'פטור מתשלומים בקופת החולים (ביקור רופא, בדיקות, תרופות).',
     howMuch: 'חיסכון של מאות עד אלפי שקלים בשנה.',
@@ -428,7 +428,7 @@ export const assistancePrograms: AssistanceProgram[] = [
   {
     id: 'tax-refund',
     title: 'החזרי מס',
-    icon: '💵',
+    icon: 'Coins',
     category: 'money',
     whatIsIt: 'כסף ששילמת יותר מדי מס ואפשר לקבל חזרה.',
     howMuch: 'אלפי שקלים (תלוי במשכורת ובניכויים).',
@@ -619,7 +619,7 @@ export const charityOrganizations = [
   },
   {
     category: 'אוכל ומזון',
-    icon: '🍞',
+    icon: 'Apple',
     organizations: [
       { name: 'פתחון לב', description: 'חלוקת סלי מזון', url: 'https://www.pitchonlev.org.il' },
       { name: 'היו שלום', description: 'סלי מזון לחגים', url: 'https://heushalom.com' },

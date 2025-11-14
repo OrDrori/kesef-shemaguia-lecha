@@ -5,8 +5,13 @@ import Footer from "@/components/Footer";
 import { ExternalLink, Phone, AlertCircle, Apple, Scale, Coins, Pill } from "lucide-react";
 import { Link } from "wouter";
 import IconRenderer from "@/components/IconRenderer";
+import { useEffect } from "react";
 
 export default function UrgentHelp() {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const urgentOptions = [
     {
       title: "סלי מזון (היום)",

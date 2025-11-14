@@ -21,6 +21,11 @@ export default function Results() {
     return null;
   }
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Track completion (only once)
   useEffect(() => {
     trackCompletion(answers);
@@ -97,7 +102,7 @@ export default function Results() {
         {/* Top 3 - Most Important */}
         {top3Programs.length > 0 && (
           <div className="space-y-4 stagger-children">
-            <h2 className="text-3xl font-bold text-center">📌 הכי חשוב לכם עכשיו</h2>
+            <h2 className="text-3xl font-bold text-center">הכי חשוב לכם עכשיו</h2>
             <div className="space-y-4">
               {top3Programs.map((program) => (
                 <ProgramCard key={program.id} program={program} highlighted />
@@ -124,7 +129,7 @@ export default function Results() {
         {/* Discounts & Benefits */}
         {discountPrograms.length > 0 && (
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold">🎁 הנחות וטבות</h2>
+            <h2 className="text-2xl font-bold">הנחות וטבות</h2>
             <div className="space-y-4">
               {discountPrograms.map((program) => (
                 <ProgramCard key={program.id} program={program} />
@@ -172,7 +177,7 @@ export default function Results() {
         {/* Charity Organizations - PROMINENT! */}
         <div className="space-y-4 mt-12 pt-8 border-t-2 border-primary/20">
           <div className="text-center space-y-2 mb-6">
-            <h2 className="text-3xl font-bold">💙 צריכים עזרה נוספת?</h2>
+            <h2 className="text-3xl font-bold">צריכים עזרה נוספת?</h2>
             <p className="text-xl text-muted-foreground">
               ארגוני סיוע שיכולים לעזור לכם
             </p>

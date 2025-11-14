@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ResultsPreview from "@/components/ResultsPreview";
 import { type Answers, saveAnswers } from "@/lib/answers";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
 import { ArrowLeft, Target, Clock, Lightbulb } from "lucide-react";
@@ -25,6 +25,11 @@ export default function Questionnaire() {
     monthlyRent: null,
     age: null
   });
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Total steps calculation
   const totalSteps = 8;

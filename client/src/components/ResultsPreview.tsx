@@ -4,6 +4,7 @@ import { assistancePrograms, type AssistanceProgram } from "@/data/programs";
 import { type Answers } from "@/lib/answers";
 import { X, ArrowLeft } from "lucide-react";
 import { useState } from "react";
+import IconRenderer from "@/components/IconRenderer";
 
 interface ResultsPreviewProps {
   answers: Answers;
@@ -42,7 +43,7 @@ export default function ResultsPreview({ answers, onClose, onContinue }: Results
       {/* Popup - 80% of screen */}
       <div className="w-full max-w-4xl bg-background rounded-t-3xl shadow-2xl mt-[10vh] min-h-[80vh] animate-in slide-in-from-bottom-8 duration-500">
         {/* Header - 20% top area for close button */}
-        <div className="sticky top-0 bg-gradient-to-b from-primary/10 to-background border-b border-border p-6 rounded-t-3xl">
+        <div className="sticky top-0 bg-background border-b border-border p-6 rounded-t-3xl z-10">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-3xl md:text-4xl font-bold">
               מצאנו לכם {relevantPrograms.length} דברים!
@@ -66,10 +67,12 @@ export default function ResultsPreview({ answers, onClose, onContinue }: Results
           <Button
             size="lg"
             onClick={onContinue}
-            className="w-full text-xl py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-lg"
+            className="w-full text-lg py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-lg flex items-center justify-center gap-2"
           >
-            <ArrowLeft className="ml-2 h-6 w-6" />
-            המשיכו לשאלות נוספות לתוצאות מדויקות יותר
+            <ArrowLeft className="h-5 w-5 flex-shrink-0" />
+            <span className="leading-tight">
+              המשיכו לשאלות נוספות<br />לתוצאות מדויקות יותר
+            </span>
           </Button>
           
           <p className="text-sm text-muted-foreground text-center mt-2">
@@ -79,7 +82,7 @@ export default function ResultsPreview({ answers, onClose, onContinue }: Results
 
         {/* Content - scrollable */}
         <div className="p-6 space-y-4">
-          <h3 className="text-2xl font-bold mb-4">📌 הכי חשוב לכם עכשיו:</h3>
+          <h3 className="text-2xl font-bold mb-4">הכי חשוב לכם עכשיו:</h3>
           
           {topPrograms.length > 0 ? (
             <div className="space-y-4">
@@ -112,7 +115,9 @@ function ProgramPreviewCard({ program }: { program: AssistanceProgram }) {
   return (
     <Card className="p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start gap-4">
-        <div className="text-4xl flex-shrink-0">{program.icon}</div>
+        <div className="flex-shrink-0">
+          <IconRenderer iconName={program.icon} className="w-12 h-12 text-primary" />
+        </div>
         <div className="flex-1 space-y-2">
           <h4 className="text-xl font-bold">{program.title}</h4>
           <p className="text-muted-foreground">{program.whatIsIt}</p>
