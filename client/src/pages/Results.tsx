@@ -65,7 +65,7 @@ export default function Results() {
     <>
       <Header />
       <div className="min-h-screen py-8 px-4">
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
         {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
@@ -91,7 +91,7 @@ export default function Results() {
 
         {/* Top 3 - Most Important */}
         {top3Programs.length > 0 && (
-          <div className="space-y-4">
+          <div className="space-y-4 stagger-children">
             <h2 className="text-3xl font-bold text-center">📌 הכי חשוב לכם עכשיו</h2>
             <div className="space-y-4">
               {top3Programs.map((program) => (

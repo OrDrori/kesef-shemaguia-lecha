@@ -33,7 +33,7 @@ export default function Home() {
       </a>
 
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
-        <main id="main-content" className="max-w-4xl w-full text-center space-y-8">
+        <main id="main-content" className="max-w-4xl w-full text-center space-y-8 animate-fade-in">
           {/* Main heading - WCAG 2.1 - 2.4.2 Page Titled, 1.3.1 Info and Relationships */}
           <header className="space-y-4">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight flex items-center justify-center gap-3">
@@ -64,7 +64,7 @@ export default function Home() {
           <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="text-2xl md:text-3xl px-12 py-8 h-auto min-h-[60px] rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              className="text-2xl md:text-3xl px-12 py-8 h-auto min-h-[60px] rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover-lift smooth-transition animate-scale-in"
               onClick={() => setLocation('/questionnaire')}
               aria-label="התחל שאלון לבדיקת זכאות"
             >

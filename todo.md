@@ -725,3 +725,21 @@
 - [ ] בדיקת נגישות (keyboard navigation)
 - [ ] בדיקת responsive (mobile)
 - [ ] שמור checkpoint v6.0
+
+
+## v3.1 - UX Improvements & Analytics (Live!) 🎉
+
+### Completed Features
+- [x] Analytics tracking system (API client)
+- [x] User counter on home page
+- [x] Instagram share button
+- [x] Smooth animations (fade-in, scale, hover effects)
+- [x] Favicon added
+- [x] Accessibility improvements (reduced motion support)
+- [x] Performance optimizations
+
+### Next Steps
+- [ ] Deploy Cloudflare Workers API
+- [ ] Connect D1 database
+- [ ] Test analytics in production
+- [ ] Add more accessibility features
