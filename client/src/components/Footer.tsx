@@ -21,7 +21,7 @@ export default function Footer() {
               <Link href="/" className="hover:text-primary transition-colors">
                 עמוד הבית
               </Link>
-              <Link href="/urgent-help" className="hover:text-primary transition-colors">
+              <Link href="/urgent" className="hover:text-primary transition-colors">
                 עזרה דחופה
               </Link>
               <Link href="/donate" className="hover:text-primary transition-colors">
