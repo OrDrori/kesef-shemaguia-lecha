@@ -12,6 +12,7 @@ import UrgentHelp from "./pages/UrgentHelp";
 
 
 import Donate from "./pages/Donate";
+import Analytics from "./pages/Analytics";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
 
 
       <Route path="/donate" component={Donate} />
+      <Route path="/analytics" component={Analytics} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

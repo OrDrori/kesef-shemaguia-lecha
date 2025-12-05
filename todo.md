@@ -904,3 +904,29 @@
 - [x] תיקון אמוג'י בכותרות (Results.tsx, ResultsPreview.tsx)
 - [x] הסרת console.error מ-api.ts
 - [x] תיקון nested anchor tags ב-Header
+
+
+## v4.0 - מערכת Analytics פנימית ✅
+
+### מה בוצע
+- [x] יצירת `lib/analytics.ts` - מערכת מעקב מלאה
+- [x] מעקב pageviews בכל העמודים
+- [x] מעקב questionnaire completion
+- [x] מעקב Level 2 start
+- [x] מעקב WhatsApp shares
+- [x] מעקב urgent help visits
+- [x] מעקב program views & clicks
+- [x] דשבורד Analytics ב-`/analytics`
+- [x] ייצוא נתונים ל-CSV
+- [x] סטטיסטיקות תוכניות פופולריות
+- [x] 100% פרטי - localStorage only
+- [x] תיעוד מלא ב-ANALYTICS_SETUP.md
+
+### משימות עתידיות (דורשות התחברות) 🔒
+- [ ] הרשמה ל-Railway
+- [ ] Deploy Umami Analytics
+- [ ] הגדרת website tracking
+- [ ] הוספת Umami tracking code לאתר
+- [ ] בדיקה ואימות
+
+📝 **ראה ANALYTICS_SETUP.md להוראות מפורטות**

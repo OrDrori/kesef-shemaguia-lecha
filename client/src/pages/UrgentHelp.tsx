@@ -6,10 +6,13 @@ import { ExternalLink, Phone, AlertCircle, Apple, Scale, Coins, Pill } from "luc
 import { Link } from "wouter";
 import IconRenderer from "@/components/IconRenderer";
 import { useEffect } from "react";
+import { trackPageView, trackUrgentHelp } from "@/lib/analytics";
 
 export default function UrgentHelp() {
-  // Scroll to top when component mounts
+  // Track page view and scroll to top when component mounts
   useEffect(() => {
+    trackPageView('urgent-help');
+    trackUrgentHelp();
     window.scrollTo(0, 0);
   }, []);
   const urgentOptions = [

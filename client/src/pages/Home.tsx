@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Heart, ArrowLeft, Users } from "lucide-react";
 import { useState, useEffect } from "react";
 import { getStats } from "@/lib/api";
+import { trackPageView } from "@/lib/analytics";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -13,6 +14,9 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    // Track page view
+    trackPageView('home');
+    
     // Set fallback immediately
     setUserCount(127);
     setLoading(false);

@@ -10,6 +10,7 @@ import IconRenderer from "@/components/IconRenderer";
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { trackCompletion } from "@/lib/api";
+import { trackPageView, trackProgramView, trackProgramClick, trackWhatsAppShare } from "@/lib/analytics";
 
 export default function Results() {
   const [, navigate] = useLocation();
@@ -21,8 +22,9 @@ export default function Results() {
     return null;
   }
 
-  // Scroll to top when component mounts
+  // Track page view and scroll to top when component mounts
   useEffect(() => {
+    trackPageView('results');
     window.scrollTo(0, 0);
   }, []);
 
@@ -230,6 +232,7 @@ export default function Results() {
                 size="lg"
                 className="text-xl px-8 py-6"
                 onClick={() => {
+                  trackWhatsAppShare();
                   const text = `היי! מצאנו כלי שבודק מה מגיע לנו מהמדינה.\n\nהנה התוצאות שלי:\n${relevantPrograms.slice(0, 10).map(p => `✓ ${p.title}`).join('\n')}\n\nכנסו לכאן: ${window.location.origin}`;
                   window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
                 }}

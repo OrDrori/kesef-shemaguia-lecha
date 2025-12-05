@@ -7,6 +7,7 @@ import { type Answers, saveAnswers } from "@/lib/answers";
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
+import { trackPageView, trackQuestionnaireComplete } from "@/lib/analytics";
 import { ArrowLeft, Target, Clock, Lightbulb } from "lucide-react";
 import IconRenderer from "@/components/IconRenderer";
 
@@ -26,8 +27,9 @@ export default function Questionnaire() {
     age: null
   });
 
-  // Scroll to top when component mounts
+  // Track page view and scroll to top when component mounts
   useEffect(() => {
+    trackPageView('questionnaire');
     window.scrollTo(0, 0);
   }, []);
 
@@ -144,6 +146,7 @@ export default function Questionnaire() {
     const finalAnswers = { ...answers, age: value };
     setAnswers(finalAnswers);
     saveAnswers(finalAnswers);
+    trackQuestionnaireComplete();
     toast.success('סיימנו! מעביר אתכם לתוצאות... 🎉');
     setTimeout(() => {
       setLocation('/results');

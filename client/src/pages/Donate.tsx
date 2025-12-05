@@ -6,10 +6,12 @@ import { Link } from "wouter";
 import { ArrowRight, Heart, Phone, ExternalLink, Building2, Smartphone, CreditCard, Banknote } from "lucide-react";
 import DonorsList from "@/components/DonorsList";
 import { useEffect } from "react";
+import { trackPageView } from "@/lib/analytics";
 
 export default function Donate() {
-  // Scroll to top when component mounts
+  // Track page view and scroll to top when component mounts
   useEffect(() => {
+    trackPageView('donate');
     window.scrollTo(0, 0);
   }, []);
   return (
