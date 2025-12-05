@@ -39,7 +39,7 @@ export const assistancePrograms: AssistanceProgram[] = [
         'תמלא תעודת זהות',
         'האתר יגיד לך אם מגיע לך'
       ],
-      url: 'https://www.misim.gov.il/gmmhszakaut/',
+      url: 'https://www.gov.il/he/departments/units/department-gimlaot/govil-landing-page',
       phone: '*4954',
       phoneDisplay: '*מסים (4954*)',
       hours: 'א\'-ה\', 8:00-16:00'
@@ -284,7 +284,7 @@ export const assistancePrograms: AssistanceProgram[] = [
         'תמלא טופס בקשה',
         'תחכה לתשובה'
       ],
-      url: 'https://www.freeloan.org.il',
+      url: 'https://www.ogen.org/',
       phone: '1-599-500-001',
       phoneDisplay: 'האגודה הישראלית להלוואות (1-599-500-001)'
     },
@@ -612,7 +612,7 @@ export const charityOrganizations = [
     icon: 'Scale',
     organizations: [
       { name: 'יד שרה', description: 'ייעוץ משפטי לקשישים וחולים', url: 'https://yad-sarah.net' },
-      { name: 'ידיד', description: 'ייעוץ משפטי בתחום הדיור', url: 'https://www.yadid.org.il' },
+      { name: 'ידידים', description: 'ארגון מתנדבים ארצי', url: 'https://www.yedidim.org.il/' },
       { name: 'שכר מצווה', description: 'ייעוץ משפטי בהתנדבות' },
       { name: 'נעמת', description: 'סיוע משפטי לנשים', url: 'https://www.naamat.org.il' }
     ]
@@ -640,7 +640,7 @@ export const charityOrganizations = [
     icon: '🏥',
     organizations: [
       { name: 'לב אוהב', description: 'ציוד רפואי וטיפולים', phone: '09-9605604' },
-      { name: 'וראייטי', description: 'טיפולים וציוד שיקומי', phone: '03-6447220', url: 'https://www.variety-israel.org' },
+      { name: 'וראייטי ירושלים', description: 'טיפולים וציוד שיקומי', phone: '03-6447220', url: 'https://www.variety-jerusalem.org.il/' },
       { name: 'קרן עזרה לקהילה', description: 'סיוע חד פעמי עד 1,000 ₪', phone: '09-9508371' }
     ]
   }
